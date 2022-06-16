@@ -62,6 +62,9 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 				pass # do nothing
 			else:  # flip
 				flip()
+				var pitch_strength = 0.5
+				AudioServer.get_bus_effect(1, 0).pitch_scale = 1.0 + ((0.5 - randf()) * pitch_strength)
+				$FlipSound.play()
 				emit_signal("flipped", x, y)
 
 

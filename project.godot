@@ -24,10 +24,6 @@ config/name="BuildYourOrb"
 run/main_scene="res://TileFlipPuzzleTest.tscn"
 config/icon="res://icon.png"
 
-[autoload]
-
-Game="*res://Logic/Game.tscn"
-
 [physics]
 
 common/enable_pause_aware_picking=true

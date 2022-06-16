@@ -19,10 +19,25 @@ func check_victory() -> bool:
 				return false
 	return true
 
-func check_flip_condition(x_flipped, y_flipped, x_other, y_other) -> bool:
-	# als erstes: rechts davon wird geflippt
-	if y_flipped == y_other and x_flipped + 1 == x_other:
+
+func diagonal_condition(x_flipped, y_flipped, x_other, y_other):
+	# possible to solve in 3x3 but pretty difficult
+	if y_flipped-1 == y_other and x_flipped + 1 == x_other:
 		return true
+	if y_flipped-1 == y_other and x_flipped - 1 == x_other:
+		return true
+	if y_flipped+1 == y_other and x_flipped + 1 == x_other:
+		return true
+	if y_flipped+1 == y_other and x_flipped - 1 == x_other:
+		return true
+	return false
+
+func check_flip_condition(x_flipped, y_flipped, x_other, y_other) -> bool:
+	# als erstes: diagonalen werden geflippt
+#	if y_flipped == y_other and x_flipped + 1 == x_other:
+#		return true
+		
+
 	return false
 
 func register_tile_change(x, y):

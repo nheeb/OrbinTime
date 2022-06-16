@@ -4,7 +4,6 @@
 [ext_resource path="res://Suitcase.gd" type="Script" id=2]
 
 [node name="Suitcase" type="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 2 )
 
 [node name="SuitcaseModel" parent="." instance=ExtResource( 1 )]

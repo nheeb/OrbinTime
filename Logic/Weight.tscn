@@ -19,4 +19,4 @@ mesh = SubResource( 1 )
 [node name="CollisionShape" type="CollisionShape" parent="Mesh/ClickArea"]
 shape = SubResource( 2 )
 
-[connection signal="input_event" from="Mesh/ClickArea" to="Mesh" method="_on_ClickArea_input_event"]
+[connection signal="input_event" from="Mesh/ClickArea" to="." method="_on_ClickArea_input_event"]

@@ -41,8 +41,14 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 #	print("reached")
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == 1:
-			flip()
-			emit_signal("flipped", x, y)
+			# either put a weight on this or flip it
+			if Game.current_weight != null:
+				var weight: Weight = Game.current_weight
+				Game.current_weight = null
+				weight.transform.origin = self.transform.origin
+			else:  # flip
+				flip()
+				emit_signal("flipped", x, y)
 
 
 func _on_Tween_tween_all_completed() -> void:

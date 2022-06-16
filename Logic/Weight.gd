@@ -21,3 +21,4 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 			if currently_selected:
 				# outline shader ON
 				Game.current_weight = self
+				print("nice")

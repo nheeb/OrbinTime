@@ -40,7 +40,7 @@ func flip():
 func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 #	print("reached")
 	if event is InputEventMouseButton:
-		if event.pressed:
+		if event.pressed and event.button_index == 1:
 			flip()
 			emit_signal("flipped", x, y)
 

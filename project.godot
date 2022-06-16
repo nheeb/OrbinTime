@@ -8,11 +8,25 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Spatial",
+"class": "Weight",
+"language": "GDScript",
+"path": "res://Logic/Weight.gd"
+} ]
+_global_script_class_icons={
+"Weight": ""
+}
+
 [application]
 
 config/name="BuildYourOrb"
 run/main_scene="res://TileFlipPuzzleTest.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Game="*res://Logic/Game.tscn"
 
 [physics]
 

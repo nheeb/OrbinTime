@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tile_flip_2.ogg-76e4e93d30ef9db9ea50f6a20a10e42c.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/tile_flip_2.ogg"
+dest_files=[ "res://.import/tile_flip_2.ogg-76e4e93d30ef9db9ea50f6a20a10e42c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

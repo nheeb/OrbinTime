@@ -7,6 +7,8 @@
 [node name="Orb" type="RigidBody"]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="OrbBlackModel" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0 )

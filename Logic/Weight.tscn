@@ -1,22 +1,23 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Logic/Weight.gd" type="Script" id=1]
-
-[sub_resource type="CubeMesh" id=1]
+[ext_resource path="res://Models/WeightModel.tscn" type="PackedScene" id=2]
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 1, 1.00028, 1 )
+extents = Vector3( 3.40413, 3.74859, 3.61897 )
 
 [node name="Weight" type="Spatial"]
+transform = Transform( 0.315189, 0, 0, 0, 0.315189, 0, 0, 0, 0.315189, 0, 0, 0 )
 script = ExtResource( 1 )
 
-[node name="Mesh" type="MeshInstance" parent="."]
+[node name="Mesh2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.473135, 0, 0, 0, 0.473135, 0, 0, 0, 0.473135, 0, 0, 0 )
+
+[node name="ClickArea" type="Area" parent="Mesh2"]
 transform = Transform( 0.253028, 0, 0, 0, 0.253028, 0, 0, 0, 0.253028, 0, 0, 0 )
-mesh = SubResource( 1 )
 
-[node name="ClickArea" type="Area" parent="Mesh"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Mesh/ClickArea"]
+[node name="CollisionShape" type="CollisionShape" parent="Mesh2/ClickArea"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3575, 0 )
 shape = SubResource( 2 )
 
-[connection signal="input_event" from="Mesh/ClickArea" to="Mesh" method="_on_ClickArea_input_event"]
+[connection signal="input_event" from="Mesh2/ClickArea" to="." method="_on_ClickArea_input_event"]

@@ -22,3 +22,4 @@ surfaces/0 = {
 [node name="Sphere" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )
 skeleton = NodePath("../..")
+material/0 = null

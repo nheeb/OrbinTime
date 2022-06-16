@@ -54,7 +54,8 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 				weight.currently_selected = false
 				Game.selected_weight = null
 				
-				weight.transform.origin = self.transform.origin
+				weight.transform.origin.x = self.transform.origin.x
+				weight.transform.origin.z = self.transform.origin.z
 				Game.weight_x = x
 				Game.weight_y = y
 			elif Game.weight_x == x and Game.weight_y == y: # weight is on this tile

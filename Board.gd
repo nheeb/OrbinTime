@@ -21,7 +21,7 @@ func check_victory() -> bool:
 
 
 func diagonal_condition(x_flipped, y_flipped, x_other, y_other):
-	# possible to solve in 3x3 but pretty difficult
+	# possible to solve in 3x3 but pretty difficult, easy with a weight
 	if y_flipped-1 == y_other and x_flipped + 1 == x_other:
 		return true
 	if y_flipped-1 == y_other and x_flipped - 1 == x_other:
@@ -31,12 +31,22 @@ func diagonal_condition(x_flipped, y_flipped, x_other, y_other):
 	if y_flipped+1 == y_other and x_flipped - 1 == x_other:
 		return true
 	return false
+	
+func cardinal_condition(x_flipped, y_flipped, x_other, y_other):
+	if y_flipped-1 == y_other and x_flipped == x_other:
+		return true
+	if y_flipped+1 == y_other and x_flipped == x_other:
+		return true
+	if y_flipped == y_other and x_flipped + 1 == x_other:
+		return true
+	if y_flipped == y_other and x_flipped - 1 == x_other:
+		return true
 
 func check_flip_condition(x_flipped, y_flipped, x_other, y_other) -> bool:
 	# als erstes: diagonalen werden geflippt
 #	if y_flipped == y_other and x_flipped + 1 == x_other:
 #		return true
-	return diagonal_condition(x_flipped, y_flipped, x_other, y_other)
+	return cardinal_condition(x_flipped, y_flipped, x_other, y_other)
 
 func register_tile_change(x, y):
 	# changing rule, which tiles will flip as well

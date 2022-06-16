@@ -1,7 +1,7 @@
 extends Spatial
 
 onready var is_flipped := false
-export var random_flippiness = 10.5
+export var random_flippiness = 5.5
 onready var target_one = $Mesh.transform.rotated(Vector3.FORWARD, deg2rad(180.0 + (randf()-0.5)*random_flippiness))
 onready var target_two = $Mesh.transform.rotated(Vector3.FORWARD, deg2rad((randf()-0.5)*random_flippiness))
 
@@ -23,12 +23,11 @@ func flip_lerp(weight: float):
 	$Mesh.transform = $Mesh.transform.interpolate_with(target_transform, weight)
 
 func flip_visually():
-	if $Tween.is_active():
-		print("reset tween")
+	if $Tween.is_active():\
 		$Tween.stop_all()
 	target_transform = target_one if is_flipped else target_two
-
-	$Tween.interpolate_method(self, "flip_lerp", 0.0, 1.0, 1.0, Tween.TRANS_LINEAR)
+	$Tween.remove_all()
+	$Tween.interpolate_method(self, "flip_lerp", 0.0, 1.0, 1.8, Tween.TRANS_LINEAR)
 	$Tween.start()
 #	$ClickArea.monitoring = false
 #	$ClickArea.input_ray_pickable = false
@@ -42,10 +41,16 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == 1:
 			# either put a weight on this or flip it
-			if Game.current_weight != null:
-				var weight: Weight = Game.current_weight
-				Game.current_weight = null
+			if Game.selected_weight != null: # weight is selected for movement
+				var weight: Weight = Game.selected_weight
+				weight.currently_selected = false
+				Game.selected_weight = null
+				
 				weight.transform.origin = self.transform.origin
+				Game.weight_x = x
+				Game.weight_y = y
+			elif Game.weight_x == x and Game.weight_y == y: # weight is on this tile
+				pass # do nothing
 			else:  # flip
 				flip()
 				emit_signal("flipped", x, y)

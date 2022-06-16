@@ -10,7 +10,7 @@
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.43677, 0.899573, 0, -0.899573, 0.43677, 0.611616, 4.40535, 3.20552 )
 
-[node name="Board" parent="." instance=ExtResource( 3 )]
+[node name="3x3Board" parent="." instance=ExtResource( 3 )]
 
 [node name="Board2" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.87955, 0, 0 )

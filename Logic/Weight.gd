@@ -12,13 +12,12 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-
-
 func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == 1:
 			currently_selected = not currently_selected
 			if currently_selected:
+				print("weight was selected")
 				# outline shader ON
-				Game.current_weight = self
+				Game.selected_weight = self
 				print("nice")

@@ -36,16 +36,18 @@ func check_flip_condition(x_flipped, y_flipped, x_other, y_other) -> bool:
 	# als erstes: diagonalen werden geflippt
 #	if y_flipped == y_other and x_flipped + 1 == x_other:
 #		return true
-		
-
-	return false
+	return diagonal_condition(x_flipped, y_flipped, x_other, y_other)
 
 func register_tile_change(x, y):
 	# changing rule, which tiles will flip as well
 	for tile_row in tiles:
 		for tile in tile_row:
 			if check_flip_condition(x, y, tile.x, tile.y):
-				tile.flip()
+				# if there's a weight on here don't flip
+				if Game.weight_x == tile.x and Game.weight_y == tile.y:
+					pass # don't flip
+				else:
+					tile.flip()
 	
 	if check_victory():
 		print("wow you won")

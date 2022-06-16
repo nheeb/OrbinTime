@@ -7,6 +7,12 @@
 script = ExtResource( 2 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.372988, 0.927836, 0, -0.927836, 0.372988, 0, 0.495, 0.285 )
+transform = Transform( 1, 0, 0, 0, 0.372988, 0.927836, 0, -0.927836, 0.372988, 0, 0.703197, 0.352542 )
+
+[node name="Camera2" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.372988, 0.927836, 0, -0.927836, 0.372988, 0, 0.945961, 0.402131 )
+projection = 1
+current = true
+size = 0.5292
 
 [node name="Suitcase" parent="." instance=ExtResource( 1 )]

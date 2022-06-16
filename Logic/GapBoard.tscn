@@ -1,12 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Models/Tile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Board.gd" type="Script" id=2]
-
-[sub_resource type="CubeMesh" id=1]
-
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 1, 1.00028, 1 )
+[ext_resource path="res://Logic/Weight.tscn" type="PackedScene" id=3]
 
 [node name="Board" type="Spatial"]
 script = ExtResource( 2 )
@@ -38,12 +34,5 @@ transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15
 [node name="Tile33" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.670086, -1.1396e-07, 1.71132 )
 
-[node name="Weight" type="MeshInstance" parent="."]
-transform = Transform( 0.253028, 0, 0, 0, 0.253028, 0, 0, 0, 0.253028, 3.25927, 0, 0.144415 )
-mesh = SubResource( 1 )
-
-[node name="ClickArea" type="Area" parent="Weight"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Weight/ClickArea"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-shape = SubResource( 2 )
+[node name="Weight" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.99919, 0, 0 )

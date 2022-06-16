@@ -3,6 +3,9 @@ extends Spatial
 var maze_mode := true
 var max_angle_degree := 10
 
+func _ready():
+	$SuitcaseModel/OpenPivot.rotation_degrees = Vector3.ZERO
+	$SuitcaseModel/OpenPivot/CloserThing.rotation_degrees = Vector3.ZERO
 
 func _physics_process(delta):
 	if maze_mode:

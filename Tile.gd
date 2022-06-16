@@ -1,5 +1,7 @@
 extends Spatial
 
+export var flipped_in_beginning: bool = false
+
 onready var is_flipped := false
 export var random_flippiness = 5.5
 onready var target_one = $Mesh.transform.rotated(Vector3.FORWARD, deg2rad(180.0 + (randf()-0.5)*random_flippiness))
@@ -16,6 +18,12 @@ func _ready() -> void:
 	x = int(coords[0])
 	y = int(coords[1])
 	
+	$Mesh/Sprite3D.frame_coords = Vector2(y-1, x-1)
+	
+	if flipped_in_beginning:
+		is_flipped = true
+		$Mesh.transform = target_one
+
 
 var target_z = PI
 var target_transform: Transform

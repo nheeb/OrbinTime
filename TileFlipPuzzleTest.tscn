@@ -1,0 +1,132 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Models/Tile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Board.gd" type="Script" id=2]
+
+[node name="TileFlipPuzzleTest" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.43677, 0.899573, 0, -0.899573, 0.43677, 0.611616, 11.9199, 5.35952 )
+
+[node name="Board" type="Spatial" parent="."]
+script = ExtResource( 2 )
+
+[node name="Tile11" parent="Board" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.95376, 1.15424e-07, -1.03148 )
+
+[node name="Tile12" parent="Board" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.636588, 2.73587e-10, -1.02796 )
+
+[node name="Tile13" parent="Board" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.670086, -1.1396e-07, -1.02796 )
+
+[node name="Tile21" parent="Board" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.94818, 1.14936e-07, 0.324627 )
+
+[node name="Tile22" parent="Board" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.621978, -1.00366e-09, 0.314214 )
+
+[node name="Tile23" parent="Board" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.686841, -1.15424e-07, 0.314214 )
+
+[node name="Tile31" parent="Board" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.95376, 1.15424e-07, 1.7078 )
+
+[node name="Tile32" parent="Board" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.636588, 2.73587e-10, 1.71132 )
+
+[node name="Tile33" parent="Board" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.670086, -1.1396e-07, 1.71132 )
+
+[node name="Board2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.87955, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="Tile11" parent="Board2" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.95376, 1.15424e-07, -1.03148 )
+
+[node name="Tile12" parent="Board2" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.636588, 2.73587e-10, -1.02796 )
+
+[node name="Tile13" parent="Board2" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.670086, -1.1396e-07, -1.02796 )
+
+[node name="Tile21" parent="Board2" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.94818, 1.14936e-07, 0.324627 )
+
+[node name="Tile22" parent="Board2" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.621978, -1.00366e-09, 0.314214 )
+
+[node name="Tile23" parent="Board2" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.686841, -1.15424e-07, 0.314214 )
+
+[node name="Tile31" parent="Board2" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.95376, 1.15424e-07, 1.7078 )
+
+[node name="Tile32" parent="Board2" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.636588, 2.73587e-10, 1.71132 )
+
+[node name="Tile33" parent="Board2" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.670086, -1.1396e-07, 1.71132 )
+
+[node name="Board3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.10838, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="Tile11" parent="Board3" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.95376, 1.15424e-07, -1.03148 )
+
+[node name="Tile12" parent="Board3" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.636588, 2.73587e-10, -1.02796 )
+
+[node name="Tile13" parent="Board3" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.670086, -1.1396e-07, -1.02796 )
+
+[node name="Tile21" parent="Board3" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.94818, 1.14936e-07, 0.324627 )
+
+[node name="Tile22" parent="Board3" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.621978, -1.00366e-09, 0.314214 )
+
+[node name="Tile23" parent="Board3" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.686841, -1.15424e-07, 0.314214 )
+
+[node name="Tile31" parent="Board3" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.95376, 1.15424e-07, 1.7078 )
+
+[node name="Tile32" parent="Board3" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.636588, 2.73587e-10, 1.71132 )
+
+[node name="Tile33" parent="Board3" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.670086, -1.1396e-07, 1.71132 )
+
+[node name="Board4" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0436807, 0, -5.10346 )
+script = ExtResource( 2 )
+
+[node name="Tile11" parent="Board4" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.95376, 1.15424e-07, -1.03148 )
+
+[node name="Tile12" parent="Board4" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.636588, 2.73587e-10, -1.02796 )
+
+[node name="Tile13" parent="Board4" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.670086, -1.1396e-07, -1.02796 )
+
+[node name="Tile21" parent="Board4" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.94818, 1.14936e-07, 0.324627 )
+
+[node name="Tile22" parent="Board4" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.621978, -1.00366e-09, 0.314214 )
+
+[node name="Tile23" parent="Board4" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.686841, -1.15424e-07, 0.314214 )
+
+[node name="Tile31" parent="Board4" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.95376, 1.15424e-07, 1.7078 )
+
+[node name="Tile32" parent="Board4" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.636588, 2.73587e-10, 1.71132 )
+
+[node name="Tile33" parent="Board4" instance=ExtResource( 1 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.670086, -1.1396e-07, 1.71132 )

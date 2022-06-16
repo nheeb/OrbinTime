@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Models/Tile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Board.gd" type="Script" id=2]
 [ext_resource path="res://Logic/3x3Board.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Logic/Weight.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/WeightRack.tscn" type="PackedScene" id=5]
 
 [node name="TileFlipPuzzleTest" type="Spatial"]
 
@@ -110,3 +111,6 @@ transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15
 
 [node name="Weight" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.19914, 0, 0 )
+
+[node name="WeightRack" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.88237, 0, 1.64746 )

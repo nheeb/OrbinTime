@@ -46,3 +46,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.45 )
 transform = Transform( 1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 0, 0 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]

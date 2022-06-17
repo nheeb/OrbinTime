@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="Drawer" type="Spatial"]
+
+[node name="DrawerMesh" type="MeshInstance" parent="."]
+transform = Transform( 2.66849, 0, 0, 0, 0.256694, 0, 0, 0, 1.42725, 0, 0, 0 )
+mesh = SubResource( 1 )

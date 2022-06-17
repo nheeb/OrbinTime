@@ -1,9 +1,9 @@
 [gd_scene load_steps=27 format=2]
 
-[ext_resource path="res://Meshes/bronze_gold.material" type="Material" id=1]
-[ext_resource path="res://Meshes/ziffernblatt.material" type="Material" id=2]
-[ext_resource path="res://Meshes/Material_001.material" type="Material" id=3]
-[ext_resource path="res://Meshes/silver.material" type="Material" id=4]
+[ext_resource path="res://Assets/Meshes/bronze_gold.material" type="Material" id=1]
+[ext_resource path="res://Assets/Meshes/ziffernblatt.material" type="Material" id=2]
+[ext_resource path="res://Assets/Meshes/Material_001.material" type="Material" id=3]
+[ext_resource path="res://Assets/Meshes/silver.material" type="Material" id=4]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Socket_Cylinder001"

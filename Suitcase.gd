@@ -25,3 +25,6 @@ func straight():
 	$Tween.interpolate_property(self, "rotation_degrees:x", rotation_degrees.x, 0.0, 1.0, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
 	$Tween.interpolate_property(self, "rotation_degrees:z", rotation_degrees.z, 0.0, 1.0, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
 	$Tween.start()
+
+func _on_ButtonDrawer_button_pressed() -> void:
+	$Drawer.pull_out()

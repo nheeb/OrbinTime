@@ -76,11 +76,14 @@ func _on_Switch3_switch_turned() -> void:
 func _on_BoardPuzzle1_puzzle_won() -> void:
 	Game.puzzle1_beaten = true
 	# turn on LED 1
+	$LED.set_light("Green", true)
 
 func _on_BoardPuzzle2_puzzle_won() -> void:
 	Game.puzzle2_beaten = true
+	$LED.set_light("Blue", true)
 
 func _on_BoardPuzzle3_puzzle_won() -> void:
 	Game.puzzle3_beaten = true
+	$LED.set_light("Red", true)
 
 

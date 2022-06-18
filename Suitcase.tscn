@@ -134,6 +134,8 @@ transform = Transform( -3.08571e-08, 0, 0.705928, 0.62828, 0.321867, 2.7463e-08,
 [connection signal="switch_turned_off" from="Buttons/Switch3" to="." method="_on_Switch3_switch_turned"]
 [connection signal="switch_turned_on" from="Buttons/Switch3" to="." method="_on_Switch3_switch_turned"]
 [connection signal="puzzle_won" from="DrawerPuzzle1/Drawer/BoardPuzzle1" to="." method="_on_BoardPuzzle1_puzzle_won"]
+[connection signal="puzzle_won" from="DrawerPuzzle2/Drawer/BoardPuzzle2" to="." method="_on_BoardPuzzle2_puzzle_won"]
+[connection signal="puzzle_won" from="DrawerPuzzle3/Drawer/ImpossibleBoard" to="." method="_on_BoardPuzzle3_puzzle_won"]
 
 [editable path="Buttons/Switch1"]
 [editable path="Buttons/Switch1/SwitchModel"]

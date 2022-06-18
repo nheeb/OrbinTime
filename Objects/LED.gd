@@ -7,3 +7,4 @@ func _ready():
 
 func set_light(led : String, value: bool) -> void:
 	get_node(led).get_active_material(0).emission_enabled = value
+	get_node(led).get_node("OmniLight").light_energy = 1.0 if value else 0.0

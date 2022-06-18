@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Suitcase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Level.gd" type="Script" id=2]
 [ext_resource path="res://Objects/Orb.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Logic/3x3Board.tscn" type="PackedScene" id=4]
+[ext_resource path="res://default_env.tres" type="Environment" id=5]
 
 [node name="Level" type="Spatial"]
 script = ExtResource( 2 )
@@ -39,3 +40,4 @@ transform = Transform( 1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0
 [node name="Tween" type="Tween" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 5 )

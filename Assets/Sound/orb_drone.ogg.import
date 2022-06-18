@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/orb_drone.ogg-4f54a60f29225cf39642d3aa0a6012af.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/orb_drone.ogg"
+dest_files=[ "res://.import/orb_drone.ogg-4f54a60f29225cf39642d3aa0a6012af.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -20,6 +20,16 @@ func move_camera_to_base_pos():
 	$Tween.interpolate_method(self, "interpolate", 0.0, 1.0, 2.5)
 	$Tween.start()
 
+
+func move_camera_to_ending_pos():
+#	$Tween.reset_all()
+#	$Tween.remove_all()
+	target = Transform($Pivot/CameraEnding.transform)
+	start = Transform($Pivot/Camera.transform)
+	pivot_start = Transform($Pivot.transform)
+	$Tween.interpolate_method(self, "interpolate", 0.0, 1.0, 2.5)
+	$Tween.start()
+
 var maze_mode := false
 
 func _ready():
@@ -45,12 +55,26 @@ func _ready():
 
 func ending_initiated():
 	print("ending init")
-	# TODO --- 
+	if Game.puzzle1_beaten or Game.puzzle2_beaten or Game.puzzle3_beaten:
+		view_mode = false
+		move_camera_to_ending_pos()
+		yield($Tween, "tween_all_completed")
+		$Orb.do_mountains = Game.puzzle1_beaten
+		$Orb.do_trees = Game.puzzle2_beaten
+		$Orb.do_rivers = Game.puzzle3_beaten
+		$Orb.become_planet()
+		yield($Orb, "planet_done")
+		$Suitcase/EndingText.set_but_text(Game.puzzle1_beaten , Game.puzzle2_beaten , Game.puzzle3_beaten)
+		$Suitcase/EndingText.animate()
+		
 
 var view_mode := false
 var max_move := .03
 var cam_global_pos : Vector3
 func _physics_process(_delta):
+#	if Input.is_action_just_pressed("ending"):
+#		move_camera_to_ending_pos()
+#		view_mode = false
 	if view_mode:
 		var mouse_pos := get_viewport().get_mouse_position()
 		mouse_pos.x = 2.0 * (float(mouse_pos.x) / get_viewport().size.x) - 1.0
@@ -73,6 +97,7 @@ func _physics_process(_delta):
 			$Orb/AnimationPlayer.play("spin")
 			# orb fly to camera
 			var fly_duration := 3.3
+			$OrbDroneSound.play()
 			$Tween.interpolate_property($Orb, "global_transform:origin:x", $Orb.global_transform.origin.x, $Pivot/Camera/OrbFlyTarget.global_transform.origin.x, fly_duration)
 			$Tween.interpolate_property($Orb, "global_transform:origin:z", $Orb.global_transform.origin.z, $Pivot/Camera/OrbFlyTarget.global_transform.origin.z, fly_duration)
 			$Tween.interpolate_property($Orb, "global_transform:origin:y", $Orb.global_transform.origin.y, $Pivot/Camera/OrbFlyTarget.global_transform.origin.y, fly_duration, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)

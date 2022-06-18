@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Suitcase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Level.gd" type="Script" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Assets/Sound/unlock.ogg" type="AudioStream" id=4]
 [ext_resource path="res://default_env.tres" type="Environment" id=5]
 [ext_resource path="res://Assets/Sound/hinge_opening.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Sound/orb_drone.ogg" type="AudioStream" id=7]
+[ext_resource path="res://EndingText.tscn" type="PackedScene" id=8]
 
 [sub_resource type="PhysicsMaterial" id=1]
 
@@ -13,6 +15,9 @@
 script = ExtResource( 2 )
 
 [node name="Suitcase" parent="." instance=ExtResource( 1 )]
+
+[node name="EndingText" parent="Suitcase" instance=ExtResource( 8 )]
+transform = Transform( 0.085891, 0, 0, 0, 0.0810262, 0.0284957, 0, -0.0284957, 0.0810262, 0, 0.0283488, -0.190601 )
 
 [node name="MazeFinish" type="Spatial" parent="Suitcase"]
 transform = Transform( 0.222174, 0, 0, 0, 0.222174, 0, 0, 0, 0.222174, 0.157171, 0.0848121, -0.059342 )
@@ -35,6 +40,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0332579, -0.00886017, -0.085
 [node name="Position3D" type="Position3D" parent="Pivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.45 )
 
+[node name="CameraEnding" type="Position3D" parent="Pivot"]
+transform = Transform( 1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0.138, 0.0380369 )
+
 [node name="PivotTarget" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 0, 0 )
 
@@ -51,3 +59,7 @@ stream = ExtResource( 4 )
 
 [node name="HingeSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+
+[node name="OrbDroneSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -5.0

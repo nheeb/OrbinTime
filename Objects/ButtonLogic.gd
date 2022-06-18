@@ -27,5 +27,10 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 
 
 func _on_ClickArea_mouse_exited() -> void:
+	Game.toggle_outline(self, false)
 	if is_pressed:
 		released()
+
+
+func _on_ClickArea_mouse_entered() -> void:
+	Game.toggle_outline(self, true)

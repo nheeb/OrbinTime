@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/weight.gltf-b71ce9b2a98154c2d067152dfe4289ae.scn"
+path="res://.import/Switch.gltf-4fc57edf069c297e3c073f7079225972.scn"
 
 [deps]
 
-source_file="res://Meshes/weight.gltf"
-dest_files=[ "res://.import/weight.gltf-b71ce9b2a98154c2d067152dfe4289ae.scn" ]
+source_file="res://Meshes/Switch.gltf"
+dest_files=[ "res://.import/Switch.gltf-4fc57edf069c297e3c073f7079225972.scn" ]
 
 [params]
 

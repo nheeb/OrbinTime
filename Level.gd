@@ -24,6 +24,9 @@ func move_camera_to_base_pos():
 var maze_mode := false
 
 func _ready():
+	$Suitcase.maze_mode = false
+	$Orb.visible = false
+	$Orb.mode = RigidBody.MODE_STATIC
 	var suitcase_target : Vector3 = $Suitcase.global_transform.origin
 	$Suitcase.global_transform.origin = $SuitcaseSpawn.global_transform.origin
 	$Suitcase.transform.basis = Transform.IDENTITY.rotated(Vector3(1, .5, 0).normalized(), 70).basis
@@ -33,7 +36,12 @@ func _ready():
 	$Tween.interpolate_property($Suitcase, "transform:basis", $Suitcase.transform.basis, Basis.IDENTITY, 5)
 	$Tween.start()
 	yield($Tween, "tween_all_completed")
+	$Orb.visible = true
+	$Orb.global_transform.origin = $Suitcase/SuitcaseModel/OpenPivot/Maze/StaticBody/OrbSpawnPosition.global_transform.origin
+	yield(get_tree().create_timer(1),"timeout")
 	maze_mode = true
+	$Suitcase.maze_mode = true
+	$Orb.mode = RigidBody.MODE_RIGID
 
 func _physics_process(_delta):
 	if maze_mode:

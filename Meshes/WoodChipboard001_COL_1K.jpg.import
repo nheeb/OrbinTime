@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/FabricLeatherBuffaloSemiAniline001_COL_1K.jpg-95cc3780c7391a6489c8d662a48317bb.s3tc.stex"
-path.etc2="res://.import/FabricLeatherBuffaloSemiAniline001_COL_1K.jpg-95cc3780c7391a6489c8d662a48317bb.etc2.stex"
+path.s3tc="res://.import/WoodChipboard001_COL_1K.jpg-f5483e337bae99144969035924beaa0b.s3tc.stex"
+path.etc2="res://.import/WoodChipboard001_COL_1K.jpg-f5483e337bae99144969035924beaa0b.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Meshes/FabricLeatherBuffaloSemiAniline001_COL_1K.jpg"
-dest_files=[ "res://.import/FabricLeatherBuffaloSemiAniline001_COL_1K.jpg-95cc3780c7391a6489c8d662a48317bb.s3tc.stex", "res://.import/FabricLeatherBuffaloSemiAniline001_COL_1K.jpg-95cc3780c7391a6489c8d662a48317bb.etc2.stex" ]
+source_file="res://Meshes/WoodChipboard001_COL_1K.jpg"
+dest_files=[ "res://.import/WoodChipboard001_COL_1K.jpg-f5483e337bae99144969035924beaa0b.s3tc.stex", "res://.import/WoodChipboard001_COL_1K.jpg-f5483e337bae99144969035924beaa0b.etc2.stex" ]
 
 [params]
 

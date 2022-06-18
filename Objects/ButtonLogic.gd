@@ -10,11 +10,13 @@ func pressed():
 	# for now move the buttonTop immediately down
 	# for more fanciness we could use a Tween
 	$EdgeButtonModel/EdgeButtonTop.translate(Vector3.DOWN * button_press_depth)
+	$PushSound.play()
 	is_pressed = true
 	emit_signal("button_pressed")
 	
 func released():
 	$EdgeButtonModel/EdgeButtonTop.translate(-Vector3.DOWN * button_press_depth)
+	$ReleaseSound.play()
 	is_pressed = false
 
 func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vector3, _normal: Vector3, _shape_idx: int) -> void:

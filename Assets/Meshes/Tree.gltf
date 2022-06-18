@@ -1,0 +1,218 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.8.19",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Foilage",
+            "translation" : [
+                -0.10175275802612305,
+                3.722710132598877,
+                0.033344537019729614
+            ]
+        },
+        {
+            "mesh" : 1,
+            "name" : "Cylinder",
+            "scale" : [
+                0.39505285024642944,
+                0.39505285024642944,
+                0.39505285024642944
+            ],
+            "translation" : [
+                -0.01641020178794861,
+                1.7364379167556763,
+                -0.04102548956871033
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "TreeShader",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.018993370234966278,
+                    0.06294499337673187,
+                    0.004592908546328545,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.8818181753158569
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "TreeBark",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.2140345275402069,
+                    0.10151279717683792,
+                    0.03251098468899727,
+                    1
+                ],
+                "metallicFactor" : 0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.008",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        },
+        {
+            "name" : "Cylinder",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 7720,
+            "max" : [
+                2.968101978302002,
+                2.6692862510681152,
+                2.1515908241271973
+            ],
+            "min" : [
+                -2.3536741733551025,
+                -2.005774736404419,
+                -2.779930353164673
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 7720,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 7720,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 17400,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 344,
+            "max" : [
+                1.9494730234146118,
+                5.945259094238281,
+                0.8199087381362915
+            ],
+            "min" : [
+                -2.244868278503418,
+                -4.827428817749023,
+                -2.9531705379486084
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 344,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 344,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 1380,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 92640,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 92640,
+            "byteOffset" : 92640
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 61760,
+            "byteOffset" : 185280
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 34800,
+            "byteOffset" : 247040
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4128,
+            "byteOffset" : 281840
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4128,
+            "byteOffset" : 285968
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2752,
+            "byteOffset" : 290096
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2760,
+            "byteOffset" : 292848
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 295608,
+            "uri" : "Tree.bin"
+        }
+    ]
+}

@@ -15,7 +15,7 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "Sphere"
+            "name" : "Cube"
         }
     ],
     "materials" : [
@@ -37,7 +37,7 @@
     ],
     "meshes" : [
         {
-            "name" : "Sphere",
+            "name" : "Cube",
             "primitives" : [
                 {
                     "attributes" : {
@@ -68,58 +68,58 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 604,
+            "count" : 1734,
             "max" : [
-                0.9999997019767761,
-                1,
-                0.9999994039535522
+                0.8562712073326111,
+                0.8562712073326111,
+                0.8562712073326111
             ],
             "min" : [
-                -0.9999990463256836,
-                -1,
-                -0.9999987483024597
+                -0.8562712073326111,
+                -0.8562712073326111,
+                -0.8562712073326111
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 604,
+            "count" : 1734,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 604,
+            "count" : 1734,
             "type" : "VEC2"
         },
         {
             "bufferView" : 3,
             "componentType" : 5123,
-            "count" : 2880,
+            "count" : 9216,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 7248,
+            "byteLength" : 20808,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 7248,
-            "byteOffset" : 7248
+            "byteLength" : 20808,
+            "byteOffset" : 20808
         },
         {
             "buffer" : 0,
-            "byteLength" : 4832,
-            "byteOffset" : 14496
+            "byteLength" : 13872,
+            "byteOffset" : 41616
         },
         {
             "buffer" : 0,
-            "byteLength" : 5760,
-            "byteOffset" : 19328
+            "byteLength" : 18432,
+            "byteOffset" : 55488
         }
     ],
     "samplers" : [
@@ -130,7 +130,7 @@
     ],
     "buffers" : [
         {
-            "byteLength" : 25088,
+            "byteLength" : 73920,
             "uri" : "Orb.bin"
         }
     ]

@@ -71,4 +71,3 @@ stream = ExtResource( 6 )
 [connection signal="input_event" from="ClickArea" to="." method="_on_ClickArea_input_event"]
 [connection signal="mouse_entered" from="ClickArea" to="." method="_on_ClickArea_mouse_entered"]
 [connection signal="mouse_exited" from="ClickArea" to="." method="_on_ClickArea_mouse_exited"]
-[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]

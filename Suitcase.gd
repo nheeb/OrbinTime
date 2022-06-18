@@ -18,10 +18,11 @@ func _physics_process(_delta):
 		
 		rotation_degrees.x = lerp(rotation_degrees.x, x_target, .05)
 		rotation_degrees.z = lerp(rotation_degrees.z, z_target, .05)
-#		rotation_degrees.x = x_target
-#		rotation_degrees.z = z_target
 
 		rotation_degrees.y = 0
+
+
+		
 
 func open():
 	$SuitcaseModel/AnimationPlayer.play("open")

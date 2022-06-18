@@ -43,7 +43,21 @@ func _ready():
 	$Suitcase.maze_mode = true
 	$Orb.mode = RigidBody.MODE_RIGID
 
+var view_mode := false
+var max_move := .05
+var cam_global_pos : Vector3
 func _physics_process(_delta):
+	if view_mode:
+		var mouse_pos := get_viewport().get_mouse_position()
+		mouse_pos.x = 2.0 * (float(mouse_pos.x) / get_viewport().size.x) - 1.0
+		mouse_pos.y = 2.0 * (float(mouse_pos.y) / get_viewport().size.y) - 1.0
+		
+		var x_target := mouse_pos.x * max_move + cam_global_pos.x
+		var z_target := mouse_pos.y * max_move + cam_global_pos.z
+		
+		$Pivot/Camera.global_transform.origin.x = lerp($Pivot/Camera.global_transform.origin.x, x_target, .04)
+		$Pivot/Camera.global_transform.origin.z = lerp($Pivot/Camera.global_transform.origin.z, z_target, .04)
+	
 	if maze_mode:
 		var dist_to_finish :float = $Orb.global_transform.origin.distance_to($Suitcase/MazeFinish.global_transform.origin)
 		if dist_to_finish < finish_range:
@@ -57,7 +71,7 @@ func _physics_process(_delta):
 			$Tween.interpolate_property($Orb, "global_transform:origin:x", $Orb.global_transform.origin.x, $Pivot/Camera/OrbFlyTarget.global_transform.origin.x, fly_duration)
 			$Tween.interpolate_property($Orb, "global_transform:origin:z", $Orb.global_transform.origin.z, $Pivot/Camera/OrbFlyTarget.global_transform.origin.z, fly_duration)
 			$Tween.interpolate_property($Orb, "global_transform:origin:y", $Orb.global_transform.origin.y, $Pivot/Camera/OrbFlyTarget.global_transform.origin.y, fly_duration, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
-			$Tween.interpolate_property($Orb, "scale", Vector3.ONE, 2*Vector3.ONE, fly_duration)
+			$Tween.interpolate_property($Orb, "scale", Vector3.ONE, 2.5*Vector3.ONE, fly_duration)
 			$Tween.start()
 			yield($Tween, "tween_all_completed")
 			$Suitcase.open()
@@ -69,6 +83,10 @@ func _physics_process(_delta):
 			yield(get_tree().create_timer(.7), "timeout")
 			$Suitcase/SuitcaseModel/OpenPivot/Maze.queue_free()
 			move_camera_to_base_pos()
+			yield($Tween, "tween_all_completed")
+			cam_global_pos = $Pivot/Camera.global_transform.origin
+			view_mode=true
 			
 		if Input.is_action_just_pressed("teleport_orb") or $Orb.global_transform.origin.y < -2:
 			$Orb.global_transform.origin = $Suitcase/MazeFinish.global_transform.origin
+

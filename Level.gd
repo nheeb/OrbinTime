@@ -53,12 +53,13 @@ func _ready():
 	$Orb.mode = RigidBody.MODE_RIGID
 	var _e = $Suitcase/Main/SocketModel.connect("ending_initiated", self, "ending_initiated")
 
+var ending_mode := false
 func ending_initiated():
-	print("ending init")
 	if Game.puzzle1_beaten or Game.puzzle2_beaten or Game.puzzle3_beaten:
 		view_mode = false
 		move_camera_to_ending_pos()
 		yield($Tween, "tween_all_completed")
+		$Suitcase/Main/SocketModel/AnimationPlayer.play("busy")
 		$Orb.do_mountains = Game.puzzle1_beaten
 		$Orb.do_trees = Game.puzzle2_beaten
 		$Orb.do_rivers = Game.puzzle3_beaten
@@ -66,7 +67,20 @@ func ending_initiated():
 		yield($Orb, "planet_done")
 		$Suitcase/EndingText.set_but_text(Game.puzzle1_beaten , Game.puzzle2_beaten , Game.puzzle3_beaten)
 		$Suitcase/EndingText.animate()
-		
+		yield(get_tree().create_timer(3),"timeout")
+		ending_mode = true
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if ending_mode:
+			if !Game.puzzle1_beaten or !Game.puzzle2_beaten or !Game.puzzle3_beaten:
+				ending_mode = false
+				move_camera_to_base_pos()
+				$Orb.revert()
+				yield($Tween, "tween_all_completed")
+				$Suitcase/EndingText.visible = false
+				$Suitcase/Main/SocketModel/AnimationPlayer.play("idle")
+
 
 var view_mode := false
 var max_move := .03
@@ -115,6 +129,7 @@ func _physics_process(_delta):
 			$Suitcase/SuitcaseModel/Belt.visible = false
 			move_camera_to_base_pos()
 			yield($Tween, "tween_all_completed")
+			$Suitcase/Circles.activate()
 			cam_global_pos = $Pivot/Camera.global_transform.origin
 			view_mode=true
 			

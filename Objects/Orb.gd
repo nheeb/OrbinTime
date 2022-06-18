@@ -43,3 +43,20 @@ func become_planet():
 		$Tween.start()
 		yield($Tween,"tween_all_completed")
 	emit_signal("planet_done")
+
+func revert():
+	if do_grass:
+		$Tween.interpolate_property($OrbBlackModel/Sphere.mesh.surface_get_material(0), "shader_param/paint_value", 1.0, 0.0, 4.0)
+	if do_mountains:
+		$Tween.interpolate_property($OrbBlackModel/Sphere.mesh.surface_get_material(0), "shader_param/mountain_value", 1.0, 0.0, 3.0)
+	if do_rivers:
+		$Tween.interpolate_property($OrbBlackModel/Sphere.mesh.surface_get_material(0), "shader_param/river_value", 1.0, 0.0, 3.5)
+	$Tween.start()
+	if do_trees:
+		var trees := []
+		trees.append_array($OrbBlackModel/Trees.get_children())
+		trees.shuffle()
+		for t in trees:
+			if t is MeshInstance:
+				t.queue_free()
+				yield(get_tree().create_timer(.2),"timeout")

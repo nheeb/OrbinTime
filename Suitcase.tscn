@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Models/SuitcaseModel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Suitcase.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Objects/DrawerWithPuzzle1.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/DrawerWithPuzzle2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/LED.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Effects/Circles.tscn" type="PackedScene" id=12]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -52,7 +53,7 @@ skeleton = NodePath("../..")
 material/0 = SubResource( 2 )
 
 [node name="SocketModel" parent="Main" instance=ExtResource( 3 )]
-transform = Transform( 0.0359511, 0, 0, 0, 0.0359511, 0, 0, 0, 0.0359511, 0, -0.0685433, -0.241635 )
+transform = Transform( 0.0347379, 0, -0.00926058, 0, 0.0359511, 0, 0.00926058, 0, 0.0347379, 0, -0.0685433, -0.241635 )
 
 [node name="OrbTarget" type="Spatial" parent="Main/SocketModel"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7422, 0 )
@@ -113,7 +114,7 @@ mesh = SubResource( 4 )
 [node name="DrawerPuzzle1" parent="." instance=ExtResource( 9 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.722336, -0.307586, 0 )
 
-[node name="BoardPuzzle1" parent="DrawerPuzzle1/Drawer" index="4"]
+[node name="BoardPuzzle1" parent="DrawerPuzzle1/Drawer" index="5"]
 transform = Transform( 0.524194, 0, 6.77626e-21, 0, 1.80556, 0, -6.77626e-21, 0, 0.524194, -0.338818, 0.386922, -0.156461 )
 
 [node name="DrawerPuzzle2" parent="." instance=ExtResource( 10 )]
@@ -123,7 +124,10 @@ transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.72683
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.722, -0.875268, 0 )
 
 [node name="LED" parent="." instance=ExtResource( 11 )]
-transform = Transform( -3.08571e-08, 0, 0.705928, 0.62828, 0.321867, 2.7463e-08, -0.321867, 0.62828, -1.40693e-08, 0.000296958, 0.0437303, -0.289202 )
+transform = Transform( -3.08571e-08, 0, 0.705928, 0.62828, 0.321867, 2.7463e-08, -0.321867, 0.62828, -1.40693e-08, 0.000296958, 0.0456448, -0.296899 )
+
+[node name="Circles" parent="." instance=ExtResource( 12 )]
+transform = Transform( 0.0332468, 0, 0, 0, 0.0396075, 0, 0, 0, 0.0332468, 0, 0, -0.242104 )
 
 [connection signal="switch_turned_off" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]
 [connection signal="switch_turned_on" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]

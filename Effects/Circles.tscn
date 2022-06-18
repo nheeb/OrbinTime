@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Shader/Circles.gdshader" type="Shader" id=1]
+[ext_resource path="res://Effects/Circles.gd" type="Script" id=2]
+
+[sub_resource type="CylinderMesh" id=1]
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = ExtResource( 1 )
+shader_param/albedo = Color( 1, 0.996078, 0.631373, 1 )
+shader_param/offset_time = 0.0
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 1 )
+shader_param/albedo = Color( 0.8125, 0.638931, 0.415771, 1 )
+shader_param/offset_time = 0.05
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 1 )
+shader_param/albedo = Color( 1, 0.996078, 0.631373, 1 )
+shader_param/offset_time = 0.1
+
+[sub_resource type="ShaderMaterial" id=7]
+shader = ExtResource( 1 )
+shader_param/albedo = Color( 1, 0.996078, 0.631373, 1 )
+shader_param/offset_time = 0.15
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = ExtResource( 1 )
+shader_param/albedo = Color( 1, 0.996078, 0.631373, 1 )
+shader_param/offset_time = 0.2
+
+[node name="Circles" type="Spatial"]
+script = ExtResource( 2 )
+color = Color( 1, 0.996078, 0.631373, 1 )
+
+[node name="Cylinder" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 2.72905, 0, 0, 0, 1, 0, 2.55599, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 5 )
+
+[node name="Cylinder2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 2.72905, 0, 0, 0, 1, 0, 2.55599, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 4 )
+
+[node name="Cylinder3" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 2.72905, 0, 0, 0, 1, 0, 2.55599, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 6 )
+
+[node name="Cylinder4" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 2.72905, 0, 0, 0, 1, 0, 2.55599, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 7 )
+
+[node name="Cylinder5" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 2.72905, 0, 0, 0, 1, 0, 2.55599, 0 )
+visible = false
+mesh = SubResource( 1 )
+material/0 = SubResource( 8 )
+
+[node name="Tween" type="Tween" parent="."]

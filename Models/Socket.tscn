@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Assets/Meshes/bronze_gold.material" type="Material" id=1]
 [ext_resource path="res://Assets/Meshes/ziffernblatt.material" type="Material" id=2]
@@ -362,6 +362,329 @@ surfaces/0 = {
 "vertex_count": 171
 }
 
+[sub_resource type="Animation" id=24]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Clock/Timepiece:rotation_degrees:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Clock/Timepiece:rotation_degrees:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 36.229, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Clock/Timepiece:rotation_degrees:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("2:rotation_degrees:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 5.30246, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("2:rotation_degrees:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 90, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("2:rotation_degrees:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( -90, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("gear 3:rotation_degrees:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 82.8442, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("gear 3:rotation_degrees:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 90, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("gear 3:rotation_degrees:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( -90, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("gear 3:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 82.8442, 90, -90 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("2:rotation_degrees")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 5.30246, 90, -90 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("1001:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 7.91514, -89.9999, -90 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("2001:rotation_degrees")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 6.58071, 102.445, -92.969 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("gear 3001:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 90, -114.986, 0 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("1002:rotation_degrees")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 5.80013, 160.368, -90 ) ]
+}
+tracks/15/type = "bezier"
+tracks/15/path = NodePath("Cylinder002:rotation_degrees:x")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"points": PoolRealArray( 2.0264e-06, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("Cylinder002:rotation_degrees:y")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( -25.099, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/17/type = "bezier"
+tracks/17/path = NodePath("Cylinder002:rotation_degrees:z")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"points": PoolRealArray( -90, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "busy"
+length = 4.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Clock/Timepiece:rotation_degrees:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 36.229, -0.25, 0, 0.25, 0, -79.113, -0.25, 0, 0.25, 0, -61.519, -0.25, 0, 0.25, 0, -61.519, -0.25, 0, 0.25, 0, -93.311, -0.25, 0, 0.25, 0, -93.311, -0.25, 0, 0.25, 0, -115.766, -0.25, 0, 0.25, 0, -13.422, -0.25, 0, 0.25, 0, -50.248, -0.25, 0, 0.25, 0, -54.886, -0.25, 0, 0.25, 0, 11.085, -0.25, 0, 0.25, 0, 11.085, -0.25, 0, 0.25, 0, 36.229, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4, 0.8, 1, 1.4, 1.6, 1.8, 2.3, 2.6, 2.8, 3.3, 3.5, 3.7 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("gear 3:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 82.8442, 90, -90 ), Vector3( 802.844, 90, -90 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 725.302, 90, -90 ), Vector3( 5.30246, 90, -90 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("1001:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 7.91514, -89.9999, -90 ), Vector3( 367.915, -90, -90 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("2001:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 6.58071, 102.445, -92.969 ), Vector3( 366.581, 102.445, -92.969 ) ]
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Cylinder002:rotation_degrees:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 2.0264e-06, -0.25, 0, 0.25, 0, -64.652, -0.25, 0, 0.25, 0, -64.652, -0.25, 0, 0.25, 0, 2.0264e-06, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2.5, 3.5 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Cylinder002:rotation_degrees:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( -25.099, -0.25, 0, 0.25, 0, -25.099, -0.25, 0, 0.25, 0, -25.099, -0.25, 0, 0.25, 0, -25.099, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2.5, 3.5 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("Cylinder002:rotation_degrees:z")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( -90, -0.25, 0, 0.25, 0, -90, -0.25, 0, 0.25, 0, -90, -0.25, 0, 0.25, 0, -90, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2.5, 3.5 )
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "idle"
+length = 4.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Clock/Timepiece:rotation_degrees:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 36.229, -0.25, 0, 0.25, 0, 9.282, -0.25, 0, 0.25, 0, 9.282, -0.25, 0, 0.25, 0, 69.141, -0.25, 0, 0.25, 0, 36.6, -0.25, 0, 0.25, 0, 36.6, -0.25, 0, 0.25, 0, 36.229, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9, 1.2, 2.2, 3, 3.2, 3.9 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("2:rotation_degrees:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 5.30246, -0.25, 0, 4, 361.961, 365.302, -4, -359.479, 0.4, -8.11865 ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("gear 3:rotation_degrees:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 442.844, -0.25, 0, 4, -357.352, 82.8442, -4, 363.619, 0.25, 0 ),
+"times": PoolRealArray( 0, 4 )
+}
+
 [node name="Socket" type="Spatial"]
 script = ExtResource( 5 )
 
@@ -371,7 +694,7 @@ mesh = SubResource( 1 )
 skeleton = NodePath("../..")
 
 [node name="Timepiece" type="MeshInstance" parent="Clock"]
-transform = Transform( 1.05827, 0, 0, 0, 4.9382, 0, 0, 0, 1.83156, 0, 0.798448, 0.150238 )
+transform = Transform( 0.853666, 0, 1.08248, 0, 4.93821, 0, -0.625453, 0, 1.47745, -0.0344572, 0.798448, 0.125995 )
 mesh = SubResource( 2 )
 skeleton = NodePath("../../..")
 
@@ -387,37 +710,37 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.51931, -0.259865 )
 shape = SubResource( 23 )
 
 [node name="gear 3" type="MeshInstance" parent="."]
-transform = Transform( -0.212665, -5.22592e-09, 0.0266992, -0.0266992, 0, -0.212665, 1.19769e-07, -0.00922909, -2.55507e-08, -0.093659, 2.00176, 0.991465 )
+transform = Transform( -0.212665, -5.20446e-09, 0.0266993, -0.0266993, -5.02529e-11, -0.212665, 1.20071e-07, -0.00922909, -1.38983e-08, -0.093659, 2.00176, 0.991465 )
 mesh = SubResource( 4 )
 skeleton = NodePath("../..")
 
 [node name="2" type="MeshInstance" parent="."]
-transform = Transform( 0.00704373, 8.095e-10, -0.0758936, 0.0758936, -5.39666e-10, 0.00704374, 2.27153e-09, 0.0090541, 9.08611e-09, -0.152686, 1.52426, 0.998219 )
+transform = Transform( 0.00704373, 3.32597e-10, -0.0758936, 0.0758936, -6.8064e-10, 0.00704373, 5.44654e-09, 0.0090541, 3.31741e-09, -0.152686, 1.52426, 0.998219 )
 mesh = SubResource( 5 )
 skeleton = NodePath("../..")
 
 [node name="2001" type="MeshInstance" parent="."]
-transform = Transform( 0.00691207, 0.00180393, -0.0666538, 0.0681661, 0.000419979, 0.0078744, -0.00517002, 0.00794914, 0.01471, 0.228017, 0.323513, 0.981098 )
+transform = Transform( 0.00691207, 0.00180393, -0.0666538, 0.0681661, 0.000419979, 0.00787439, -0.00517002, 0.00794914, 0.01471, 0.229733, 0.324963, 0.991848 )
 mesh = SubResource( 6 )
 skeleton = NodePath("../..")
 
 [node name="1001" type="MeshInstance" parent="."]
-transform = Transform( 0.0279926, 1.1469e-08, -0.201341, -0.201341, 1.63843e-09, -0.0279926, 6.05813e-09, 0.0137441, 1.69628e-07, -0.154506, 0.540983, 0.998219 )
+transform = Transform( 0.0279926, 1.40022e-08, -0.201341, -0.201341, 1.02777e-09, -0.0279926, -1.34622e-08, 0.0137441, 2.07215e-07, -0.137933, 0.574094, 1.02279 )
 mesh = SubResource( 7 )
 skeleton = NodePath("../..")
 
 [node name="gear 3001" type="MeshInstance" parent="."]
-transform = Transform( -0.0738842, -0.00682675, 1.56385e-08, 5.21284e-09, -8.97843e-10, -0.174914, 0.158543, -0.0031814, 0, 0.830587, 0.890425, 0.562906 )
+transform = Transform( -0.0738842, -0.00682675, 6.93015e-09, 0, -3.29219e-10, -0.174914, 0.158543, -0.0031814, 3.22959e-09, 0.830587, 0.890425, 0.562906 )
 mesh = SubResource( 8 )
 skeleton = NodePath("../..")
 
 [node name="1002" type="MeshInstance" parent="."]
-transform = Transform( -0.00524368, -0.00983497, 0.0516222, -0.153647, -1.24478e-09, -0.0156072, 0.0147, -0.00350827, -0.144716, 0.939317, 0.696018, 0.343114 )
+transform = Transform( -0.00524369, -0.00983497, 0.0516222, -0.153647, -4.54096e-10, -0.0156073, 0.0147, -0.00350827, -0.144716, 0.939317, 0.696018, 0.343114 )
 mesh = SubResource( 9 )
 skeleton = NodePath("../..")
 
 [node name="Cylinder002" type="MeshInstance" parent="."]
-transform = Transform( 8.49546e-08, 0.43024, -0.20153, -0.475101, 8.49546e-08, -2.12387e-08, 2.12387e-08, 0.20153, 0.43024, 0.900473, 1.44889, 0.402953 )
+transform = Transform( 3.96098e-08, 0.43024, -0.20153, -0.475101, 3.58691e-08, -1.68031e-08, -1.37732e-12, 0.20153, 0.43024, 0.900473, 1.44889, 0.402953 )
 mesh = SubResource( 10 )
 skeleton = NodePath("../..")
 
@@ -479,6 +802,12 @@ skeleton = NodePath("../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.27823, 0 )
 mesh = SubResource( 22 )
 skeleton = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/RESET = SubResource( 24 )
+anims/busy = SubResource( 25 )
+anims/idle = SubResource( 26 )
 
 [connection signal="input_event" from="Clock/ClickArea" to="." method="_on_ClickArea_input_event"]
 [connection signal="mouse_entered" from="Clock/ClickArea" to="." method="_on_ClickArea_mouse_entered"]

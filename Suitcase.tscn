@@ -14,6 +14,13 @@
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0.560784, 0.54902, 0.407843, 1 )
 
+[sub_resource type="SpatialMaterial" id=3]
+flags_unshaded = true
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="PlaneMesh" id=4]
+material = SubResource( 3 )
+
 [node name="Suitcase" type="Spatial"]
 script = ExtResource( 2 )
 
@@ -57,6 +64,13 @@ transform = Transform( 0.100508, 0, 0, 0, 0.0566538, 0, 0, 0, 0.100508, 0.129479
 
 [node name="Weight" parent="." instance=ExtResource( 8 )]
 transform = Transform( 0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0.129479, -0.0635703, -0.234074 )
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.40047, 0, 0 )
+mesh = SubResource( 4 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.40349, 0, 0 )
+mesh = SubResource( 4 )
 
 [connection signal="button_pressed" from="Buttons/ButtonDrawer" to="." method="_on_ButtonDrawer_button_pressed"]
 [connection signal="switch_turned_off" from="Buttons/Switch" to="." method="_on_Switch_switch_turned"]

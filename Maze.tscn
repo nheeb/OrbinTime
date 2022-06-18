@@ -26,7 +26,6 @@ data = PoolVector3Array( -0.2004, 0.0078, -0.1354, -0.1985, 0.0078, -0.103, -0.2
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0122186, 0.0769587, 0.330571 )
 mesh = SubResource( 10 )
 skeleton = NodePath("../../../..")
-material/0 = null
 
 [node name="StaticBody" type="StaticBody" parent="."]
 

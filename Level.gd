@@ -21,7 +21,19 @@ func move_camera_to_base_pos():
 	$Tween.interpolate_method(self, "interpolate", 0.0, 1.0, 2.5)
 	$Tween.start()
 
-var maze_mode := true
+var maze_mode := false
+
+func _ready():
+	var suitcase_target : Vector3 = $Suitcase.global_transform.origin
+	$Suitcase.global_transform.origin = $SuitcaseSpawn.global_transform.origin
+	$Suitcase.transform.basis = Transform.IDENTITY.rotated(Vector3(1, .5, 0).normalized(), 70).basis
+	$Tween.interpolate_property($Suitcase, "global_transform:origin:x", $Suitcase.global_transform.origin.x, suitcase_target.x, 5)
+	$Tween.interpolate_property($Suitcase, "global_transform:origin:z", $Suitcase.global_transform.origin.z, suitcase_target.z, 5)
+	$Tween.interpolate_property($Suitcase, "global_transform:origin:y", $Suitcase.global_transform.origin.y, suitcase_target.y, 5, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
+	$Tween.interpolate_property($Suitcase, "transform:basis", $Suitcase.transform.basis, Basis.IDENTITY, 5)
+	$Tween.start()
+	yield($Tween, "tween_all_completed")
+	maze_mode = true
 
 func _physics_process(_delta):
 	if maze_mode:

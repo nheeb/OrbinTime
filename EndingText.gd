@@ -1,9 +1,9 @@
 extends Spatial
 
-var you_text := "You did it! You've build a planet!"
+var you_text := "You did it! You've built a planet!"
 var but_text := ""
 
-func set_but_text(trees, mountains, rivers):
+func set_but_text(mountains, trees, rivers):
 	if !mountains:
 		but_text = "But it could use some mountains..."
 	elif !trees:
@@ -18,6 +18,11 @@ var current_label: Label3D
 var current_label_text : String
 var current_label_pct := 0.0 setget set_label_pct
 
+func _ready():
+	visible = false
+	$You.text = ""
+	$But.text = ""
+
 func set_label_pct(p):
 	current_label_pct = p
 	if !is_instance_valid(current_label):
@@ -27,6 +32,10 @@ func set_label_pct(p):
 	current_label.text = snippet
 
 func animate():
+	$You.text = ""
+	$But.text = ""
+	$Click.visible = false
+	visible = true
 	current_label = $You
 	current_label_text = you_text
 	$Tween.interpolate_property(self, "current_label_pct", 0.0, 1.0, 3)
@@ -36,3 +45,6 @@ func animate():
 	current_label_text = but_text
 	$Tween.interpolate_property(self, "current_label_pct", 0.0, 1.0, 3)
 	$Tween.start()
+	yield(get_tree().create_timer(4),"timeout")
+	if !but_text.begins_with("It"):
+		$Click.visible = true

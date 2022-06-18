@@ -11,6 +11,8 @@ const TREE = preload("res://Objects/Tree.tscn")
 #	$AnimationPlayer.play("spin")
 #	become_planet()
 
+signal planet_done
+
 func become_planet():
 	if do_grass:
 		$Tween.interpolate_property($OrbBlackModel/Sphere.mesh.surface_get_material(0), "shader_param/paint_value", 0.0, 1.0, 4.0)
@@ -34,9 +36,10 @@ func become_planet():
 			tree.transform.origin = dir * .85
 			tree.grow()
 			yield(get_tree().create_timer(.2),"timeout")
-			
+	yield(get_tree().create_timer(1.0),"timeout")
 	if do_rivers:
 		$OrbBlackModel/Water.visible = true
-		$Tween.interpolate_property($OrbBlackModel/Sphere.mesh.surface_get_material(0), "shader_param/river_value", 0.0, 1.0, 3.0)
+		$Tween.interpolate_property($OrbBlackModel/Sphere.mesh.surface_get_material(0), "shader_param/river_value", 0.0, 1.0, 3.5)
 		$Tween.start()
 		yield($Tween,"tween_all_completed")
+	emit_signal("planet_done")

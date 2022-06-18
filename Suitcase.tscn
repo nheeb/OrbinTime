@@ -59,7 +59,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0325182, -0.245921 )
 [node name="Buttons" type="Spatial" parent="."]
 
 [node name="Button1" parent="Buttons" instance=ExtResource( 4 )]
-transform = Transform( 0.720903, 0, 0, 0, -3.15117e-08, -0.720903, 0, 1, -4.37114e-08, 0.230004, -0.0327787, -0.292758 )
+transform = Transform( 0.720903, 0, 0, 0, -3.15117e-08, -0.720903, 0, 1, -4.37114e-08, 0.111254, -0.0205617, -0.292758 )
 
 [node name="Button2" parent="Buttons" instance=ExtResource( 4 )]
 transform = Transform( -3.00436e-08, 3.00436e-08, 0.687317, 0.687317, 1.31324e-15, 3.00436e-08, 0, 0.887129, -3.87777e-08, 0.321035, -0.0228463, -0.292758 )
@@ -82,7 +82,7 @@ is_turned_on = true
 material/0 = SubResource( 6 )
 
 [node name="WeightRack" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.100508, 0, 0, 0, 0.0566538, 0, 0, 0, 0.100508, 0.129479, -0.0685249, -0.234074 )
+transform = Transform( 0.100508, 0, 0, 0, 0.0566538, 0, 0, 0, 0.100508, 0.204034, -0.0685249, -0.234074 )
 
 [node name="WeightRack2" parent="." instance=ExtResource( 7 )]
 transform = Transform( 0.100508, 0, 0, 0, 0.0566538, 0, 0, 0, 0.100508, 0.00260164, -1.03606, 0.0227152 )

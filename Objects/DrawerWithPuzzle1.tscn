@@ -32,4 +32,6 @@ material/0 = ExtResource( 4 )
 
 [node name="Tween" type="Tween" parent="."]
 
+[node name="GlowAnimation" type="AnimationPlayer" parent="."]
+
 [connection signal="puzzle_won" from="Drawer/BoardPuzzle1" to="." method="_on_BoardPuzzle1_puzzle_won"]

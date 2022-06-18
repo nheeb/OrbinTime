@@ -5,3 +5,5 @@
 [node name="Game" type="Node"]
 script = ExtResource( 1 )
 WEIGHT_COLOR = Color( 0.890196, 0.352941, 0, 1 )
+
+[node name="Tween" type="Tween" parent="."]

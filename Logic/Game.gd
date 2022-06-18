@@ -49,3 +49,11 @@ func fetch_all_child_mesh_instances(object: Node) -> Array:
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("clear_selection"):
 		clear_outline()
+		
+# could be made into a generic func in Game
+func turn_orb_on(mat:SpatialMaterial, target_color):
+	$Tween.reset_all()
+	$Tween.interpolate_property(mat, "albedo_color", mat.albedo_color, target_color, 0.6, Tween.TRANS_BOUNCE)
+	$Tween.start()
+	# after that transition it should change color a little / glow for a nice effect
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Models/SuitcaseModel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Suitcase.gd" type="Script" id=2]
@@ -20,6 +20,10 @@ albedo_color = Color( 0.560784, 0.54902, 0.407843, 1 )
 [sub_resource type="SpatialMaterial" id=5]
 params_cull_mode = 2
 albedo_color = Color( 0.180392, 0.541176, 0.117647, 1 )
+
+[sub_resource type="SpatialMaterial" id=7]
+params_cull_mode = 2
+albedo_color = Color( 0.0313726, 0.47451, 0.701961, 1 )
 
 [sub_resource type="SpatialMaterial" id=6]
 params_cull_mode = 2
@@ -74,6 +78,9 @@ material/0 = SubResource( 5 )
 [node name="Switch2" parent="Buttons" instance=ExtResource( 6 )]
 transform = Transform( -0.0496274, 1.02262e-09, 4.33856e-09, 4.33856e-09, -4.47001e-17, 0.0496274, 1.02262e-09, 0.0496274, 0, -0.216256, -0.0253246, -0.289258 )
 
+[node name="Switch" parent="Buttons/Switch2/SwitchModel" index="1"]
+material/0 = SubResource( 7 )
+
 [node name="Switch3" parent="Buttons" instance=ExtResource( 6 )]
 transform = Transform( -0.0496274, 1.02262e-09, 4.33856e-09, 4.33856e-09, -4.47001e-17, 0.0496274, 1.02262e-09, 0.0496274, 0, -0.135792, -0.0253246, -0.289258 )
 is_turned_on = true
@@ -127,11 +134,11 @@ transform = Transform( -3.08571e-08, 0, 0.705928, 0.62828, 0.321867, 2.7463e-08,
 [connection signal="switch_turned_off" from="Buttons/Switch3" to="." method="_on_Switch3_switch_turned"]
 [connection signal="switch_turned_on" from="Buttons/Switch3" to="." method="_on_Switch3_switch_turned"]
 [connection signal="puzzle_won" from="DrawerPuzzle1/Drawer/BoardPuzzle1" to="." method="_on_BoardPuzzle1_puzzle_won"]
-[connection signal="puzzle_won" from="DrawerPuzzle2/Drawer/BoardPuzzle1" to="." method="_on_BoardPuzzle2_puzzle_won"]
-[connection signal="puzzle_won" from="DrawerPuzzle3/Drawer/BoardPuzzle1" to="." method="_on_BoardPuzzle3_puzzle_won"]
 
 [editable path="Buttons/Switch1"]
 [editable path="Buttons/Switch1/SwitchModel"]
+[editable path="Buttons/Switch2"]
+[editable path="Buttons/Switch2/SwitchModel"]
 [editable path="Buttons/Switch3"]
 [editable path="Buttons/Switch3/SwitchModel"]
 [editable path="DrawerPuzzle1"]

@@ -1,19 +1,22 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Objects/Drawer.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Logic/BoardPuzzle1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Logic/ImpossibleBoard.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/DrawerWithPuzzle1.gd" type="Script" id=3]
 
 [sub_resource type="SphereMesh" id=1]
 
 [sub_resource type="CubeMesh" id=2]
 
 [node name="DrawerWithPuzzle3" type="Spatial"]
+script = ExtResource( 3 )
+target_color = Color( 0.533333, 0.145098, 0.027451, 1 )
 
 [node name="Drawer" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.124, 0, 0, 0, 0.036, 0, 0, 0, 0.124, 0, 0, 0 )
 
-[node name="BoardPuzzle1" parent="Drawer" instance=ExtResource( 2 )]
-transform = Transform( 0.524194, 0, 0, 0, 1.80556, 0, 0, 0, 0.524194, -0.338818, 0.386922, -0.156461 )
+[node name="ImpossibleBoard" parent="Drawer" instance=ExtResource( 2 )]
+transform = Transform( 0.524, 0, 0, 0, 0.524, 0, 0, 0, 0.524, -0.342814, 0.336956, -0.167839 )
 
 [node name="SolutionOrb" type="MeshInstance" parent="Drawer"]
 transform = Transform( -0.190405, 0, -1.66457e-08, 0, 0.655839, 0, 1.66457e-08, 0, -0.190405, -1.64951, 0, -2.8796e-07 )

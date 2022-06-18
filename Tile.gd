@@ -48,6 +48,7 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 #	print("reached")
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == 1:
+
 			# either put a weight on this or flip it
 			if Game.selected_weight != null: # weight is selected for movement
 				var weight: Weight = Game.selected_weight

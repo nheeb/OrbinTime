@@ -9,6 +9,9 @@ export var WEIGHT_COLOR := Color("384a51")
 var selected_weight: Weight = null
 var weight_x = -1
 var weight_y = -1
+var weight_puzzle = -1
+var main_weight_rack: Node = null
+var main_weight:Node = null
 
 const OUTLINE = preload("res://Assets/Materials/OutlineMat.tres")
 

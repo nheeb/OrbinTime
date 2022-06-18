@@ -45,7 +45,12 @@ func pull_out_immediately():
 func pull_back():
 	var aabb = $DrawerMesh.get_transformed_aabb()
 	var length = aabb.get_longest_axis_size() / self.scale.x
-	# TODO add some bounce to make it more interesting
+	# if the weight is on this drawer, port it back to the weight
+	var puzzle_number = int(get_parent().name[-1])
+
+	if puzzle_number == Game.weight_puzzle:
+		# port weight back
+		Game.main_weight.global_transform.origin = Game.main_weight_rack.global_transform.origin
 	start_transform = Transform(self.transform)
 	target_transform = self.transform.translated(-PULL_DIRECTION * length)
 	$Tween.reset_all()

@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Objects/Drawer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Logic/BoardPuzzle1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/DrawerWithPuzzle1.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Materials/Level1Cable.tres" type="Material" id=4]
+[ext_resource path="res://Assets/Sound/mountain_sound.ogg" type="AudioStream" id=5]
 
 [sub_resource type="SphereMesh" id=1]
 
@@ -33,5 +34,9 @@ material/0 = ExtResource( 4 )
 [node name="Tween" type="Tween" parent="."]
 
 [node name="GlowAnimation" type="AnimationPlayer" parent="."]
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -9.0
 
 [connection signal="puzzle_won" from="Drawer/BoardPuzzle1" to="." method="_on_BoardPuzzle_puzzle_won"]

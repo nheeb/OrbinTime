@@ -18,6 +18,7 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 				weight.currently_selected = false
 				Game.weight_x = -1
 				Game.weight_y = -1
+				Game.weight_puzzle = -1
 				Game.clear_outline()
 				$WeightDropSound.play()
 			else:

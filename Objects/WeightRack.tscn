@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Objects/WeightRack.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sound/weight_dropped.ogg" type="AudioStream" id=2]
 
 [sub_resource type="CylinderMesh" id=1]
 
@@ -18,5 +19,8 @@ mesh = SubResource( 1 )
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance/ClickArea"]
 transform = Transform( 1, 0, 0, 0, 1.03381, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 2 )
+
+[node name="WeightDropSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
 
 [connection signal="input_event" from="MeshInstance/ClickArea" to="." method="_on_ClickArea_input_event"]

@@ -2,23 +2,27 @@ extends Spatial
 
 export var turn_angle := 30  # degrees
 
-var is_turned_on := false
+export var is_turned_on := false
 # disable the switch while the drawer is moving
 var enabled := true
 
 signal switch_turned_on
 signal switch_turned_off
 
+func _ready() -> void:
+	if is_turned_on:
+		flip_visually()
+
 func flip_visually():
 	# TODO could be tweened to be more fancy
-	var rotation = 2*turn_angle if is_turned_on else -2*turn_angle
+	var rotation = -2*turn_angle if is_turned_on else 2*turn_angle
 	$SwitchModel/Switch.rotate_x(deg2rad(rotation))
 	Game.clear_outline()
 
 	
 func flip():
-	flip_visually()
 	is_turned_on = not is_turned_on
+	flip_visually()
 	if is_turned_on:
 		$SwitchOn.play()
 		emit_signal("switch_turned_on")

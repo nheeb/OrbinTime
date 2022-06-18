@@ -1,5 +1,10 @@
 extends Node
 
+var puzzle1_beaten = false
+var puzzle2_beaten = false
+var puzzle3_beaten = false
+
+
 export var WEIGHT_COLOR := Color("384a51")
 var selected_weight: Weight = null
 var weight_x = -1

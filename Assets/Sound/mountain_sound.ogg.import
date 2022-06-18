@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mountain_sound.ogg-fb2013a219aabf7ef226dec780866018.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/mountain_sound.ogg"
+dest_files=[ "res://.import/mountain_sound.ogg-fb2013a219aabf7ef226dec780866018.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

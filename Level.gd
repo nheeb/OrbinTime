@@ -2,7 +2,6 @@ extends Spatial
 
 var finish_range := .02
 
-
 # target transform
 var start: Transform
 var pivot_start
@@ -82,6 +81,7 @@ func _physics_process(_delta):
 			$Tween.start()
 			yield(get_tree().create_timer(.7), "timeout")
 			$Suitcase/SuitcaseModel/OpenPivot/Maze.queue_free()
+			$Suitcase/SuitcaseModel/Belt.visible = false
 			move_camera_to_base_pos()
 			yield($Tween, "tween_all_completed")
 			cam_global_pos = $Pivot/Camera.global_transform.origin

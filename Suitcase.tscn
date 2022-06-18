@@ -99,17 +99,14 @@ transform = Transform( 0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0.00245671, -1.03418,
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.40047, -0.151759, 0 )
-visible = false
 mesh = SubResource( 4 )
 
 [node name="MeshInstance3" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00273252, -0.149186, 1.293 )
-visible = false
 mesh = SubResource( 4 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.38847, -0.15703, 0 )
-visible = false
 mesh = SubResource( 4 )
 
 [node name="DrawerPuzzle1" parent="." instance=ExtResource( 9 )]

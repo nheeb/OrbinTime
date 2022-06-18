@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/open_squeak.ogg-9dc2ca4c2a0c10754cf5817dc064a4a9.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/open_squeak.ogg"
+dest_files=[ "res://.import/open_squeak.ogg-9dc2ca4c2a0c10754cf5817dc064a4a9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -41,7 +41,7 @@ func _ready():
 	maze_mode = true
 	$Suitcase.maze_mode = true
 	$Orb.mode = RigidBody.MODE_RIGID
-	$Suitcase/Main/SocketModel.connect("ending_initiated", self, "ending_initiated")
+	var _e = $Suitcase/Main/SocketModel.connect("ending_initiated", self, "ending_initiated")
 
 func ending_initiated():
 	print("ending init")
@@ -66,6 +66,7 @@ func _physics_process(_delta):
 		var dist_to_finish :float = $Orb.global_transform.origin.distance_to($Suitcase/MazeFinish.global_transform.origin)
 		if dist_to_finish < finish_range:
 			maze_mode = false
+			$UnlockSound.play()
 			$Suitcase.straight()
 			# orb spin active
 			$Orb.mode = RigidBody.MODE_STATIC

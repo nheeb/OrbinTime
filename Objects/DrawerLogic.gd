@@ -7,10 +7,6 @@ export var PULL_DIRECTION: Vector3 = Vector3.RIGHT
 # could be relevant to disable button while the drawer is moving
 signal pull_completed
 
-func _ready() -> void:
-	pass 
-
-
 var start_transform: Transform
 var target_transform: Transform
 func move_global(weight):

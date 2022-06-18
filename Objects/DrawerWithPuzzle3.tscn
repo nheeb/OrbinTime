@@ -7,10 +7,10 @@
 
 [sub_resource type="CubeMesh" id=2]
 
-[node name="DrawerWithPuzzle1" type="Spatial"]
+[node name="DrawerWithPuzzle3" type="Spatial"]
 
 [node name="Drawer" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.124, 0, -1.08404e-08, 0, 0.036, 0, 1.08404e-08, 0, -0.124, 0, 0, 0 )
+transform = Transform( 0.124, 0, 0, 0, 0.036, 0, 0, 0, 0.124, 0, 0, 0 )
 
 [node name="BoardPuzzle1" parent="Drawer" instance=ExtResource( 2 )]
 transform = Transform( 0.524194, 0, 0, 0, 1.80556, 0, 0, 0, 0.524194, -0.338818, 0.386922, -0.156461 )

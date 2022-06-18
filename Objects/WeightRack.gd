@@ -19,6 +19,7 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 				Game.weight_x = -1
 				Game.weight_y = -1
 				Game.clear_outline()
+				$WeightDropSound.play()
 			else:
 				pass # do nothing (?)
 				

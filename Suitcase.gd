@@ -6,6 +6,9 @@ var max_angle_degree := 8
 func _ready():
 	$SuitcaseModel/OpenPivot.rotation_degrees = Vector3.ZERO
 	$SuitcaseModel/OpenPivot/CloserThing.rotation_degrees = Vector3.ZERO
+	
+	$DrawerPuzzle1/Drawer.pull_out_immediately()
+	$DrawerPuzzle3/Drawer.pull_out_immediately()
 
 func _physics_process(_delta):
 	if maze_mode:
@@ -45,7 +48,19 @@ func change_to_long():
 
 
 func _on_Switch_switch_turned() -> void:
-	$Buttons/Switch.enabled = false
-	$Drawer.button_activated()
-	yield($Drawer, "pull_completed")
-	$Buttons/Switch.enabled = true
+	$Buttons/Switch1.enabled = false
+	$DrawerPuzzle1/Drawer.button_activated()
+	yield($DrawerPuzzle1/Drawer, "pull_completed")
+	$Buttons/Switch1.enabled = true
+
+func _on_Switch2_switch_turned() -> void:
+	$Buttons/Switch2.enabled = false
+	$DrawerPuzzle2/Drawer.button_activated()
+	yield($DrawerPuzzle2/Drawer, "pull_completed")
+	$Buttons/Switch2.enabled = true
+
+func _on_Switch3_switch_turned() -> void:
+	$Buttons/Switch3.enabled = false
+	$DrawerPuzzle3/Drawer.button_activated()
+	yield($DrawerPuzzle3/Drawer, "pull_completed")
+	$Buttons/Switch3.enabled = true

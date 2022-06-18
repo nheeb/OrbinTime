@@ -41,6 +41,11 @@ func _ready():
 	maze_mode = true
 	$Suitcase.maze_mode = true
 	$Orb.mode = RigidBody.MODE_RIGID
+	$Suitcase/Main/SocketModel.connect("ending_initiated", self, "ending_initiated")
+
+func ending_initiated():
+	print("ending init")
+	# TODO --- 
 
 var view_mode := false
 var max_move := .03

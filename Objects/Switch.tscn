@@ -21,9 +21,11 @@ shape = SubResource( 1 )
 
 [node name="SwitchOn" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+volume_db = -5.0
 
 [node name="SwitchOff" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -5.0
 
 [connection signal="input_event" from="ClickArea" to="." method="_on_ClickArea_input_event"]
 [connection signal="mouse_entered" from="ClickArea" to="." method="_on_ClickArea_mouse_entered"]

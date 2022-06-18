@@ -61,6 +61,7 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 				Game.weight_x = x
 				Game.weight_y = y
 				Game.clear_outline()
+				$WeightDropSound.play()
 			elif Game.weight_x == x and Game.weight_y == y: # weight is on this tile
 				pass # do nothing
 			else:  # flip

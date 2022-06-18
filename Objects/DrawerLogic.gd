@@ -30,6 +30,7 @@ func pull_out():
 	$Tween.reset_all()
 	$Tween.interpolate_method(self, "move_global", 0.0, 1.0, 0.8, Tween.TRANS_BOUNCE, Tween.EASE_IN_OUT)
 	$Tween.start()
+	$DrawerOpen.play()
 	pulled_out = true
 	
 	
@@ -42,6 +43,7 @@ func pull_back():
 	$Tween.reset_all()
 	$Tween.interpolate_method(self, "move_global", 0.0, 1.0, 0.6)
 	$Tween.start()
+	$DrawerClose.play()
 	pulled_out = false
 
 

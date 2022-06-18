@@ -1,7 +1,7 @@
 extends Spatial
 
 var maze_mode := true
-var max_angle_degree := 10
+var max_angle_degree := 8
 
 func _ready():
 	$SuitcaseModel/OpenPivot.rotation_degrees = Vector3.ZERO
@@ -16,8 +16,8 @@ func _physics_process(_delta):
 		var x_target := mouse_pos.y * max_angle_degree
 		var z_target := -mouse_pos.x * max_angle_degree
 		
-		rotation_degrees.x = lerp(rotation_degrees.x, x_target, .1)
-		rotation_degrees.z = lerp(rotation_degrees.z, z_target, .1)
+		rotation_degrees.x = lerp(rotation_degrees.x, x_target, .05)
+		rotation_degrees.z = lerp(rotation_degrees.z, z_target, .05)
 #		rotation_degrees.x = x_target
 #		rotation_degrees.z = z_target
 

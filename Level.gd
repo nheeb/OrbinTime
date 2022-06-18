@@ -1,6 +1,6 @@
 extends Spatial
 
-var finish_range := .01
+var finish_range := .02
 
 
 # target transform
@@ -31,7 +31,7 @@ func _ready():
 	$Suitcase.global_transform.origin = $SuitcaseSpawn.global_transform.origin
 	$Suitcase.transform.basis = Transform.IDENTITY.rotated(Vector3(1, .5, 0).normalized(), 70).basis
 	$Tween.interpolate_property($Suitcase, "global_transform:origin:x", $Suitcase.global_transform.origin.x, suitcase_target.x, 5)
-	$Tween.interpolate_property($Suitcase, "global_transform:origin:z", $Suitcase.global_transform.origin.z, suitcase_target.z, 5)
+	$Tween.interpolate_property($Suitcase, "global_transform:origin:z", $Suitcase.global_transform.origin.z, suitcase_target.z, 5, Tween.TRANS_QUAD, Tween.EASE_OUT)
 	$Tween.interpolate_property($Suitcase, "global_transform:origin:y", $Suitcase.global_transform.origin.y, suitcase_target.y, 5, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
 	$Tween.interpolate_property($Suitcase, "transform:basis", $Suitcase.transform.basis, Basis.IDENTITY, 5)
 	$Tween.start()
@@ -67,7 +67,8 @@ func _physics_process(_delta):
 			$Tween.interpolate_property($Orb, "global_transform:origin:y", $Orb.global_transform.origin.y, $Suitcase/Main/SocketModel/OrbTarget.global_transform.origin.y, fly_duration, Tween.TRANS_QUAD, Tween.EASE_IN)
 			$Tween.start()
 			yield(get_tree().create_timer(.7), "timeout")
+			$Suitcase/SuitcaseModel/OpenPivot/Maze.queue_free()
 			move_camera_to_base_pos()
 			
-		if Input.is_action_just_pressed("teleport_orb"):
+		if Input.is_action_just_pressed("teleport_orb") or $Orb.global_transform.origin.y < -2:
 			$Orb.global_transform.origin = $Suitcase/MazeFinish.global_transform.origin

@@ -43,7 +43,7 @@ func _ready():
 	$Orb.mode = RigidBody.MODE_RIGID
 
 var view_mode := false
-var max_move := .05
+var max_move := .03
 var cam_global_pos : Vector3
 func _physics_process(_delta):
 	if view_mode:
@@ -54,8 +54,8 @@ func _physics_process(_delta):
 		var x_target := mouse_pos.x * max_move + cam_global_pos.x
 		var z_target := mouse_pos.y * max_move + cam_global_pos.z
 		
-		$Pivot/Camera.global_transform.origin.x = lerp($Pivot/Camera.global_transform.origin.x, x_target, .04)
-		$Pivot/Camera.global_transform.origin.z = lerp($Pivot/Camera.global_transform.origin.z, z_target, .04)
+		$Pivot/Camera.global_transform.origin.x = lerp($Pivot/Camera.global_transform.origin.x, x_target, .02)
+		$Pivot/Camera.global_transform.origin.z = lerp($Pivot/Camera.global_transform.origin.z, z_target, .02)
 	
 	if maze_mode:
 		var dist_to_finish :float = $Orb.global_transform.origin.distance_to($Suitcase/MazeFinish.global_transform.origin)

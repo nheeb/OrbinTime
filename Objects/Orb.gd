@@ -7,9 +7,9 @@ var do_rivers := true
 
 const TREE = preload("res://Objects/Tree.tscn")
 
-func _ready():
-	$AnimationPlayer.play("spin")
-	become_planet()
+#func _ready():
+#	$AnimationPlayer.play("spin")
+#	become_planet()
 
 func become_planet():
 	if do_grass:

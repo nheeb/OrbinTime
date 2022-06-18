@@ -53,7 +53,3 @@ anims/RESET = SubResource( 2 )
 anims/spin = SubResource( 3 )
 
 [node name="Tween" type="Tween" parent="."]
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0374991 )
-near = 0.01

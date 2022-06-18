@@ -10,6 +10,7 @@
 [ext_resource path="res://Logic/Weight.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/DrawerWithPuzzle1.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/DrawerWithPuzzle2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/LED.tscn" type="PackedScene" id=11]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -23,8 +24,6 @@ albedo_color = Color( 0.180392, 0.541176, 0.117647, 1 )
 [sub_resource type="SpatialMaterial" id=6]
 params_cull_mode = 2
 albedo_color = Color( 0.533333, 0.145098, 0.027451, 1 )
-
-[sub_resource type="SphereMesh" id=7]
 
 [sub_resource type="SpatialMaterial" id=3]
 flags_unshaded = true
@@ -82,20 +81,6 @@ is_turned_on = true
 [node name="Switch" parent="Buttons/Switch3/SwitchModel" index="1"]
 material/0 = SubResource( 6 )
 
-[node name="LEDs" type="Spatial" parent="."]
-
-[node name="led1" type="MeshInstance" parent="LEDs"]
-transform = Transform( 0.0114893, 0, 0, 0, 0.0114893, 0, 0, 0, 0.00832087, -0.0308992, 0.0444226, -0.291697 )
-mesh = SubResource( 7 )
-
-[node name="led2" type="MeshInstance" parent="LEDs"]
-transform = Transform( 0.0114893, 0, 0, 0, 0.0114893, 0, 0, 0, 0.00832087, 0.00238492, 0.0444226, -0.291697 )
-mesh = SubResource( 7 )
-
-[node name="led3" type="MeshInstance" parent="LEDs"]
-transform = Transform( 0.0114893, 0, 0, 0, 0.0114893, 0, 0, 0, 0.00832087, 0.0354338, 0.0444226, -0.291697 )
-mesh = SubResource( 7 )
-
 [node name="WeightRack" parent="." instance=ExtResource( 7 )]
 transform = Transform( 0.100508, 0, 0, 0, 0.0566538, 0, 0, 0, 0.100508, 0.129479, -0.0685249, -0.234074 )
 
@@ -131,6 +116,9 @@ transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.72683
 
 [node name="DrawerPuzzle3" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.722, -0.875268, 0 )
+
+[node name="LED" parent="." instance=ExtResource( 11 )]
+transform = Transform( -3.08571e-08, 0, 0.705928, 0.62828, 0.321867, 2.7463e-08, -0.321867, 0.62828, -1.40693e-08, 0.000296958, 0.0437303, -0.289202 )
 
 [connection signal="switch_turned_off" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]
 [connection signal="switch_turned_on" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]

@@ -28,6 +28,13 @@ config/icon="res://icon.png"
 
 Game="*res://Logic/Game.tscn"
 
+[importer_defaults]
+
+ogg_vorbis={
+"loop": false,
+"loop_offset": 0
+}
+
 [input]
 
 teleport_orb={

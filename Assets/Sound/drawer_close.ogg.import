@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/drawer_close.ogg-17122565401b9099617be1e73f756eb1.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/drawer_close.ogg"
+dest_files=[ "res://.import/drawer_close.ogg-17122565401b9099617be1e73f756eb1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

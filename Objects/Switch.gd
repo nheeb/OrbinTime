@@ -20,9 +20,11 @@ func flip():
 	flip_visually()
 	is_turned_on = not is_turned_on
 	if is_turned_on:
+		$SwitchOn.play()
 		emit_signal("switch_turned_on")
 	else:
 		emit_signal("switch_turned_off")
+		$SwitchOff.play()
 
 func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:

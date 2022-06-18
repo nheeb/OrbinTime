@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Objects/ButtonLogic.gd" type="Script" id=1]
 [ext_resource path="res://Models/EdgeButtonModel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Sound/button_release.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Sound/button_push.ogg" type="AudioStream" id=4]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.05124, 0.0223632, 0.0349561 )
@@ -16,6 +18,12 @@ script = ExtResource( 1 )
 [node name="CollisionShape" type="CollisionShape" parent="ClickArea"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0195407, 0 )
 shape = SubResource( 1 )
+
+[node name="PushSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="ReleaseSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="input_event" from="ClickArea" to="." method="_on_ClickArea_input_event"]
 [connection signal="mouse_entered" from="ClickArea" to="." method="_on_ClickArea_mouse_entered"]

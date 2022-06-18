@@ -2,7 +2,6 @@ extends Spatial
 
 var finish_range := .02
 
-
 # target transform
 var start: Transform
 var pivot_start

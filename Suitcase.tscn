@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Models/SuitcaseModel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Suitcase.gd" type="Script" id=2]
@@ -23,6 +23,8 @@ albedo_color = Color( 0.180392, 0.541176, 0.117647, 1 )
 [sub_resource type="SpatialMaterial" id=6]
 params_cull_mode = 2
 albedo_color = Color( 0.533333, 0.145098, 0.027451, 1 )
+
+[sub_resource type="SphereMesh" id=7]
 
 [sub_resource type="SpatialMaterial" id=3]
 flags_unshaded = true
@@ -80,6 +82,20 @@ is_turned_on = true
 [node name="Switch" parent="Buttons/Switch3/SwitchModel" index="1"]
 material/0 = SubResource( 6 )
 
+[node name="LEDs" type="Spatial" parent="."]
+
+[node name="led1" type="MeshInstance" parent="LEDs"]
+transform = Transform( 0.0114893, 0, 0, 0, 0.0114893, 0, 0, 0, 0.00832087, -0.0308992, 0.0444226, -0.291697 )
+mesh = SubResource( 7 )
+
+[node name="led2" type="MeshInstance" parent="LEDs"]
+transform = Transform( 0.0114893, 0, 0, 0, 0.0114893, 0, 0, 0, 0.00832087, 0.00238492, 0.0444226, -0.291697 )
+mesh = SubResource( 7 )
+
+[node name="led3" type="MeshInstance" parent="LEDs"]
+transform = Transform( 0.0114893, 0, 0, 0, 0.0114893, 0, 0, 0, 0.00832087, 0.0354338, 0.0444226, -0.291697 )
+mesh = SubResource( 7 )
+
 [node name="WeightRack" parent="." instance=ExtResource( 7 )]
 transform = Transform( 0.100508, 0, 0, 0, 0.0566538, 0, 0, 0, 0.100508, 0.129479, -0.0685249, -0.234074 )
 
@@ -107,6 +123,9 @@ mesh = SubResource( 4 )
 [node name="DrawerPuzzle1" parent="." instance=ExtResource( 9 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.722336, -0.307586, 0 )
 
+[node name="BoardPuzzle1" parent="DrawerPuzzle1/Drawer" index="4"]
+transform = Transform( 0.524194, 0, 6.77626e-21, 0, 1.80556, 0, -6.77626e-21, 0, 0.524194, -0.338818, 0.386922, -0.156461 )
+
 [node name="DrawerPuzzle2" parent="." instance=ExtResource( 10 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.726832, -0.637354, 0 )
 
@@ -119,8 +138,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.722, -0.875268, 0 )
 [connection signal="switch_turned_on" from="Buttons/Switch2" to="." method="_on_Switch2_switch_turned"]
 [connection signal="switch_turned_off" from="Buttons/Switch3" to="." method="_on_Switch3_switch_turned"]
 [connection signal="switch_turned_on" from="Buttons/Switch3" to="." method="_on_Switch3_switch_turned"]
+[connection signal="puzzle_won" from="DrawerPuzzle1/Drawer/BoardPuzzle1" to="." method="_on_BoardPuzzle1_puzzle_won"]
+[connection signal="puzzle_won" from="DrawerPuzzle2/Drawer/BoardPuzzle1" to="." method="_on_BoardPuzzle2_puzzle_won"]
+[connection signal="puzzle_won" from="DrawerPuzzle3/Drawer/BoardPuzzle1" to="." method="_on_BoardPuzzle3_puzzle_won"]
 
 [editable path="Buttons/Switch1"]
 [editable path="Buttons/Switch1/SwitchModel"]
 [editable path="Buttons/Switch3"]
 [editable path="Buttons/Switch3/SwitchModel"]
+[editable path="DrawerPuzzle1"]
+[editable path="DrawerPuzzle2"]
+[editable path="DrawerPuzzle3"]

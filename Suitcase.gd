@@ -3,6 +3,16 @@ extends Spatial
 var maze_mode := true
 var max_angle_degree := 8
 
+func puzzle1_beaten():
+	pass
+	
+func puzzle2_beaten():
+	pass
+	
+func puzzle3_beaten():
+	pass
+
+
 func _ready():
 	$SuitcaseModel/OpenPivot.rotation_degrees = Vector3.ZERO
 	$SuitcaseModel/OpenPivot/CloserThing.rotation_degrees = Vector3.ZERO
@@ -23,9 +33,6 @@ func _physics_process(_delta):
 		rotation_degrees.z = lerp(rotation_degrees.z, z_target, .05)
 
 		rotation_degrees.y = 0
-
-
-		
 
 func open():
 	$SuitcaseModel/AnimationPlayer.play("open")
@@ -64,3 +71,16 @@ func _on_Switch3_switch_turned() -> void:
 	$DrawerPuzzle3/Drawer.button_activated()
 	yield($DrawerPuzzle3/Drawer, "pull_completed")
 	$Buttons/Switch3.enabled = true
+
+
+func _on_BoardPuzzle1_puzzle_won() -> void:
+	Game.puzzle1_beaten = true
+	# turn on LED 1
+
+func _on_BoardPuzzle2_puzzle_won() -> void:
+	Game.puzzle2_beaten = true
+
+func _on_BoardPuzzle3_puzzle_won() -> void:
+	Game.puzzle3_beaten = true
+
+

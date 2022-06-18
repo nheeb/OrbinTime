@@ -31,4 +31,7 @@ func _on_ButtonDrawer_button_pressed() -> void:
 
 
 func _on_Switch_switch_turned() -> void:
+	$Buttons/Switch.enabled = false
 	$Drawer.button_activated()
+	yield($Drawer, "pull_completed")
+	$Buttons/Switch.enabled = true

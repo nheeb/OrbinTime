@@ -1,5 +1,6 @@
 extends Node
 
+export var WEIGHT_COLOR := Color("384a51")
 var selected_weight: Weight = null
 var weight_x = -1
 var weight_y = -1
@@ -10,7 +11,8 @@ func toggle_outline(object: Spatial, value: bool, color: Color = Color.ghostwhit
 	if value:
 		object.add_to_group("outlined")
 	else:
-		object.remove_from_group("outlined")
+		if object.is_in_group("outlined"):
+			object.remove_from_group("outlined")
 	var outline_mat : ShaderMaterial = OUTLINE.duplicate(true)
 	outline_mat.set("shader_param/outline_width", width)
 	outline_mat.set("shader_param/outline_color", color)
@@ -39,6 +41,6 @@ func fetch_all_child_mesh_instances(object: Node) -> Array:
 		mesh_instances.append_array(fetch_all_child_mesh_instances(c))
 	return mesh_instances
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_just_pressed("clear_selection"):
 		clear_outline()

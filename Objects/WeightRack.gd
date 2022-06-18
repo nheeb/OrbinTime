@@ -11,12 +11,14 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 		if event.pressed and event.button_index == 1:
 			if Game.selected_weight != null: # Weight is selected and will be dropped off here
 				var weight: Weight = Game.selected_weight
-				weight.transform.origin.x = transform.origin.x
-				weight.transform.origin.z = transform.origin.z
+				weight.global_transform.origin.x = global_transform.origin.x
+				weight.global_transform.origin.y = global_transform.origin.x
+				weight.global_transform.origin.z = global_transform.origin.z
 				Game.selected_weight = null
 				weight.currently_selected = false
 				Game.weight_x = -1
 				Game.weight_y = -1
+				Game.clear_outline()
 			else:
 				pass # do nothing (?)
 				

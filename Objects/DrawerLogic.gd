@@ -28,7 +28,7 @@ func pull_out():
 	start_transform = Transform(self.transform)
 	target_transform = self.transform.translated(Vector3.RIGHT * length)
 	$Tween.reset_all()
-	$Tween.interpolate_method(self, "move_global", 0.0, 1.0, 1.5)
+	$Tween.interpolate_method(self, "move_global", 0.0, 1.0, 0.8, Tween.TRANS_BOUNCE, Tween.EASE_IN_OUT)
 	$Tween.start()
 	pulled_out = true
 	
@@ -40,7 +40,7 @@ func pull_back():
 	start_transform = Transform(self.transform)
 	target_transform = self.transform.translated(Vector3.LEFT * length)
 	$Tween.reset_all()
-	$Tween.interpolate_method(self, "move_global", 0.0, 1.0, 1.5)
+	$Tween.interpolate_method(self, "move_global", 0.0, 1.0, 0.6)
 	$Tween.start()
 	pulled_out = false
 

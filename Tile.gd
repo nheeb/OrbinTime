@@ -55,10 +55,12 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 				weight.currently_selected = false
 				Game.selected_weight = null
 				
-				weight.transform.origin.x = self.transform.origin.x
-				weight.transform.origin.z = self.transform.origin.z
+				weight.global_transform.origin.x = self.global_transform.origin.x
+				weight.global_transform.origin.y = self.global_transform.origin.y
+				weight.global_transform.origin.z = self.global_transform.origin.z
 				Game.weight_x = x
 				Game.weight_y = y
+				Game.clear_outline()
 			elif Game.weight_x == x and Game.weight_y == y: # weight is on this tile
 				pass # do nothing
 			else:  # flip
@@ -68,8 +70,15 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 				$FlipSound.play()
 				emit_signal("flipped", x, y)
 
+func _on_ClickArea_mouse_exited() -> void:
+	if Game.selected_weight != null:
+		Game.toggle_outline(self, false, Game.WEIGHT_COLOR, 0.08)
+	else:
+		Game.toggle_outline(self, false)
 
-func _on_Tween_tween_all_completed() -> void:
-#	$ClickArea.monitoring = true
-#	$ClickArea.input_ray_pickable = true
-	pass
+
+func _on_ClickArea_mouse_entered() -> void:
+	if Game.selected_weight != null:
+		Game.toggle_outline(self, true, Game.WEIGHT_COLOR, 0.08)
+	elif Game.weight_x != x or Game.weight_y != y:
+		Game.toggle_outline(self, true)

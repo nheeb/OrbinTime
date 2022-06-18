@@ -1,6 +1,7 @@
 extends Spatial
 class_name Weight
 
+export var WEIGHT_COLOR := Color("384a51")
 var currently_selected = false
 # Declare member variables here. Examples:
 # var a: int = 2
@@ -17,7 +18,16 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 		if event.pressed and event.button_index == 1:
 			currently_selected = not currently_selected
 			if currently_selected:
-				print("weight was selected")
-				# outline shader ON
+				# TODO outline shader tiles ON
+				Game.toggle_outline(self, true)
 				Game.selected_weight = self
-				print("nice")
+
+
+func _on_ClickArea_mouse_entered() -> void:
+	if not currently_selected:
+		Game.toggle_outline(self, true)
+
+
+func _on_ClickArea_mouse_exited() -> void:
+	if not currently_selected:
+		Game.toggle_outline(self, false)

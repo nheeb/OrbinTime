@@ -27,7 +27,8 @@ func toggle_outline(object: Spatial, value: bool, color: Color = Color.ghostwhit
 		make_materials_right(mi)
 		for i in range(mi.get_surface_material_count()):
 			var mat := mi.get_surface_material(i)
-			mat.next_pass = outline_mat if value else null
+			if mat != null:
+				mat.next_pass = outline_mat if value else null
 
 func clear_outline():
 	for member in get_tree().get_nodes_in_group("outlined"):
@@ -36,7 +37,10 @@ func clear_outline():
 func make_materials_right(mi: MeshInstance):
 	if mi.get_surface_material(0) == null:
 		for i in mi.get_surface_material_count():
-			mi.set_surface_material(i, mi.mesh.surface_get_material(i).duplicate(false))
+			if mi.mesh != null:
+				var surface_mat = mi.mesh.surface_get_material(i)
+				if surface_mat != null:
+					mi.set_surface_material(i, surface_mat.duplicate(false))
 
 func fetch_all_child_mesh_instances(object: Node) -> Array:
 	var mesh_instances := []

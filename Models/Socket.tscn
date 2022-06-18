@@ -1,9 +1,10 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Assets/Meshes/bronze_gold.material" type="Material" id=1]
 [ext_resource path="res://Assets/Meshes/ziffernblatt.material" type="Material" id=2]
 [ext_resource path="res://Assets/Meshes/Material_001.material" type="Material" id=3]
 [ext_resource path="res://Assets/Meshes/silver.material" type="Material" id=4]
+[ext_resource path="res://Objects/Socket.gd" type="Script" id=5]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Socket_Cylinder001"
@@ -60,6 +61,9 @@ surfaces/0 = {
 "skeleton_aabb": [  ],
 "vertex_count": 132
 }
+
+[sub_resource type="BoxShape" id=23]
+extents = Vector3( 2.21465, 5.65053, 2.63862 )
 
 [sub_resource type="ArrayMesh" id=4]
 resource_name = "Socket_Cylinder004"
@@ -358,137 +362,124 @@ surfaces/0 = {
 "vertex_count": 171
 }
 
-[node name="SocketModel" type="Spatial"]
+[node name="Socket" type="Spatial"]
+script = ExtResource( 5 )
 
-[node name="Cylinder001" type="MeshInstance" parent="."]
+[node name="Clock" type="MeshInstance" parent="."]
 transform = Transform( 0.447729, 0, 0, 0, 0, -0.447729, 0, 0.166061, 0, 0, 1.06461, 0.951009 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../..")
-material/0 = null
-material/1 = null
 
-[node name="Plane" type="MeshInstance" parent="."]
-transform = Transform( 0.473818, 0, 0, 0, 0, -0.820042, 0, 0.820042, 0, 0, 0.997344, 1.0836 )
+[node name="Timepiece" type="MeshInstance" parent="Clock"]
+transform = Transform( 1.05827, 0, 0, 0, 4.9382, 0, 0, 0, 1.83156, 0, 0.798448, 0.150238 )
 mesh = SubResource( 2 )
-skeleton = NodePath("../..")
-material/0 = null
+skeleton = NodePath("../../..")
 
-[node name="Cylinder003" type="MeshInstance" parent="."]
-transform = Transform( 0.155521, 0, 0, 0, 0.155521, 0, 0, 0, 0.155521, 0, 1.29311, 1.57709 )
+[node name="Cylinder003" type="MeshInstance" parent="Clock"]
+transform = Transform( 0.347355, 0, 0, 0, 0, 0.936529, 0, -0.347355, 0, 0, 3.77019, -0.510354 )
 mesh = SubResource( 3 )
-skeleton = NodePath("../..")
-material/0 = null
+skeleton = NodePath("../../..")
+
+[node name="ClickArea" type="Area" parent="Clock"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Clock/ClickArea"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.51931, -0.259865 )
+shape = SubResource( 23 )
 
 [node name="gear 3" type="MeshInstance" parent="."]
 transform = Transform( -0.212665, -5.22592e-09, 0.0266992, -0.0266992, 0, -0.212665, 1.19769e-07, -0.00922909, -2.55507e-08, -0.093659, 2.00176, 0.991465 )
 mesh = SubResource( 4 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="2" type="MeshInstance" parent="."]
 transform = Transform( 0.00704373, 8.095e-10, -0.0758936, 0.0758936, -5.39666e-10, 0.00704374, 2.27153e-09, 0.0090541, 9.08611e-09, -0.152686, 1.52426, 0.998219 )
 mesh = SubResource( 5 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="2001" type="MeshInstance" parent="."]
 transform = Transform( 0.00691207, 0.00180393, -0.0666538, 0.0681661, 0.000419979, 0.0078744, -0.00517002, 0.00794914, 0.01471, 0.228017, 0.323513, 0.981098 )
 mesh = SubResource( 6 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="1001" type="MeshInstance" parent="."]
 transform = Transform( 0.0279926, 1.1469e-08, -0.201341, -0.201341, 1.63843e-09, -0.0279926, 6.05813e-09, 0.0137441, 1.69628e-07, -0.154506, 0.540983, 0.998219 )
 mesh = SubResource( 7 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="gear 3001" type="MeshInstance" parent="."]
 transform = Transform( -0.0738842, -0.00682675, 1.56385e-08, 5.21284e-09, -8.97843e-10, -0.174914, 0.158543, -0.0031814, 0, 0.830587, 0.890425, 0.562906 )
 mesh = SubResource( 8 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="1002" type="MeshInstance" parent="."]
 transform = Transform( -0.00524368, -0.00983497, 0.0516222, -0.153647, -1.24478e-09, -0.0156072, 0.0147, -0.00350827, -0.144716, 0.939317, 0.696018, 0.343114 )
 mesh = SubResource( 9 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="Cylinder002" type="MeshInstance" parent="."]
 transform = Transform( 8.49546e-08, 0.43024, -0.20153, -0.475101, 8.49546e-08, -2.12387e-08, 2.12387e-08, 0.20153, 0.43024, 0.900473, 1.44889, 0.402953 )
 mesh = SubResource( 10 )
 skeleton = NodePath("../..")
-material/0 = null
-material/1 = null
 
 [node name="NurbsPath" type="MeshInstance" parent="."]
 transform = Transform( -0.186578, 0.190023, 0.256093, -0.111895, -0.316851, 0.153585, 0.298616, -1.65163e-08, 0.217559, 1.12046, 1.63208, 0.528185 )
 mesh = SubResource( 11 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="side" type="MeshInstance" parent="."]
 transform = Transform( 4.96647e-08, 0.277745, 0, -0.277745, 4.96647e-08, 0, 0, 0, 0.277745, 1.10327, 0.892071, -0.0126224 )
 mesh = SubResource( 12 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="NurbsPath005" type="MeshInstance" parent="."]
 mesh = SubResource( 13 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="NurbsPath007" type="MeshInstance" parent="."]
 transform = Transform( -0.186578, 0.190023, 0.256093, -0.111895, -0.316851, 0.153585, 0.298616, -1.65163e-08, 0.217559, 1.12046, 1.53967, 0.528185 )
 mesh = SubResource( 14 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="side001" type="MeshInstance" parent="."]
 transform = Transform( 4.96647e-08, 0.277745, 0, -0.277745, 4.96647e-08, 0, 0, 0, 0.277745, 1.10327, 0.892071, 0.0904753 )
 mesh = SubResource( 15 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="side002" type="MeshInstance" parent="."]
 transform = Transform( 4.96647e-08, 0.277745, 0, -0.277745, 4.96647e-08, 0, 0, 0, 0.277745, 1.10327, 0.892071, -0.102989 )
 mesh = SubResource( 16 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="NurbsPath006" type="MeshInstance" parent="."]
 transform = Transform( 0, 0, 1, 0, 1, 0, -1, 0, 0, 0.981765, 1.98427, 0.488915 )
 mesh = SubResource( 17 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="Cylinder" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 mesh = SubResource( 18 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="BezierCircle" type="MeshInstance" parent="."]
 transform = Transform( 1.01747, 0, 0, 0, 1.01747, 0, 0, 0, 1.01747, 0, 1.11956, 0 )
 mesh = SubResource( 19 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="Sphere" type="MeshInstance" parent="."]
 transform = Transform( 0.0555594, 0, 0, 0, 0.0555594, 0, 0, 0, 0.0555594, 0, 2.58916, 0 )
 mesh = SubResource( 20 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="BezierCircle001" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00413871, 0 )
 mesh = SubResource( 21 )
 skeleton = NodePath("../..")
-material/0 = null
 
 [node name="BezierCircle002" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.27823, 0 )
 mesh = SubResource( 22 )
 skeleton = NodePath("../..")
-material/0 = null
+
+[connection signal="input_event" from="Clock/ClickArea" to="." method="_on_ClickArea_input_event"]
+[connection signal="mouse_entered" from="Clock/ClickArea" to="." method="_on_ClickArea_mouse_entered"]
+[connection signal="mouse_exited" from="Clock/ClickArea" to="." method="_on_ClickArea_mouse_exited"]

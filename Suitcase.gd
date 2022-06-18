@@ -14,6 +14,8 @@ func puzzle3_beaten():
 
 
 func _ready():
+	Game.main_weight_rack = $WeightRack
+	Game.main_weight = $Weight
 	$SuitcaseModel/OpenPivot.rotation_degrees = Vector3.ZERO
 	$SuitcaseModel/OpenPivot/CloserThing.rotation_degrees = Vector3.ZERO
 	

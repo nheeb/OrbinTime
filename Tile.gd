@@ -60,6 +60,8 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 				weight.global_transform.origin.z = self.global_transform.origin.z
 				Game.weight_x = x
 				Game.weight_y = y
+				var puzzle_name = get_parent().get_parent().get_parent().name
+				Game.weight_puzzle = int(puzzle_name[-1])
 				Game.clear_outline()
 				$WeightDropSound.play()
 			elif Game.weight_x == x and Game.weight_y == y: # weight is on this tile

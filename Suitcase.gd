@@ -7,7 +7,7 @@ func _ready():
 	$SuitcaseModel/OpenPivot.rotation_degrees = Vector3.ZERO
 	$SuitcaseModel/OpenPivot/CloserThing.rotation_degrees = Vector3.ZERO
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if maze_mode:
 		var mouse_pos := get_viewport().get_mouse_position()
 		mouse_pos.x = 2.0 * (float(mouse_pos.x) / get_viewport().size.x) - 1.0
@@ -27,4 +27,8 @@ func straight():
 	$Tween.start()
 
 func _on_ButtonDrawer_button_pressed() -> void:
-	$Drawer.pull_out()
+	$Drawer.button_activated()
+
+
+func _on_Switch_switch_turned() -> void:
+	$Drawer.button_activated()

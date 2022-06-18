@@ -14,3 +14,5 @@ mesh = SubResource( 1 )
 material/0 = ExtResource( 2 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]

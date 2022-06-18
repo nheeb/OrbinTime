@@ -23,7 +23,7 @@ func move_camera_to_base_pos():
 
 var maze_mode := true
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if maze_mode:
 		var dist_to_finish :float = $Orb.global_transform.origin.distance_to($Suitcase/MazeFinish.global_transform.origin)
 		if dist_to_finish < finish_range:

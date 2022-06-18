@@ -6,6 +6,7 @@ export var dim_y = 3
 # tile references
 onready var tiles = [[$Tile11, $Tile12, $Tile13], [$Tile21, $Tile22, $Tile23], [$Tile31, $Tile32, $Tile33]]
 
+signal puzzle_won
 
 func _ready() -> void:
 	for tile_row in tiles:
@@ -61,4 +62,4 @@ func register_tile_change(x, y):
 					tile.flip()
 	
 	if check_victory():
-		print("wow you won")
+		emit_signal("puzzle_won")

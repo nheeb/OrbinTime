@@ -25,9 +25,11 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 
 func _on_ClickArea_mouse_entered() -> void:
 	if Game.level.view_mode:
-		Game.toggle_outline(self, true)
+		if Game.puzzle1_beaten or Game.puzzle2_beaten or Game.puzzle3_beaten:
+			Game.toggle_outline(self, true)
 
 
 func _on_ClickArea_mouse_exited() -> void:
 	if Game.level.view_mode:
-		Game.toggle_outline(self, false)
+		if Game.puzzle1_beaten or Game.puzzle2_beaten or Game.puzzle3_beaten:
+			Game.toggle_outline(self, false)

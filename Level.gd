@@ -55,22 +55,26 @@ func _ready():
 	var _e = $Suitcase/Main/SocketModel.connect("ending_initiated", self, "ending_initiated")
 
 var ending_mode := false
+var last_cutscene := 0
 func ending_initiated():
 	if Game.puzzle1_beaten or Game.puzzle2_beaten or Game.puzzle3_beaten:
-		$Music.stop()
-		view_mode = false
-		move_camera_to_ending_pos()
-		yield($Tween, "tween_all_completed")
-		$Suitcase/Main/SocketModel/AnimationPlayer.play("busy")
-		$Orb.do_trees = Game.puzzle1_beaten
-		$Orb.do_rivers = Game.puzzle2_beaten
-		$Orb.do_mountains = Game.puzzle3_beaten
-		$Orb.become_planet()
-		yield($Orb, "planet_done")
-		$Suitcase/EndingText.set_but_text(Game.puzzle3_beaten , Game.puzzle1_beaten , Game.puzzle2_beaten)
-		$Suitcase/EndingText.animate()
-		yield(get_tree().create_timer(3),"timeout")
-		ending_mode = true
+		var this_cutscene = int(Game.puzzle1_beaten) + int(Game.puzzle2_beaten) + int(Game.puzzle3_beaten)
+		if this_cutscene > last_cutscene:
+			last_cutscene = this_cutscene
+			$Music.stop()
+			view_mode = false
+			move_camera_to_ending_pos()
+			yield($Tween, "tween_all_completed")
+			$Suitcase/Main/SocketModel/AnimationPlayer.play("busy")
+			$Orb.do_trees = Game.puzzle1_beaten
+			$Orb.do_rivers = Game.puzzle2_beaten
+			$Orb.do_mountains = Game.puzzle3_beaten
+			$Orb.become_planet()
+			yield($Orb, "planet_done")
+			$Suitcase/EndingText.set_but_text(Game.puzzle3_beaten , Game.puzzle1_beaten , Game.puzzle2_beaten)
+			$Suitcase/EndingText.animate()
+			yield(get_tree().create_timer(6),"timeout")
+			ending_mode = true
 
 func _input(event):
 	if event is InputEventMouseButton:

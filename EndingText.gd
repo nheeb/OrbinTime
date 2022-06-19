@@ -39,12 +39,12 @@ func animate():
 	visible = true
 	current_label = $You
 	current_label_text = you_text
-	$Tween.interpolate_property(self, "current_label_pct", 0.0, 1.0, 3)
+	$Tween.interpolate_property(self, "current_label_pct", 0.0, 1.0, 2.5)
 	$Tween.start()
 	yield(get_tree().create_timer(5),"timeout")
 	current_label = $But
 	current_label_text = but_text
-	$Tween.interpolate_property(self, "current_label_pct", 0.0, 1.0, 3)
+	$Tween.interpolate_property(self, "current_label_pct", 0.0, 1.0, 1.8)
 	$Tween.start()
 	yield(get_tree().create_timer(4),"timeout")
 	if !but_text.begins_with("It"):

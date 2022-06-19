@@ -70,8 +70,8 @@ func _physics_process(delta):
 	if mode == MODE_RIGID:
 		old = new
 		new = linear_velocity.length()
-		if new > .3 and !$Roll.playing:
-			$Roll.play()
+#		if new > .3 and !$Roll.playing:
+#			$Roll.play()
 
 func _on_Orb_body_entered(body):
 	#print(body.name)

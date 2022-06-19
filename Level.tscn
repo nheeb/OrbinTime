@@ -75,7 +75,7 @@ volume_db = -12.0
 stream = ExtResource( 9 )
 
 [node name="WeightSpotlight" type="SpotLight" parent="."]
-transform = Transform( -0.998967, 9.30361e-10, -0.0454326, -0.0439847, 0.250448, 0.967131, 0.0113785, 0.96813, -0.250189, -0.00901182, -0.50128, -0.0333603 )
+transform = Transform( -0.998967, -1.39554e-08, -0.0454327, -0.0439847, 0.250448, 0.96713, 0.0113785, 0.96813, -0.250189, -0.00901182, -0.532312, -0.0333603 )
 light_energy = 12.158
 spot_range = 0.275
 spot_angle = 15.39

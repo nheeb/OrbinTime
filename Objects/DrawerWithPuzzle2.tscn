@@ -12,7 +12,7 @@
 
 [node name="DrawerWithPuzzle2" type="Spatial"]
 script = ExtResource( 3 )
-target_color = Color( 0.0313726, 0.47451, 0.701961, 1 )
+target_color = Color( 0.945098, 0, 1, 1 )
 
 [node name="Drawer" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.124, 0, 0, 0, 0.036, 0, 0, 0, 0.124, 0, 0, 0 )

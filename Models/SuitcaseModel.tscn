@@ -295,6 +295,7 @@ tracks/3/keys = {
 [node name="SuitcaseModel" type="Spatial"]
 
 [node name="Suitcase" type="MeshInstance" parent="."]
+visible = false
 mesh = SubResource( 13 )
 
 [node name="SuitcaseLong" type="MeshInstance" parent="."]
@@ -313,7 +314,7 @@ mesh = SubResource( 5 )
 skeleton = NodePath("../..")
 
 [node name="OpenPivot" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.300286 )
+transform = Transform( 1, 0, 0, 0, -0.480652, 0.876911, 0, -0.876911, -0.480652, 0, 0, -0.300286 )
 
 [node name="SuitcaseUp" type="MeshInstance" parent="OpenPivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.300286 )
@@ -331,7 +332,7 @@ mesh = SubResource( 8 )
 skeleton = NodePath("../../..")
 
 [node name="CloserThing" type="MeshInstance" parent="OpenPivot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0497625, 0.614244 )
+transform = Transform( 1, 0, 0, 0, -0.992845, 0.119409, 0, -0.119409, -0.992845, 0, 0.0497625, 0.614244 )
 mesh = SubResource( 9 )
 skeleton = NodePath("../../..")
 

@@ -224,7 +224,7 @@ surfaces/0 = {
 [sub_resource type="SpatialMaterial" id=18]
 flags_transparent = true
 albedo_color = Color( 0.905882, 0.905882, 0.905882, 0.431373 )
-roughness = 0.29
+roughness = 0.12
 
 [sub_resource type="ArrayMesh" id=17]
 resource_name = "Suitcase_Cube011"
@@ -307,6 +307,11 @@ transform = Transform( 0.933356, 0, 0, 0, 0.920074, -0.156899, 0, 0.156899, 0.92
 mesh = SubResource( 3 )
 skeleton = NodePath("../..")
 
+[node name="Handle2" type="MeshInstance" parent="."]
+transform = Transform( 0.950544, 0, 0, 0, 0.920074, -0.156899, 0, 0.156899, 0.920074, 0, -0.056052, 0.358065 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+
 [node name="Belt" type="MeshInstance" parent="."]
 mesh = SubResource( 15 )
 
@@ -346,7 +351,7 @@ skeleton = NodePath("../../..")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.302309 )
 
 [node name="Cover" type="MeshInstance" parent="OpenPivot"]
-transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, -0.0160319, 0.3005 )
+transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, -0.0214108, 0.3005 )
 mesh = SubResource( 17 )
 
 [node name="Sprite3D" type="Sprite3D" parent="OpenPivot"]

@@ -12,7 +12,7 @@ func set_open(o):
 	if open != o:
 		open = o
 		if open:
-			$Tween.interpolate_property($EdgeButtonModel/Pivot, "rotation_degrees:x", 0, -110, 1.5,Tween.TRANS_CUBIC,Tween.EASE_IN_OUT)
+			$Tween.interpolate_property($EdgeButtonModel/Pivot, "rotation_degrees:x", 0, -140, 1.5,Tween.TRANS_CUBIC,Tween.EASE_IN_OUT)
 			$Tween.start()
 	
 

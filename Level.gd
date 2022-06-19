@@ -79,6 +79,7 @@ func _input(event):
 				move_camera_to_base_pos()
 				$Orb.revert()
 				yield($Tween, "tween_all_completed")
+				view_mode = true
 				$Suitcase/EndingText.visible = false
 				$Suitcase/Main/SocketModel/AnimationPlayer.play("idle")
 

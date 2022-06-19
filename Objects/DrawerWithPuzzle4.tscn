@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Objects/Drawer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/DrawerWithPuzzle1.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Sound/ocean_sound.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Materials/Level4Cable.tres" type="Material" id=4]
 [ext_resource path="res://Assets/Materials/Level2Cable.tres" type="Material" id=5]
 [ext_resource path="res://Logic/BoardPuzzle4.tscn" type="PackedScene" id=6]
 
@@ -12,7 +13,7 @@
 
 [node name="DrawerWithPuzzle4" type="Spatial"]
 script = ExtResource( 2 )
-target_color = Color( 0.945098, 0, 1, 1 )
+target_color = Color( 0.0784314, 0, 1, 1 )
 
 [node name="Drawer" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.124, 0, 0, 0, 0.036, 0, 0, 0, 0.143341, 0, 0, 0 )
@@ -25,7 +26,7 @@ transform = Transform( 9.41633e-07, 0, -11.6713, 0, 10.508, 0, 3.84725, 0, 1.162
 transform = Transform( -0.190405, 0, -1.66457e-08, 0, 0.655839, 0, 1.66457e-08, 0, -0.190405, -1.64951, 0, -2.8796e-07 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../..")
-material/0 = ExtResource( 5 )
+material/0 = ExtResource( 4 )
 
 [node name="Cable" type="MeshInstance" parent="Drawer/SolutionOrb"]
 transform = Transform( 2.39063, 0, 0, 0, 0.531919, 0, 0, 0, 0.126755, 2.96458, 0, 0 )
@@ -35,8 +36,28 @@ material/0 = ExtResource( 5 )
 [node name="BoardPuzzle4" parent="Drawer" instance=ExtResource( 6 )]
 transform = Transform( 0.512664, 0, 0, 0, 1.76584, 0, 0, 0, 0.443491, 0.46391, 0, -0.580927 )
 
+[node name="Tile13" parent="Drawer/BoardPuzzle4" index="2"]
+clickable = false
+
+[node name="Tile23" parent="Drawer/BoardPuzzle4" index="7"]
+flipped_in_beginning = true
+clickable = false
+
+[node name="Tile33" parent="Drawer/BoardPuzzle4" index="12"]
+flipped_in_beginning = true
+clickable = false
+
+[node name="Tile43" parent="Drawer/BoardPuzzle4" index="17"]
+clickable = false
+
 [node name="Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -9.0
 
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1, 0, -8.9407e-08, -6.32203e-08, 0.707107, 0.707107, 6.32203e-08, 0.707107, -0.707107, 0, 0.63906, -0.485738 )
+
+[connection signal="puzzle_won" from="Drawer/BoardPuzzle4" to="." method="_on_BoardPuzzle_puzzle_won"]
+
 [editable path="Drawer"]
+[editable path="Drawer/BoardPuzzle4"]

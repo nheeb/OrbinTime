@@ -52,7 +52,7 @@ func check_flip_condition(x_flipped, y_flipped, x_other, y_other) -> bool:
 	# als erstes: diagonalen werden geflippt
 #	if y_flipped == y_other and x_flipped + 1 == x_other:
 #		return true
-	return diagonal_condition(x_flipped, y_flipped, x_other, y_other)
+	return diagonal_condition(x_flipped, y_flipped, x_other, y_other) or cardinal_condition(x_flipped, y_flipped, x_other, y_other)
 
 func register_tile_change(x, y):
 	# changing rule, which tiles will flip as well
@@ -66,4 +66,5 @@ func register_tile_change(x, y):
 					tile.flip()
 	
 	if check_victory():
+		print("puzzle won!!!")
 		emit_signal("puzzle_won")

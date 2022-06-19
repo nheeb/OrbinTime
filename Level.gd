@@ -87,9 +87,8 @@ var view_mode := false
 var max_move := .03
 var cam_global_pos : Vector3
 func _physics_process(_delta):
-#	if Input.is_action_just_pressed("ending"):
-#		move_camera_to_ending_pos()
-#		view_mode = false
+	if Input.is_action_just_pressed("ending"):
+		$Suitcase/Circles.queue_free()
 	if view_mode:
 		var mouse_pos := get_viewport().get_mouse_position()
 		mouse_pos.x = 2.0 * (float(mouse_pos.x) / get_viewport().size.x) - 1.0

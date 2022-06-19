@@ -22,7 +22,7 @@ func toggle_outline(object: Spatial, value: bool, color: Color = Color.ghostwhit
 	else:
 		if object.is_in_group("outlined"):
 			object.remove_from_group("outlined")
-	var outline_mat : ShaderMaterial = OUTLINE.duplicate(true)
+	var outline_mat : ShaderMaterial = OUTLINE#.duplicate(false)
 	outline_mat.set("shader_param/outline_width", width)
 	outline_mat.set("shader_param/outline_color", color)
 	var mesh_instances := fetch_all_child_mesh_instances(object)
@@ -40,7 +40,7 @@ func clear_outline():
 
 func make_materials_right(mi: MeshInstance):
 	if mi.get_surface_material(0) == null:
-		for i in mi.get_surface_material_count():
+		for i in range(mi.get_surface_material_count()):
 			if mi.mesh != null:
 				var surface_mat = mi.mesh.surface_get_material(i)
 				if surface_mat != null:

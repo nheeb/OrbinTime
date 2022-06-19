@@ -3,7 +3,7 @@ extends Spatial
 export var flipped_in_beginning: bool = false
 
 onready var is_flipped := false
-export var random_flippiness = 5.5
+export var random_flippiness = 8.5
 onready var target_one = $Mesh.transform.rotated(Vector3.FORWARD, deg2rad(180.0 + (randf()-0.5)*random_flippiness))
 onready var target_two = $Mesh.transform.rotated(Vector3.FORWARD, deg2rad((randf()-0.5)*random_flippiness))
 

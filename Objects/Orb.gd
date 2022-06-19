@@ -76,6 +76,6 @@ func _physics_process(_delta):
 func _on_Orb_body_entered(body):
 	#print(body.name)
 	if body.name == "Wall":
-		if new > 0.22:
+		if new > 0.18:
 			$Klack.play()
 			#$Roll.stop()

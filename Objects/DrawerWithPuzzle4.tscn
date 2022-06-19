@@ -30,13 +30,13 @@ PULL_DIRECTION = Vector3( 0, 0, 1 )
 transform = Transform( 9.41633e-07, 0, -11.6713, 0, 10.508, 0, 3.84725, 0, 1.16208e-06, 0.0744581, -0.0819037, 0 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Drawer"]
-transform = Transform( 1.60131, 0, 0, 0, 0.167596, 0, 0, 0, 0.567354, 0.115283, 0.661375, -0.0759252 )
+transform = Transform( 1.60131, 0, 0, 0, 0.167596, 0, 0, 0, 0.567354, 0.115283, 1.12155, 0.295197 )
 mesh = SubResource( 3 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 4 )
 
 [node name="SolutionOrb" type="MeshInstance" parent="Drawer"]
-transform = Transform( -0.190405, 0, -1.66457e-08, 0, 0.655839, 0, 1.66457e-08, 0, -0.190405, -1.64951, 0, -2.8796e-07 )
+transform = Transform( -0.190405, 0, -1.66457e-08, 0, 0.655839, 0, 1.66457e-08, 0, -0.190405, -1.75228, 0, 0.244878 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../..")
 material/0 = ExtResource( 4 )
@@ -47,7 +47,7 @@ mesh = SubResource( 2 )
 material/0 = ExtResource( 5 )
 
 [node name="BoardPuzzle4" parent="Drawer" instance=ExtResource( 6 )]
-transform = Transform( 0.512664, 0, 0, 0, 1.76584, 0, 0, 0, 0.443491, 0.46391, 0, -0.580927 )
+transform = Transform( 0.512664, 0, 0, 0, 1.76584, 0, 0, 0, 0.443491, 0.46391, 0.46017, -0.209805 )
 
 [node name="Tile13" parent="Drawer/BoardPuzzle4" index="2"]
 clickable = false

@@ -28,6 +28,8 @@ func toggle_outline(object: Spatial, value: bool, color: Color = Color.ghostwhit
 	var mesh_instances := fetch_all_child_mesh_instances(object)
 	for _m in mesh_instances:
 		var mi := _m as MeshInstance
+		if mi.name == "Cover":
+			continue
 		make_materials_right(mi)
 		for i in range(mi.get_surface_material_count()):
 			var mat := mi.get_surface_material(i)

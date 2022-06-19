@@ -1,0 +1,307 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.2.40",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1,
+                2
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "EdgeButtonBot",
+            "scale" : [
+                0.02079584077000618,
+                0.02079584077000618,
+                0.02079584077000618
+            ],
+            "translation" : [
+                0,
+                0.02107866480946541,
+                0
+            ]
+        },
+        {
+            "mesh" : 1,
+            "name" : "EdgeButtonTop",
+            "scale" : [
+                0.02079584077000618,
+                0.02079584077000618,
+                0.02079584077000618
+            ],
+            "translation" : [
+                0,
+                0.02107866480946541,
+                0
+            ]
+        },
+        {
+            "mesh" : 2,
+            "name" : "Cover",
+            "scale" : [
+                0.02079584077000618,
+                0.02079584077000618,
+                0.02079584077000618
+            ],
+            "translation" : [
+                0,
+                0.02107866480946541,
+                0
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "ButtonBase",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.05780141055583954,
+                    0.05780141055583954,
+                    0.05780141055583954,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "Button",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.44285595417022705,
+                    0.01613524928689003,
+                    0.01613524928689003,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.3449999988079071
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        },
+        {
+            "name" : "Cube.006",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                }
+            ]
+        },
+        {
+            "name" : "Cube.012",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 8,
+                        "NORMAL" : 9,
+                        "TEXCOORD_0" : 10
+                    },
+                    "indices" : 11,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 223,
+            "max" : [
+                2.4426960945129395,
+                0.059590306133031845,
+                1.6704243421554565
+            ],
+            "min" : [
+                -2.4426960945129395,
+                -1,
+                -1.6704243421554565
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 223,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 223,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 990,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 45,
+            "max" : [
+                1.947681188583374,
+                0.8553345203399658,
+                1.250661849975586
+            ],
+            "min" : [
+                -1.947681188583374,
+                -0.29230427742004395,
+                -1.250661849975586
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 45,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 45,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 198,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5126,
+            "count" : 89,
+            "max" : [
+                2.379915237426758,
+                2.6307532787323,
+                1.6076433658599854
+            ],
+            "min" : [
+                -2.379915237426758,
+                0.17407582700252533,
+                -1.6076433658599854
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5126,
+            "count" : 89,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 10,
+            "componentType" : 5126,
+            "count" : 89,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 11,
+            "componentType" : 5123,
+            "count" : 492,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 2676,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2676,
+            "byteOffset" : 2676
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1784,
+            "byteOffset" : 5352
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1980,
+            "byteOffset" : 7136
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 540,
+            "byteOffset" : 9116
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 540,
+            "byteOffset" : 9656
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 360,
+            "byteOffset" : 10196
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 396,
+            "byteOffset" : 10556
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1068,
+            "byteOffset" : 10952
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1068,
+            "byteOffset" : 12020
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 712,
+            "byteOffset" : 13088
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 984,
+            "byteOffset" : 13800
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 14784,
+            "uri" : "Button.bin"
+        }
+    ]
+}

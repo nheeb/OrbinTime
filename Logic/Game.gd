@@ -4,7 +4,7 @@ var puzzle1_beaten = false
 var puzzle2_beaten = false
 var puzzle3_beaten = false
 
-var level: Level
+var level
 
 export var WEIGHT_COLOR := Color("384a51")
 var selected_weight: Weight = null

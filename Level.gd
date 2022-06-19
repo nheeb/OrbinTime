@@ -1,5 +1,4 @@
 extends Spatial
-class_name Level
 
 var finish_range := .02
 

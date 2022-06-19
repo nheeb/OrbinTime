@@ -7,6 +7,7 @@ var is_pressed := false
 signal button_pressed
 
 var open := false setget set_open
+var enabled = true
 
 func set_open(o):
 	if open != o:
@@ -34,9 +35,9 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 	if open:
 		if event is InputEventMouseButton:
 			if event.button_index == 1:
-				if event.pressed and not is_pressed and open:
+				if event.pressed and not is_pressed and open and enabled:
 					pressed()
-				elif is_pressed and open:
+				elif is_pressed and open and enabled:
 					released() 
 
 

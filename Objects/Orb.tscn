@@ -77,5 +77,6 @@ volume_db = -7.0
 
 [node name="Klack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+bus = "TileSFX"
 
 [connection signal="body_entered" from="." to="." method="_on_Orb_body_entered"]

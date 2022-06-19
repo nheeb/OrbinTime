@@ -85,4 +85,7 @@ func _on_BoardPuzzle4_puzzle_won() -> void:
 
 func _on_Button1_button_pressed() -> void:
 	# TODO deactivate button
+	$Buttons/Button1.enabled = false
 	$DrawerPuzzle4/Drawer.button_activated()
+	yield($DrawerPuzzle4/Drawer, "pull_completed")
+	$Buttons/Button1.enabled = true

@@ -245,7 +245,7 @@ margin_top = 538.0
 margin_right = 832.0
 margin_bottom = 566.0
 custom_fonts/font = SubResource( 11 )
-text = "There is a tool you need to find for this puzzle.."
+text = "There is a tool you need to find for this puzzle..."
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0354543, -0.181088 )

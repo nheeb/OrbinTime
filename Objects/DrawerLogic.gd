@@ -37,7 +37,7 @@ func pull_out():
 	if Game.level.has_node("Suitcase/Klappe" + get_parent().name[-1]):
 		Game.level.get_node("Suitcase/Klappe" + get_parent().name[-1]).open()
 	if has_node("Lamp/Light"):
-		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 0.0, 5.0, .5)
+		$LightTween.interpolate_property(get_node("Lamp/Light"), "light_energy", 0.0, 5.0, .5)
 		$LightTween.start()
 
 func pull_out_immediately():
@@ -49,7 +49,7 @@ func pull_out_immediately():
 	if level.has_node("Suitcase/Klappe" + get_parent().name[-1]):
 		level.get_node("Suitcase/Klappe" + get_parent().name[-1]).open()
 	if has_node("Lamp/Light"):
-		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 0.0, 5.0, .5)
+		$LightTween.interpolate_property(get_node("Lamp/Light"), "light_energy", 0.0, 5.0, .5)
 		$LightTween.start()
 
 func pull_back():
@@ -79,7 +79,7 @@ func pull_back():
 	if Game.level.has_node("Suitcase/Klappe" + get_parent().name[-1]):
 		Game.level.get_node("Suitcase/Klappe" + get_parent().name[-1]).close()
 	if has_node("Lamp/Light"):
-		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 5.0, 0.0, .5)
+		$LightTween.interpolate_property(get_node("Lamp/Light"), "light_energy", 5.0, 0.0, .5)
 		$LightTween.start()
 
 

@@ -32,7 +32,7 @@ material/0 = ExtResource( 4 )
 transform = Transform( -0.524, 0, 7.91218e-08, 0, 0.524, 0, -7.91218e-08, 0, -0.524, 0.348913, 0.409054, 0.534534 )
 
 [node name="Lamp" parent="Drawer" instance=ExtResource( 5 )]
-transform = Transform( 0.209347, 0, 0, 0, 0.739408, 0, 0, 0, 0.209347, -1.64485, 1.65633, 0 )
+transform = Transform( 0.209347, 0, 0, 0, 0.544916, 0, 0, 0, 0.209347, -1.64485, 1.3217, 0 )
 
 [node name="Light" parent="Drawer/Lamp" index="0"]
 transform = Transform( 50.1458, 0, 0, 0, 48.9032, 0, 0, 0, 50.1458, 0, 0, 0 )

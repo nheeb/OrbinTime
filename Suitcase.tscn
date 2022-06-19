@@ -162,11 +162,18 @@ transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.72683
 [node name="Drawer" parent="DrawerPuzzle2" index="0"]
 transform = Transform( 0.124, 0, 0, 0, 0.036, 0, 0, 0, 0.124, 0, 0.229478, 0 )
 
+[node name="Light" parent="DrawerPuzzle2/Drawer/Lamp" index="0"]
+visible = true
+light_color = Color( 0.411765, 0, 0.690196, 1 )
+
 [node name="DrawerPuzzle3" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.722, -0.875268, 0 )
 
 [node name="Drawer" parent="DrawerPuzzle3" index="0"]
 transform = Transform( 0.124, 0, 0, 0, 0.036, 0, 0, 0, 0.124, 0, 0.349751, 0 )
+
+[node name="Light" parent="DrawerPuzzle3/Drawer/Lamp" index="0"]
+visible = true
 
 [node name="LED" parent="." instance=ExtResource( 11 )]
 transform = Transform( -3.08571e-08, 0, 0.705928, 0.62828, 0.321867, 2.7463e-08, -0.321867, 0.62828, -1.40693e-08, 0.000296958, 0.0456448, -0.296899 )
@@ -204,6 +211,9 @@ clickable = true
 
 [node name="Tile44" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="18"]
 flipped_in_beginning = true
+
+[node name="Light" parent="DrawerPuzzle4/Drawer/Lamp" index="0"]
+light_color = Color( 0, 0.133333, 1, 1 )
 
 [node name="Klappe1" parent="." instance=ExtResource( 15 )]
 transform = Transform( 0.482496, 0, 0, 0, 0.681257, 0, 0, 0, 0.482496, -0.391959, -0.14273, 0 )
@@ -248,3 +258,4 @@ transform = Transform( -0.482496, 0, -4.21811e-08, 0, 0.920992, 0, 4.21811e-08, 
 [editable path="DrawerPuzzle4"]
 [editable path="DrawerPuzzle4/Drawer"]
 [editable path="DrawerPuzzle4/Drawer/BoardPuzzle4"]
+[editable path="DrawerPuzzle4/Drawer/Lamp"]

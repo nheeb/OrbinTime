@@ -26,7 +26,7 @@ func pull_out():
 	start_transform = Transform(self.transform)
 	target_transform = self.transform.translated(PULL_DIRECTION * length)
 	$Tween.reset_all()
-	$Tween.interpolate_method(self, "move_global", 0.0, 1.0, 0.8, Tween.TRANS_BOUNCE, Tween.EASE_OUT)
+	$Tween.interpolate_method(self, "move_global", 0.0, 1.0, .9, Tween.TRANS_BOUNCE, Tween.EASE_OUT)
 	$Tween.start()
 	$DrawerOpen.play()
 	pulled_out = true

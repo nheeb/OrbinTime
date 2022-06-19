@@ -192,6 +192,9 @@ flipped_in_beginning = false
 [node name="Tile43" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="17"]
 clickable = true
 
+[node name="Camera" parent="DrawerPuzzle4" index="2"]
+current = true
+
 [connection signal="button_pressed" from="Buttons/Button1" to="." method="_on_Button1_button_pressed"]
 [connection signal="switch_turned_off" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]
 [connection signal="switch_turned_on" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]

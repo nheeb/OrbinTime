@@ -57,4 +57,6 @@ stream = ExtResource( 4 )
 transform = Transform( 6.76242, 0, 0, 0, 10.508, 0, 0, 0, 5.69966, 0.0744581, -0.0819037, 0 )
 mesh = SubResource( 2 )
 
+[node name="LightTween" type="Tween" parent="."]
+
 [connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]

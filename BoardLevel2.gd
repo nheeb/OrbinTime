@@ -21,7 +21,12 @@ func _ready() -> void:
 			tile.connect("flipped", self, "register_tile_change")
 			tile.get_node("Mesh/Sprite3D").hframes = dim_x
 			tile.get_node("Mesh/Sprite3D").vframes = dim_y
-			
+
+func reset():
+	for tile_row in tiles:
+		for tile in tile_row:
+			if tile.is_flipped and not tile.flipped_in_beginning:
+				tile.flip()	
 			
 
 func check_victory() -> bool:

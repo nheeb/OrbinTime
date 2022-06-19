@@ -23,6 +23,11 @@ func check_victory() -> bool:
 				return false
 	return true
 
+func reset():
+	for tile_row in tiles:
+		for tile in tile_row:
+			if tile.is_flipped and not tile.flipped_in_beginning:
+				tile.flip()
 
 func diagonal_condition(x_flipped, y_flipped, x_other, y_other):
 	# possible to solve in 3x3 but pretty difficult, easy with a weight

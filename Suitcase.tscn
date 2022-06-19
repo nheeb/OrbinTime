@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Models/SuitcaseModel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Suitcase.gd" type="Script" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Objects/WeightDrawer.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Objects/DrawerWithPuzzle4.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Objects/Klappe.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Sprites/reset.png" type="Texture" id=16]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -90,7 +91,15 @@ transform = Transform( 0.720903, 0, 0, 0, -3.15117e-08, -0.720903, 0, 1, -4.3711
 material/0 = SubResource( 10 )
 
 [node name="Button2" parent="Buttons" instance=ExtResource( 4 )]
-transform = Transform( -3.00436e-08, 3.00436e-08, 0.687317, 0.687317, 1.31324e-15, 3.00436e-08, 0, 0.887129, -3.87777e-08, 0.294592, -0.0228463, -0.292758 )
+transform = Transform( 0.687317, -7.51742e-21, 2.13163e-14, 2.13163e-14, -3.00436e-08, -0.687317, 0, 0.887129, -3.87777e-08, 0.294592, -0.0228463, -0.292758 )
+open = true
+
+[node name="Pivot" parent="Buttons/Button2/EdgeButtonModel" index="2"]
+visible = false
+
+[node name="Sprite3D" type="Sprite3D" parent="Buttons/Button2/EdgeButtonModel" index="3"]
+transform = Transform( 0.00834718, -2.57846e-16, 3.10631e-23, 3.18196e-24, -5.10815e-10, -0.006, 2.58877e-16, 0.00831392, -1.73828e-10, -0.00138304, 0.0392675, 0.000292238 )
+texture = ExtResource( 16 )
 
 [node name="Switch1" parent="Buttons" instance=ExtResource( 6 )]
 transform = Transform( -0.0496274, 1.02262e-09, 4.33856e-09, 4.33856e-09, -4.47001e-17, 0.0496274, 1.02262e-09, 0.0496274, 0, -0.29701, -0.0253246, -0.289258 )
@@ -187,11 +196,14 @@ flipped_in_beginning = true
 [node name="Tile15" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="4"]
 flipped_in_beginning = true
 
-[node name="Tile33" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="12"]
-flipped_in_beginning = false
+[node name="Tile42" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="16"]
+flipped_in_beginning = true
 
 [node name="Tile43" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="17"]
 clickable = true
+
+[node name="Tile44" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="18"]
+flipped_in_beginning = true
 
 [node name="Klappe1" parent="." instance=ExtResource( 15 )]
 transform = Transform( 0.482496, 0, 0, 0, 0.681257, 0, 0, 0, 0.482496, -0.391959, -0.14273, 0 )
@@ -206,6 +218,7 @@ transform = Transform( 1.1561e-08, 0, -0.969485, 0.0467565, 0.583561, 5.57565e-1
 transform = Transform( -0.482496, 0, -4.21811e-08, 0, 0.920992, 0, 4.21811e-08, 0, -0.482496, 0.387331, -0.279619, 0 )
 
 [connection signal="button_pressed" from="Buttons/Button1" to="." method="_on_Button1_button_pressed"]
+[connection signal="button_pressed" from="Buttons/Button2" to="." method="_on_reset_button_pressed"]
 [connection signal="switch_turned_off" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]
 [connection signal="switch_turned_on" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]
 [connection signal="switch_turned_off" from="Buttons/Switch2" to="." method="_on_Switch2_switch_turned"]
@@ -214,11 +227,12 @@ transform = Transform( -0.482496, 0, -4.21811e-08, 0, 0.920992, 0, 4.21811e-08, 
 [connection signal="switch_turned_on" from="Buttons/Switch3" to="." method="_on_Switch3_switch_turned"]
 [connection signal="puzzle_won" from="DrawerPuzzle1/Drawer/BoardPuzzle1" to="." method="_on_BoardPuzzle1_puzzle_won"]
 [connection signal="puzzle_won" from="DrawerPuzzle2/Drawer/BoardPuzzle2" to="." method="_on_BoardPuzzle2_puzzle_won"]
-[connection signal="puzzle_won" from="DrawerPuzzle3/Drawer/ImpossibleBoard" to="." method="_on_BoardPuzzle3_puzzle_won"]
 [connection signal="puzzle_won" from="DrawerPuzzle4/Drawer/BoardPuzzle4" to="." method="_on_BoardPuzzle4_puzzle_won"]
 
 [editable path="Buttons/Button1"]
 [editable path="Buttons/Button1/EdgeButtonModel"]
+[editable path="Buttons/Button2"]
+[editable path="Buttons/Button2/EdgeButtonModel"]
 [editable path="Buttons/Switch1"]
 [editable path="Buttons/Switch1/SwitchModel"]
 [editable path="Buttons/Switch2"]

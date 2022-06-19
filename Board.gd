@@ -19,7 +19,7 @@ func _ready() -> void:
 func reset():
 	for tile_row in tiles:
 		for tile in tile_row:
-			if tile.is_flipped and not tile.flipped_in_beginning:
+			if tile.is_flipped != tile.flipped_in_beginning:
 				tile.flip()
 
 func check_victory() -> bool:

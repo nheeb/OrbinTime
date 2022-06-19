@@ -26,7 +26,7 @@ func check_victory() -> bool:
 func reset():
 	for tile_row in tiles:
 		for tile in tile_row:
-			if tile.is_flipped and not tile.flipped_in_beginning:
+			if tile.is_flipped != tile.flipped_in_beginning:
 				tile.flip()
 
 func diagonal_condition(x_flipped, y_flipped, x_other, y_other):

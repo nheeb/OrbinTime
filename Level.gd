@@ -48,7 +48,7 @@ func _ready():
 	yield($Tween, "tween_all_completed")
 	$Orb.visible = true
 	$Orb.global_transform.origin = $Suitcase/SuitcaseModel/OpenPivot/Maze/StaticBody/OrbSpawnPosition.global_transform.origin
-	yield(get_tree().create_timer(1),"timeout")
+	yield(get_tree().create_timer(.5),"timeout")
 	maze_mode = true
 	$Suitcase.maze_mode = true
 	$Orb.mode = RigidBody.MODE_RIGID
@@ -61,12 +61,12 @@ func ending_initiated():
 		move_camera_to_ending_pos()
 		yield($Tween, "tween_all_completed")
 		$Suitcase/Main/SocketModel/AnimationPlayer.play("busy")
-		$Orb.do_mountains = Game.puzzle1_beaten
-		$Orb.do_trees = Game.puzzle2_beaten
-		$Orb.do_rivers = Game.puzzle3_beaten
+		$Orb.do_trees = Game.puzzle1_beaten
+		$Orb.do_rivers = Game.puzzle2_beaten
+		$Orb.do_mountains = Game.puzzle3_beaten
 		$Orb.become_planet()
 		yield($Orb, "planet_done")
-		$Suitcase/EndingText.set_but_text(Game.puzzle1_beaten , Game.puzzle2_beaten , Game.puzzle3_beaten)
+		$Suitcase/EndingText.set_but_text(Game.puzzle3_beaten , Game.puzzle1_beaten , Game.puzzle2_beaten)
 		$Suitcase/EndingText.animate()
 		yield(get_tree().create_timer(3),"timeout")
 		ending_mode = true

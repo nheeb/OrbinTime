@@ -42,6 +42,8 @@ tracks/0/keys = {
 }
 
 [node name="Orb" type="RigidBody"]
+contacts_reported = 2
+contact_monitor = true
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -69,3 +71,11 @@ volume_db = -8.0
 
 [node name="TreeSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+
+[node name="Roll" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Klack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="body_entered" from="." to="." method="_on_Orb_body_entered"]

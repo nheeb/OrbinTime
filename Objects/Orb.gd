@@ -63,3 +63,19 @@ func revert():
 			if t is MeshInstance:
 				t.queue_free()
 				yield(get_tree().create_timer(.2),"timeout")
+
+var old: float = 0.0
+var new: float = 0.0
+func _physics_process(delta):
+	if mode == MODE_RIGID:
+		old = new
+		new = linear_velocity.length()
+		if new > .3 and !$Roll.playing:
+			$Roll.play()
+
+func _on_Orb_body_entered(body):
+	#print(body.name)
+	if body.name == "Wall":
+		if new > 0.22:
+			$Klack.play()
+			#$Roll.stop()

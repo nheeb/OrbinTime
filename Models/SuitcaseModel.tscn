@@ -222,8 +222,8 @@ surfaces/0 = {
 
 [sub_resource type="SpatialMaterial" id=18]
 flags_transparent = true
-albedo_color = Color( 1, 1, 1, 0.12549 )
-roughness = 0.2
+albedo_color = Color( 0.905882, 0.905882, 0.905882, 0.431373 )
+roughness = 0.29
 
 [sub_resource type="ArrayMesh" id=17]
 resource_name = "Suitcase_Cube011"

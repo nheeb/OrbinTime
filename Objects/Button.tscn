@@ -25,6 +25,8 @@ stream = ExtResource( 4 )
 [node name="ReleaseSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
+[node name="Tween" type="Tween" parent="."]
+
 [connection signal="input_event" from="ClickArea" to="." method="_on_ClickArea_input_event"]
 [connection signal="mouse_entered" from="ClickArea" to="." method="_on_ClickArea_mouse_entered"]
 [connection signal="mouse_exited" from="ClickArea" to="." method="_on_ClickArea_mouse_exited"]

@@ -59,7 +59,7 @@ script = ExtResource( 2 )
 [node name="Main" type="Spatial" parent="."]
 
 [node name="TestBoden" type="MeshInstance" parent="Main"]
-transform = Transform( 0.310535, 0, 0, 0, 0.00176967, 0, 0, 0, 0.058167, 0, -0.0705242, -0.231323 )
+transform = Transform( 0.341517, 0, 0, 0, 0.00176713, 0, 0, 0, 0.0580836, 0, -0.0705242, -0.231323 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 2 )
@@ -82,7 +82,7 @@ omni_attenuation = 5.85634
 transform = Transform( 0.720903, 0, 0, 0, -3.15117e-08, -0.720903, 0, 1, -4.37114e-08, 0.111254, -0.0205617, -0.292758 )
 
 [node name="Button2" parent="Buttons" instance=ExtResource( 4 )]
-transform = Transform( -3.00436e-08, 3.00436e-08, 0.687317, 0.687317, 1.31324e-15, 3.00436e-08, 0, 0.887129, -3.87777e-08, 0.306605, -0.0228463, -0.292758 )
+transform = Transform( -3.00436e-08, 3.00436e-08, 0.687317, 0.687317, 1.31324e-15, 3.00436e-08, 0, 0.887129, -3.87777e-08, 0.294592, -0.0228463, -0.292758 )
 
 [node name="Switch1" parent="Buttons" instance=ExtResource( 6 )]
 transform = Transform( -0.0496274, 1.02262e-09, 4.33856e-09, 4.33856e-09, -4.47001e-17, 0.0496274, 1.02262e-09, 0.0496274, 0, -0.29701, -0.0253246, -0.289258 )

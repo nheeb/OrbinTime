@@ -22,7 +22,6 @@ func _ready() -> void:
 	$Mesh/Sprite3D.vframes = get_parent().dim_y
 	# scale sprite
 	if get_parent().dim_x == 4:
-		print("yup")
 		$Mesh/Sprite3D.transform = $Mesh/Sprite3D.transform.scaled(Vector3(4.0/3.0, 1.0, 1.0))
 	if get_parent().dim_y == 4:
 		$Mesh/Sprite3D.transform = $Mesh/Sprite3D.transform.scaled(Vector3(1.0, 1.0, 4.0/3.0))

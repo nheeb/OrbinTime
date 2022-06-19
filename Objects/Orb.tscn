@@ -61,6 +61,7 @@ anims/spin = SubResource( 3 )
 [node name="Tween" type="Tween" parent="."]
 
 [node name="GrassSound" type="AudioStreamPlayer" parent="."]
+volume_db = -6.0
 
 [node name="OceanSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
@@ -68,10 +69,11 @@ volume_db = -10.0
 
 [node name="MountainSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-volume_db = -8.0
+volume_db = -13.0
 
 [node name="TreeSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+volume_db = -7.0
 
 [node name="Klack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )

@@ -136,6 +136,7 @@ func _physics_process(_delta):
 			$Suitcase/Circles.activate()
 			cam_global_pos = $Pivot/Camera.global_transform.origin
 			view_mode=true
+			$Music.play()
 			
 		if Input.is_action_just_pressed("teleport_orb") or $Orb.global_transform.origin.y < -2:
 			$Orb.global_transform.origin = $Suitcase/MazeFinish.global_transform.origin

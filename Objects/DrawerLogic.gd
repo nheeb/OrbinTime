@@ -21,7 +21,14 @@ func button_activated():
 
 func pull_out():
 	var aabb = $DrawerMesh.get_transformed_aabb()
-	var length = aabb.get_longest_axis_size() / self.scale.x
+	var length
+	if PULL_DIRECTION == Vector3(0.0, 0.0, 1.0):
+		print("yeeeehaww")
+		
+		length = aabb.size.z / self.scale.z
+		print(length)
+	else:
+		length = aabb.get_longest_axis_size() / self.scale.x
 	# TODO add some bounce to make it more interesting
 	start_transform = Transform(self.transform)
 	target_transform = self.transform.translated(PULL_DIRECTION * length)

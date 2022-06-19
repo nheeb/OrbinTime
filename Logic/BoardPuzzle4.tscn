@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Logic/BoardLevel4.gd" type="Script" id=1]
+[ext_resource path="res://Models/Tile.tscn" type="PackedScene" id=2]
+
+[node name="Board" type="Spatial"]
+script = ExtResource( 1 )
+dim_x = 5
+
+[node name="Tile11" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.95376, 1.15424e-07, -1.03148 )
+
+[node name="Tile12" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.636588, 2.73587e-10, -1.02796 )
+
+[node name="Tile13" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.670086, -1.1396e-07, -1.02796 )
+
+[node name="Tile14" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -1.98643, -1.1396e-07, -1.02796 )
+
+[node name="Tile15" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -3.30369, -1.1396e-07, -1.02796 )
+
+[node name="Tile21" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.94818, 1.14936e-07, 0.324627 )
+
+[node name="Tile22" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.621978, -1.00366e-09, 0.314214 )
+
+[node name="Tile23" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.686841, -1.15424e-07, 0.314214 )
+
+[node name="Tile24" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -1.98692, -1.15424e-07, 0.314214 )
+
+[node name="Tile25" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -3.29841, -1.15424e-07, 0.314214 )
+
+[node name="Tile31" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.95376, 1.15424e-07, 1.7078 )
+
+[node name="Tile32" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.636588, 2.73587e-10, 1.71132 )
+
+[node name="Tile33" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.670086, -1.1396e-07, 1.71132 )
+
+[node name="Tile34" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -2.012, -1.1396e-07, 1.71132 )
+
+[node name="Tile35" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -3.31637, -1.1396e-07, 1.71132 )
+
+[node name="Tile41" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.95388, 1.15424e-07, 3.07948 )
+
+[node name="Tile42" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.636708, 2.73587e-10, 3.083 )
+
+[node name="Tile43" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.669966, -1.1396e-07, 3.083 )
+
+[node name="Tile44" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -1.98631, -1.1396e-07, 3.083 )
+
+[node name="Tile45" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -3.30253, -1.1396e-07, 3.083 )

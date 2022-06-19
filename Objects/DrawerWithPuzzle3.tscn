@@ -4,7 +4,7 @@
 [ext_resource path="res://Logic/ImpossibleBoard.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/DrawerWithPuzzle1.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Materials/Level3Cable.tres" type="Material" id=4]
-[ext_resource path="res://Assets/Sound/ocean_sound.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Sound/mountain_sound.ogg" type="AudioStream" id=5]
 
 [sub_resource type="SphereMesh" id=1]
 
@@ -33,6 +33,6 @@ material/0 = ExtResource( 4 )
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
-volume_db = -6.0
+volume_db = -11.0
 
 [connection signal="puzzle_won" from="Drawer/ImpossibleBoard" to="." method="_on_BoardPuzzle_puzzle_won"]

@@ -79,9 +79,10 @@ func _on_BoardPuzzle3_puzzle_won() -> void:
 	Game.puzzle3_beaten = true
 	$LED.set_light("Red", true)
 
-
 func _on_BoardPuzzle4_puzzle_won() -> void:
-	# TODO connect!!
 	Game.puzzle2_beaten = true
 	$LED.set_light("Blue", true)
 
+func _on_Button1_button_pressed() -> void:
+	# TODO deactivate button
+	$DrawerPuzzle4/Drawer.button_activated()

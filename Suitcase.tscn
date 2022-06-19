@@ -60,7 +60,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7422, 0 )
 
 [node name="OmniLight" type="OmniLight" parent="Main"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0325182, -0.0715137 )
-light_energy = 0.5
+light_energy = 1.821
+omni_range = 1.841
+omni_attenuation = 5.85634
 
 [node name="Buttons" type="Spatial" parent="."]
 
@@ -68,7 +70,7 @@ light_energy = 0.5
 transform = Transform( 0.720903, 0, 0, 0, -3.15117e-08, -0.720903, 0, 1, -4.37114e-08, 0.111254, -0.0205617, -0.292758 )
 
 [node name="Button2" parent="Buttons" instance=ExtResource( 4 )]
-transform = Transform( -3.00436e-08, 3.00436e-08, 0.687317, 0.687317, 1.31324e-15, 3.00436e-08, 0, 0.887129, -3.87777e-08, 0.321035, -0.0228463, -0.292758 )
+transform = Transform( -3.00436e-08, 3.00436e-08, 0.687317, 0.687317, 1.31324e-15, 3.00436e-08, 0, 0.887129, -3.87777e-08, 0.306605, -0.0228463, -0.292758 )
 
 [node name="Switch1" parent="Buttons" instance=ExtResource( 6 )]
 transform = Transform( -0.0496274, 1.02262e-09, 4.33856e-09, 4.33856e-09, -4.47001e-17, 0.0496274, 1.02262e-09, 0.0496274, 0, -0.29701, -0.0253246, -0.289258 )
@@ -94,10 +96,10 @@ material/0 = SubResource( 6 )
 transform = Transform( 0.100508, 0, 0, 0, 0.0566538, 0, 0, 0, 0.100508, 0.204034, -0.0685249, -0.234074 )
 
 [node name="WeightRack2" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.100508, 0, 0, 0, 0.0566538, 0, 0, 0, 0.100508, 0.00260164, -1.03606, 0.0227152 )
+transform = Transform( 0.100508, 0, 0, 0, 0.0566538, 0, 0, 0, 0.100508, 0.00260164, -0.727655, 0.0227152 )
 
 [node name="Weight" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0.00245671, -1.03418, 0.0224677 )
+transform = Transform( 0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0.00245671, -0.725775, 0.0224677 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.40047, -0.151759, 0 )
@@ -114,14 +116,23 @@ mesh = SubResource( 4 )
 [node name="DrawerPuzzle1" parent="." instance=ExtResource( 9 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.722336, -0.307586, 0 )
 
+[node name="Drawer" parent="DrawerPuzzle1" index="0"]
+transform = Transform( -0.124, 0, -1.08404e-08, 0, 0.036, 0, 1.08404e-08, 0, -0.124, 0, 0.0822766, 0 )
+
 [node name="BoardPuzzle1" parent="DrawerPuzzle1/Drawer" index="5"]
 transform = Transform( 0.524194, 0, 6.77626e-21, 0, 1.80556, 0, -6.77626e-21, 0, 0.524194, -0.338818, 0.386922, -0.156461 )
 
 [node name="DrawerPuzzle2" parent="." instance=ExtResource( 10 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.726832, -0.637354, 0 )
 
+[node name="Drawer" parent="DrawerPuzzle2" index="0"]
+transform = Transform( 0.124, 0, 0, 0, 0.036, 0, 0, 0, 0.124, 0, 0.229478, 0 )
+
 [node name="DrawerPuzzle3" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.722, -0.875268, 0 )
+
+[node name="Drawer" parent="DrawerPuzzle3" index="0"]
+transform = Transform( 0.124, 0, 0, 0, 0.036, 0, 0, 0, 0.124, 0, 0.349751, 0 )
 
 [node name="LED" parent="." instance=ExtResource( 11 )]
 transform = Transform( -3.08571e-08, 0, 0.705928, 0.62828, 0.321867, 2.7463e-08, -0.321867, 0.62828, -1.40693e-08, 0.000296958, 0.0456448, -0.296899 )

@@ -1,4 +1,5 @@
 extends Spatial
+class_name Level
 
 var finish_range := .02
 
@@ -33,6 +34,7 @@ func move_camera_to_ending_pos():
 var maze_mode := false
 
 func _ready():
+	Game.level = self
 	$Suitcase.maze_mode = false
 	$Orb.visible = false
 	$Orb.mode = RigidBody.MODE_STATIC
@@ -109,6 +111,10 @@ func _physics_process(_delta):
 			# orb spin active
 			$Orb.mode = RigidBody.MODE_STATIC
 			$Orb/AnimationPlayer.play("spin")
+			# orb fly up
+			$Tween.interpolate_property($Orb, "global_transform:origin:y", $Orb.global_transform.origin.y, $Orb.global_transform.origin.y+.1, 1, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
+			$Tween.start()
+			yield($Tween, "tween_all_completed")
 			# orb fly to camera
 			var fly_duration := 3.3
 			$OrbDroneSound.play()

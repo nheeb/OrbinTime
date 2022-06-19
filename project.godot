@@ -10,11 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Spatial",
+"class": "Level",
+"language": "GDScript",
+"path": "res://Level.gd"
+}, {
+"base": "Spatial",
 "class": "Weight",
 "language": "GDScript",
 "path": "res://Logic/Weight.gd"
 } ]
 _global_script_class_icons={
+"Level": "",
 "Weight": ""
 }
 

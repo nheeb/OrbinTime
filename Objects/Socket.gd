@@ -17,13 +17,16 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 	if event is InputEventMouseButton:
 		if event.button_index == 1:
 			if event.pressed:
-				# TODO: check if there is at least 1 puzzle solved
-				emit_signal("ending_initiated")
+				if Game.level.view_mode:
+					# TODO: check if there is at least 1 puzzle solved
+					emit_signal("ending_initiated")
 
 
 func _on_ClickArea_mouse_entered() -> void:
-	Game.toggle_outline(self, true)
+	if Game.level.view_mode:
+		Game.toggle_outline(self, true)
 
 
 func _on_ClickArea_mouse_exited() -> void:
-	Game.toggle_outline(self, false)
+	if Game.level.view_mode:
+		Game.toggle_outline(self, false)

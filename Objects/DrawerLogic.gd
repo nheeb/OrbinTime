@@ -47,6 +47,9 @@ func pull_back():
 	if puzzle_number == Game.weight_puzzle:
 		# port weight back
 		Game.main_weight.global_transform.origin = Game.main_weight_rack.global_transform.origin
+		Game.weight_x = -1
+		Game.weight_y = -1
+		Game.weight_puzzle = -1
 	start_transform = Transform(self.transform)
 	target_transform = self.transform.translated(-PULL_DIRECTION * length)
 	$Tween.reset_all()

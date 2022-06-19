@@ -8,6 +8,7 @@ script = ExtResource( 2 )
 
 [node name="Tile11" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 1.95376, 1.15424e-07, -1.03148 )
+flipped_in_beginning = true
 
 [node name="Tile12" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.636588, 2.73587e-10, -1.02796 )
@@ -33,3 +34,4 @@ transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15
 
 [node name="Tile33" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, -0.670086, -1.1396e-07, 1.71132 )
+flipped_in_beginning = true

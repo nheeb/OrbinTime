@@ -1,4 +1,5 @@
 extends Spatial
+class_name Level
 
 var finish_range := .02
 
@@ -33,6 +34,7 @@ func move_camera_to_ending_pos():
 var maze_mode := false
 
 func _ready():
+	Game.level = self
 	$Suitcase.maze_mode = false
 	$Orb.visible = false
 	$Orb.mode = RigidBody.MODE_STATIC

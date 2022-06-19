@@ -61,7 +61,6 @@ func ending_initiated():
 		var this_cutscene = int(Game.puzzle1_beaten) + int(Game.puzzle2_beaten) + int(Game.puzzle3_beaten)
 		if this_cutscene > last_cutscene:
 			last_cutscene = this_cutscene
-			$Music.stop()
 			view_mode = false
 			move_camera_to_ending_pos()
 			yield($Tween, "tween_all_completed")

@@ -85,10 +85,16 @@ func _on_BoardPuzzle4_puzzle_won() -> void:
 
 func _on_Button1_button_pressed() -> void:
 	# TODO deactivate button
+	if Game.main_weight.at_start_pos:
+		$CanvasLayer/Tool.visible = true
 	$Buttons/Button1.enabled = false
 	$DrawerPuzzle4/Drawer.button_activated()
 	yield($DrawerPuzzle4/Drawer, "pull_completed")
 	$Buttons/Button1.enabled = true
+	
+	if Game.main_weight.at_start_pos:
+		yield(get_tree().create_timer(5.0), "timeout")
+		$CanvasLayer/Tool.visible = false
 
 
 func _on_reset_button_pressed() -> void:

@@ -243,6 +243,14 @@ margin_bottom = 566.0
 custom_fonts/font = SubResource( 11 )
 text = "There is a tool you need to find for this puzzle.."
 
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0354543, -0.181088 )
+light_energy = 0.0
+omni_range = 0.117316
+omni_attenuation = 0.500001
+
+[node name="Tween" type="Tween" parent="OmniLight"]
+
 [connection signal="button_pressed" from="Buttons/Button1" to="." method="_on_Button1_button_pressed"]
 [connection signal="button_pressed" from="Buttons/Button2" to="." method="_on_reset_button_pressed"]
 [connection signal="switch_turned_off" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]

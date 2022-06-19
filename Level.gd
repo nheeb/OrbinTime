@@ -73,7 +73,7 @@ func ending_initiated():
 			yield($Orb, "planet_done")
 			$Suitcase/EndingText.set_but_text(Game.puzzle3_beaten , Game.puzzle1_beaten , Game.puzzle2_beaten)
 			$Suitcase/EndingText.animate()
-			yield(get_tree().create_timer(6),"timeout")
+			yield(get_tree().create_timer(7.5),"timeout")
 			ending_mode = true
 
 func _input(event):

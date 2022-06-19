@@ -21,4 +21,9 @@ transform = Transform( 0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, 0.0555258, -0.575722,
 text = "(click to try again)"
 font = ExtResource( 2 )
 
+[node name="Thanks" type="Label3D" parent="."]
+transform = Transform( 0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, 0.0555258, -0.575722, 0 )
+text = "Thanks for playing!"
+font = ExtResource( 2 )
+
 [node name="Tween" type="Tween" parent="."]

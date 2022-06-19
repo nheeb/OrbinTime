@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Models/OrbBlackModel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Orb.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sound/ocean_sound.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Sound/mountain_sound.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Sound/forest_sound.ogg" type="AudioStream" id=5]
 
 [sub_resource type="SphereShape" id=1]
 radius = 1.21857
@@ -53,3 +56,16 @@ anims/RESET = SubResource( 2 )
 anims/spin = SubResource( 3 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="GrassSound" type="AudioStreamPlayer" parent="."]
+
+[node name="OceanSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
+
+[node name="MountainSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -8.0
+
+[node name="TreeSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )

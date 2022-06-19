@@ -35,6 +35,7 @@ func animate():
 	$You.text = ""
 	$But.text = ""
 	$Click.visible = false
+	$Thanks.visible = false
 	visible = true
 	current_label = $You
 	current_label_text = you_text
@@ -48,3 +49,5 @@ func animate():
 	yield(get_tree().create_timer(4),"timeout")
 	if !but_text.begins_with("It"):
 		$Click.visible = true
+	else:
+		$Thanks.visible = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Models/SuitcaseModel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Suitcase.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Objects/DrawerWithPuzzle2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/LED.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Effects/Circles.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Objects/WeightDrawer.tscn" type="PackedScene" id=13]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -97,6 +98,7 @@ transform = Transform( 0.100508, 0, 0, 0, 0.0566538, 0, 0, 0, 0.100508, 0.204034
 
 [node name="WeightRack2" parent="." instance=ExtResource( 7 )]
 transform = Transform( 0.100508, 0, 0, 0, 0.0566538, 0, 0, 0, 0.100508, 0.00260164, -0.727655, 0.0227152 )
+visible = false
 
 [node name="Weight" parent="." instance=ExtResource( 8 )]
 transform = Transform( 0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0.00245671, -0.725775, 0.0224677 )
@@ -139,6 +141,9 @@ transform = Transform( -3.08571e-08, 0, 0.705928, 0.62828, 0.321867, 2.7463e-08,
 
 [node name="Circles" parent="." instance=ExtResource( 12 )]
 transform = Transform( 0.0332468, 0, 0, 0, 0.0396075, 0, 0, 0, 0.0332468, 0, 0, -0.242104 )
+
+[node name="Drawer" parent="." instance=ExtResource( 13 )]
+transform = Transform( -3.13437e-09, 0, -0.0598398, 0, 0.210101, 0, 0.0718376, 0, -2.62048e-09, 0, -0.720917, -0.105965 )
 
 [connection signal="switch_turned_off" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]
 [connection signal="switch_turned_on" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]

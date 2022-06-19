@@ -37,7 +37,7 @@ surfaces/1 = {
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 0.0155453, 0.00505323, 0.0154113 )
 
-[node name="Tile" type="Spatial"]
+[node name="Tile" type="Spatial" groups=["tile"]]
 transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0 )
 script = ExtResource( 3 )
 

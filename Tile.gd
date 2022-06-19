@@ -81,14 +81,19 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 				emit_signal("flipped", x, y)
 
 func _on_ClickArea_mouse_exited() -> void:
+#	if Game.selected_weight != null:
+##		Game.toggle_outline(self, false, Game.WEIGHT_COLOR, 0.08)
+#		pass
+#	else:
 	if Game.selected_weight != null:
-		Game.toggle_outline(self, false, Game.WEIGHT_COLOR, 0.08)
+		Game.toggle_outline(self, true, Game.WEIGHT_COLOR, 0.08)
 	else:
 		Game.toggle_outline(self, false)
 
 
 func _on_ClickArea_mouse_entered() -> void:
-	if Game.selected_weight != null:
-		Game.toggle_outline(self, true, Game.WEIGHT_COLOR, 0.08)
-	elif Game.weight_x != x or Game.weight_y != y:
+#	if Game.selected_weight != null:
+##		Game.toggle_outline(self, true, Game.WEIGHT_COLOR, 0.08)
+#		pass
+	if Game.weight_x != x or Game.weight_y != y:
 		Game.toggle_outline(self, true)

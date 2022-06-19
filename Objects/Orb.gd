@@ -22,12 +22,14 @@ func become_planet():
 	if do_mountains:
 		$Tween.interpolate_property($OrbBlackModel/Sphere.mesh.surface_get_material(0), "shader_param/mountain_value", 0.0, 1.0, 3.0)
 		$Tween.start()
+		$MountainSound.play()
 		yield($Tween,"tween_all_completed")
 		yield(get_tree().create_timer(.5),"timeout")
 	if do_trees:
 		var trees := []
 		trees.append_array($OrbBlackModel/Trees.get_children())
 		trees.shuffle()
+		$TreeSound.play()
 		for t in trees:
 			var dir : Vector3 = t.translation.normalized()
 			var tree := TREE.instance()
@@ -38,6 +40,7 @@ func become_planet():
 			yield(get_tree().create_timer(.2),"timeout")
 	yield(get_tree().create_timer(1.0),"timeout")
 	if do_rivers:
+		$OceanSound.play()
 		$OrbBlackModel/Water.visible = true
 		$Tween.interpolate_property($OrbBlackModel/Sphere.mesh.surface_get_material(0), "shader_param/river_value", 0.0, 1.0, 3.5)
 		$Tween.start()

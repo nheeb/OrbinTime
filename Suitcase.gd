@@ -3,16 +3,6 @@ extends Spatial
 var maze_mode := true
 var max_angle_degree := 8
 
-func puzzle1_beaten():
-	pass
-	
-func puzzle2_beaten():
-	pass
-	
-func puzzle3_beaten():
-	pass
-
-
 func _ready():
 	Game.main_weight_rack = $WeightRack
 	Game.main_weight = $Weight

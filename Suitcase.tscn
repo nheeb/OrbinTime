@@ -227,6 +227,7 @@ transform = Transform( -0.482496, 0, -4.21811e-08, 0, 0.920992, 0, 4.21811e-08, 
 [connection signal="switch_turned_on" from="Buttons/Switch3" to="." method="_on_Switch3_switch_turned"]
 [connection signal="puzzle_won" from="DrawerPuzzle1/Drawer/BoardPuzzle1" to="." method="_on_BoardPuzzle1_puzzle_won"]
 [connection signal="puzzle_won" from="DrawerPuzzle2/Drawer/BoardPuzzle2" to="." method="_on_BoardPuzzle2_puzzle_won"]
+[connection signal="puzzle_won" from="DrawerPuzzle3/Drawer/BoardPuzzle3" to="." method="_on_BoardPuzzle3_puzzle_won"]
 [connection signal="puzzle_won" from="DrawerPuzzle4/Drawer/BoardPuzzle4" to="." method="_on_BoardPuzzle4_puzzle_won"]
 
 [editable path="Buttons/Button1"]

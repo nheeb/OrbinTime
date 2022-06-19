@@ -74,7 +74,8 @@ volume_db = -12.0
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 14.4254, 0, 0, 0, 14.4254, 0, 0, 0, 14.4254, 0, -2.52686, 0 )
-mesh = SubResource( 2 )
-material/0 = SubResource( 3 )
+[node name="WeightSpotlight" type="SpotLight" parent="."]
+transform = Transform( -0.998967, 9.30361e-10, -0.0454326, -0.0439847, 0.250448, 0.967131, 0.0113785, 0.96813, -0.250189, -0.00901182, -0.50128, -0.0333603 )
+light_energy = 12.158
+spot_range = 0.275
+spot_angle = 15.39

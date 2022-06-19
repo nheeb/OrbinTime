@@ -24,3 +24,5 @@ shape = SubResource( 2 )
 stream = ExtResource( 2 )
 
 [connection signal="input_event" from="MeshInstance/ClickArea" to="." method="_on_ClickArea_input_event"]
+[connection signal="mouse_entered" from="MeshInstance/ClickArea" to="." method="_on_ClickArea_mouse_entered"]
+[connection signal="mouse_exited" from="MeshInstance/ClickArea" to="." method="_on_ClickArea_mouse_exited"]

@@ -15,6 +15,7 @@ func _ready() -> void:
 
 func start_teleport():
 	self.global_transform.origin = Game.main_weight_rack.global_transform.origin
+	Game.level.get_node("WeightSpotlight").visible = false
 	$WeightDropSound.play()
 	at_start_pos = false
 

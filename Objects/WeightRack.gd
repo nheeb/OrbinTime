@@ -24,3 +24,12 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 			else:
 				pass # do nothing (?)
 				
+
+
+func _on_ClickArea_mouse_entered() -> void:
+	if Game.selected_weight != null: # Weight is selected and will be dropped off here
+		Game.toggle_outline(self, true, Game.WEIGHT_COLOR, 0.08)
+
+
+func _on_ClickArea_mouse_exited() -> void:
+	Game.toggle_outline(self, false)

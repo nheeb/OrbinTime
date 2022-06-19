@@ -34,6 +34,10 @@ func pull_out():
 	$Tween.start()
 	$DrawerOpen.play()
 	pulled_out = true
+	if has_node("Lamp/Light"):
+		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 0.0, 1.0, .5)
+		$LightTween.start()
+		
 	
 
 func pull_out_immediately():
@@ -41,6 +45,9 @@ func pull_out_immediately():
 	var length = aabb.get_longest_axis_size() / self.scale.x
 	self.transform = self.transform.translated(PULL_DIRECTION * length)
 	pulled_out = true
+	if has_node("Lamp/Light"):
+		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 0.0, 1.0, .5)
+		$LightTween.start()
 
 func pull_back():
 	var aabb = $DrawerMesh.get_transformed_aabb()
@@ -66,6 +73,9 @@ func pull_back():
 	$Tween.start()
 	$DrawerClose.play()
 	pulled_out = false
+	if has_node("Lamp/Light"):
+		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 1.0, 0.0, .5)
+		$LightTween.start()
 
 
 func _on_Tween_tween_all_completed() -> void:

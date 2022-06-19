@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Objects/Drawer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Logic/BoardPuzzle2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/DrawerWithPuzzle1.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Materials/Level2Cable.tres" type="Material" id=4]
+[ext_resource path="res://Objects/Lamp.tscn" type="PackedScene" id=5]
 
 [sub_resource type="SphereMesh" id=1]
 
@@ -17,20 +18,30 @@ target_color = Color( 0.945098, 0, 1, 1 )
 transform = Transform( 0.124, 0, 0, 0, 0.036, 0, 0, 0, 0.124, 0, 0, 0 )
 
 [node name="SolutionOrb" type="MeshInstance" parent="Drawer"]
-transform = Transform( -0.190405, 0, -1.66457e-08, 0, 0.655839, 0, 1.66457e-08, 0, -0.190405, -1.64951, 0, -2.8796e-07 )
+transform = Transform( -0.190405, 0, -2.87504e-08, 0, 0.316875, 0, 2.87504e-08, 0, -0.190405, -1.64951, 0, -2.8796e-07 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../..")
 material/0 = ExtResource( 4 )
 
 [node name="Cable" type="MeshInstance" parent="Drawer/SolutionOrb"]
-transform = Transform( 2.39063, 0, 0, 0, 0.531919, 0, 0, 0, 0.126755, 2.96458, 0, 0 )
+transform = Transform( 2.8575, 0, 0, 0, 0.531919, 0, 8.52651e-14, 0, 0.126755, 3.01727, 0, 4.54747e-13 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 4 )
 
 [node name="BoardPuzzle2" parent="Drawer" instance=ExtResource( 2 )]
 transform = Transform( -0.524, 0, 7.91218e-08, 0, 0.524, 0, -7.91218e-08, 0, -0.524, 0.348913, 0.409054, 0.534534 )
 
+[node name="Lamp" parent="Drawer" instance=ExtResource( 5 )]
+transform = Transform( 0.209347, 0, 0, 0, 0.739408, 0, 0, 0, 0.209347, -1.64485, 1.65633, 0 )
+
+[node name="Light" parent="Drawer/Lamp" index="0"]
+transform = Transform( 50.1458, 0, 0, 0, 48.9032, 0, 0, 0, 50.1458, 0, 0, 0 )
+visible = false
+light_color = Color( 0.129412, 0.0784314, 1, 1 )
+
 [node name="Sound" type="AudioStreamPlayer" parent="."]
 volume_db = -5.0
 
 [connection signal="puzzle_won" from="Drawer/BoardPuzzle2" to="." method="_on_BoardPuzzle_puzzle_won"]
+
+[editable path="Drawer/Lamp"]

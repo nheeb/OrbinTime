@@ -13,3 +13,4 @@ fog_depth_begin = 0.0
 fog_depth_end = 2.5
 fog_depth_curve = 4.75683
 ssao_enabled = true
+glow_enabled = true

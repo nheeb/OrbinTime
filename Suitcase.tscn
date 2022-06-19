@@ -170,41 +170,27 @@ transform = Transform( -3.13437e-09, 0, -0.0598398, 0, 0.210101, 0, 0.0718376, 0
 [node name="DrawerPuzzle4" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.323367, -0.481265 )
 
+[node name="Tile11" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="0"]
+flipped_in_beginning = true
+
 [node name="Tile12" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="1"]
-clickable = false
+transform = Transform( 1, 8.74228e-08, 8.74228e-08, 8.74228e-08, -1, 7.64274e-15, 8.74228e-08, 0, -1, 0.636588, 0, -1.02796 )
+flipped_in_beginning = true
 
 [node name="Tile13" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="2"]
 clickable = true
 
 [node name="Tile14" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="3"]
-clickable = false
+flipped_in_beginning = true
 
-[node name="Tile21" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="5"]
-clickable = true
-
-[node name="Tile23" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="7"]
-clickable = true
-
-[node name="Tile25" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="9"]
-clickable = true
-
-[node name="Tile31" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="10"]
-clickable = true
+[node name="Tile15" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="4"]
+flipped_in_beginning = true
 
 [node name="Tile33" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="12"]
-clickable = true
-
-[node name="Tile35" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="14"]
-clickable = true
-
-[node name="Tile42" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="16"]
-clickable = false
+flipped_in_beginning = false
 
 [node name="Tile43" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="17"]
 clickable = true
-
-[node name="Tile44" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="18"]
-clickable = false
 
 [connection signal="button_pressed" from="Buttons/Button1" to="." method="_on_Button1_button_pressed"]
 [connection signal="switch_turned_off" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]

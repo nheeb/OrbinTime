@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/marble_rolling_2.ogg-dc2f47ee7b8b80a227ea0279d0055e48.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/marble_rolling_2.ogg"
+dest_files=[ "res://.import/marble_rolling_2.ogg-dc2f47ee7b8b80a227ea0279d0055e48.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

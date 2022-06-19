@@ -113,7 +113,7 @@ is_turned_on = true
 material/0 = SubResource( 6 )
 
 [node name="WeightRack" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.100508, 0, 0, 0, 0.0566538, 0, 0, 0, 0.100508, 0.204034, -0.0685249, -0.234074 )
+transform = Transform( 0.100508, 0, 0, 0, 0.0437299, 0, 0, 0, 0.100508, 0.204034, -0.0652985, -0.234074 )
 
 [node name="WeightRack2" parent="." instance=ExtResource( 7 )]
 transform = Transform( 0.100508, 0, 0, 0, 0.0566538, 0, 0, 0, 0.100508, 0.00260164, -0.727655, 0.0227152 )

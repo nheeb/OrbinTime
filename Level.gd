@@ -109,6 +109,10 @@ func _physics_process(_delta):
 			# orb spin active
 			$Orb.mode = RigidBody.MODE_STATIC
 			$Orb/AnimationPlayer.play("spin")
+			# orb fly up
+			$Tween.interpolate_property($Orb, "global_transform:origin:y", $Orb.global_transform.origin.y, $Orb.global_transform.origin.y+.1, 1, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
+			$Tween.start()
+			yield($Tween, "tween_all_completed")
 			# orb fly to camera
 			var fly_duration := 3.3
 			$OrbDroneSound.play()

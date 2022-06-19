@@ -89,3 +89,15 @@ func _on_Button1_button_pressed() -> void:
 	$DrawerPuzzle4/Drawer.button_activated()
 	yield($DrawerPuzzle4/Drawer, "pull_completed")
 	$Buttons/Button1.enabled = true
+
+
+func _on_reset_button_pressed() -> void:
+	for i in [1, 2, 3, 4]:
+		var node = get_node("DrawerPuzzle" + str(i))
+		# only reset puzzles that haven't been solved yet
+		if not node.has_node("Sound"):
+			# dirty hack to see if it's been solved
+			continue
+		if node.get_node("Sound").playing:
+			continue
+		node.get_node("Drawer/BoardPuzzle" + str(i)).reset()

@@ -18,7 +18,7 @@ target_color = Color( 0.533333, 0.145098, 0.027451, 1 )
 [node name="Drawer" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.124, 0, 0, 0, 0.036, 0, 0, 0, 0.124, 0, 0, 0 )
 
-[node name="ImpossibleBoard" parent="Drawer" instance=ExtResource( 2 )]
+[node name="BoardPuzzle3" parent="Drawer" instance=ExtResource( 2 )]
 transform = Transform( 0.524, 0, 0, 0, 0.524, 0, 0, 0, 0.524, -0.342814, 0.336956, -0.167839 )
 
 [node name="SolutionOrb" type="MeshInstance" parent="Drawer"]
@@ -43,6 +43,6 @@ light_color = Color( 1, 0, 0, 1 )
 stream = ExtResource( 5 )
 volume_db = -11.0
 
-[connection signal="puzzle_won" from="Drawer/ImpossibleBoard" to="." method="_on_BoardPuzzle_puzzle_won"]
+[connection signal="puzzle_won" from="Drawer/BoardPuzzle3" to="." method="_on_BoardPuzzle_puzzle_won"]
 
 [editable path="Drawer/Lamp"]

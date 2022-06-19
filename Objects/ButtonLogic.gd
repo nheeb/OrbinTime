@@ -6,7 +6,7 @@ var is_pressed := false
 
 signal button_pressed
 
-var open := false setget set_open
+export var open := false setget set_open
 var enabled = true
 
 func set_open(o):

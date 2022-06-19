@@ -4,6 +4,7 @@ var maze_mode := true
 var max_angle_degree := 8
 
 func _ready():
+	
 	Game.main_weight_rack = $WeightRack
 	Game.main_weight = $Weight
 	$SuitcaseModel/OpenPivot.rotation_degrees = Vector3.ZERO
@@ -86,6 +87,7 @@ func _on_BoardPuzzle4_puzzle_won() -> void:
 func _on_Button1_button_pressed() -> void:
 	# TODO deactivate button
 	if Game.main_weight.at_start_pos:
+		$CanvasLayer/Tool.rect_position = get_viewport().size/2 - $CanvasLayer/Tool.rect_size/2
 		$CanvasLayer/Tool.visible = true
 	$Buttons/Button1.enabled = false
 	$DrawerPuzzle4/Drawer.button_activated()

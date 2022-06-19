@@ -21,6 +21,8 @@ func _ready():
 	
 	$DrawerPuzzle1/Drawer.pull_out_immediately()
 	$DrawerPuzzle3/Drawer.pull_out_immediately()
+	
+	$Circles.visible = true
 
 func _physics_process(_delta):
 	if maze_mode:

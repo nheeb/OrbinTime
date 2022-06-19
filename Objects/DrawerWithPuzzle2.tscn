@@ -29,7 +29,7 @@ mesh = SubResource( 2 )
 material/0 = ExtResource( 4 )
 
 [node name="BoardPuzzle2" parent="Drawer" instance=ExtResource( 2 )]
-transform = Transform( -0.524, 0, 7.91218e-08, 0, 0.524, 0, -7.91218e-08, 0, -0.524, 0.348913, 0.363397, 0.175639 )
+transform = Transform( -0.524, 0, 7.91218e-08, 0, 0.524, 0, -7.91218e-08, 0, -0.524, 0.348913, 0.409054, 0.534534 )
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )

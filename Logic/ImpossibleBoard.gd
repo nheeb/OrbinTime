@@ -3,6 +3,8 @@ extends Spatial
 export var dim_x = 3
 export var dim_y = 3
 
+export var texture: Texture
+
 # tile references
 onready var tiles = [[$Tile11, $Tile12, $Tile13], [$Tile21, $Tile22, $Tile23], [$Tile31, $Tile32, $Tile33]]
 
@@ -11,6 +13,7 @@ signal puzzle_won
 func _ready() -> void:
 	for tile_row in tiles:
 		for tile in tile_row:
+			tile.get_node("Mesh/Sprite3D").texture = texture
 			tile.connect("flipped", self, "register_tile_change")
 
 func check_victory() -> bool:

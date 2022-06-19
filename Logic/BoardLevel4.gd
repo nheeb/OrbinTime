@@ -3,6 +3,8 @@ extends Spatial
 export var dim_x = 4
 export var dim_y = 4
 
+export var texture: Texture
+
 # tile references
 onready var tiles = [[$Tile11, $Tile12, $Tile13, $Tile14, $Tile15], 
 	[$Tile21, $Tile22, $Tile23, $Tile24, $Tile25], 
@@ -15,6 +17,7 @@ func _ready() -> void:
 	for tile_row in tiles:
 		for tile in tile_row:
 			tile.connect("flipped", self, "register_tile_change")
+			tile.get_node("Mesh/Sprite3D").texture = texture
 			tile.get_node("Mesh/Sprite3D").hframes = dim_x
 			tile.get_node("Mesh/Sprite3D").vframes = dim_y
 

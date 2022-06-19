@@ -33,7 +33,7 @@ func become_planet():
 		for t in trees:
 			var dir : Vector3 = t.translation.normalized()
 			var tree := TREE.instance()
-			$OrbBlackModel.add_child(tree)
+			$OrbBlackModel/Trees.add_child(tree)
 			tree.transform = Transform.IDENTITY.looking_at(dir, Vector3.UP)
 			tree.transform.origin = dir * .85
 			tree.grow()
@@ -60,7 +60,7 @@ func revert():
 		trees.append_array($OrbBlackModel/Trees.get_children())
 		trees.shuffle()
 		for t in trees:
-			if t is MeshInstance:
+			if not t is Position3D:
 				t.queue_free()
 				yield(get_tree().create_timer(.2),"timeout")
 

@@ -66,7 +66,7 @@ func revert():
 
 var old: float = 0.0
 var new: float = 0.0
-func _physics_process(delta):
+func _physics_process(_delta):
 	if mode == MODE_RIGID:
 		old = new
 		new = linear_velocity.length()

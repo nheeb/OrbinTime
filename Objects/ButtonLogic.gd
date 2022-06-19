@@ -34,9 +34,9 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 	if open:
 		if event is InputEventMouseButton:
 			if event.button_index == 1:
-				if event.pressed and not is_pressed:
+				if event.pressed and not is_pressed and open:
 					pressed()
-				elif is_pressed:
+				elif is_pressed and open:
 					released() 
 
 

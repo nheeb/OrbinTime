@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Meshes/Belt.material" type="Material" id=1]
 [ext_resource path="res://Assets/Meshes/Gold.material" type="Material" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/Sound/hinge_opening.ogg" type="AudioStream" id=7]
 [ext_resource path="res://Assets/Sound/open_squeak.ogg" type="AudioStream" id=8]
 [ext_resource path="res://Assets/Meshes/Leather.material" type="Material" id=9]
+[ext_resource path="res://Assets/Meshes/title.png" type="Texture" id=10]
 
 [sub_resource type="ArrayMesh" id=13]
 resource_name = "Suitcase_Cube001"
@@ -314,7 +315,7 @@ mesh = SubResource( 5 )
 skeleton = NodePath("../..")
 
 [node name="OpenPivot" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, -0.480652, 0.876911, 0, -0.876911, -0.480652, 0, 0, -0.300286 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.300286 )
 
 [node name="SuitcaseUp" type="MeshInstance" parent="OpenPivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.300286 )
@@ -332,7 +333,7 @@ mesh = SubResource( 8 )
 skeleton = NodePath("../../..")
 
 [node name="CloserThing" type="MeshInstance" parent="OpenPivot"]
-transform = Transform( 1, 0, 0, 0, -0.992845, 0.119409, 0, -0.119409, -0.992845, 0, 0.0497625, 0.614244 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0497625, 0.614244 )
 mesh = SubResource( 9 )
 skeleton = NodePath("../../..")
 
@@ -347,6 +348,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.302309 )
 [node name="Cover" type="MeshInstance" parent="OpenPivot"]
 transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, -0.0160319, 0.3005 )
 mesh = SubResource( 17 )
+
+[node name="Sprite3D" type="Sprite3D" parent="OpenPivot"]
+transform = Transform( 0.049411, 0, 0, 0, -2.15982e-09, 0.049411, 0, -0.049411, -2.15982e-09, 0, 0.100688, 0.0962824 )
+modulate = Color( 0.945098, 1, 0, 1 )
+texture = ExtResource( 10 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/open = SubResource( 12 )

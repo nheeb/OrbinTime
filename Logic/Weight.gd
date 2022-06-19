@@ -22,8 +22,10 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == 1:
 			if at_start_pos:
-				start_teleport()
-				return
+				# only pickup if no puzzle is active
+				if not Game.level.get_node("Suitcase/DrawerPuzzle1/Drawer").pulled_out and not Game.level.get_node("Suitcase/DrawerPuzzle1/Drawer").pulled_out and not Game.level.get_node("Suitcase/DrawerPuzzle3/Drawer").pulled_out and not Game.level.get_node("Suitcase/DrawerPuzzle4/Drawer").pulled_out:
+					start_teleport()
+					return
 			currently_selected = not currently_selected
 			if currently_selected:
 				# TODO outline shader tiles ON

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Models/SuitcaseModel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Suitcase.gd" type="Script" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Effects/Circles.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Objects/WeightDrawer.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Objects/DrawerWithPuzzle4.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Objects/Klappe.tscn" type="PackedScene" id=15]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -191,6 +192,18 @@ flipped_in_beginning = false
 
 [node name="Tile43" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="17"]
 clickable = true
+
+[node name="Klappe1" parent="." instance=ExtResource( 15 )]
+transform = Transform( 0.482496, 0, 0, 0, 0.482496, 0, 0, 0, 0.482496, -0.391959, -0.18647, 0 )
+
+[node name="Klappe3" parent="." instance=ExtResource( 15 )]
+transform = Transform( 0.482496, 0, 0, 0, 0.586321, 0, 0, 0, 0.482496, -0.391959, -0.459177, 0 )
+
+[node name="Klappe4" parent="." instance=ExtResource( 15 )]
+transform = Transform( 1.1561e-08, 0, -0.969485, 0.0467565, 0.583561, 5.57565e-10, 0.480225, -0.0568177, 5.72663e-09, -0.0152556, -0.262913, -0.286831 )
+
+[node name="Klappe2" parent="." instance=ExtResource( 15 )]
+transform = Transform( -0.482496, 0, -4.21811e-08, 0, 0.586321, 0, 4.21811e-08, 0, -0.482496, 0.387331, -0.344458, 0 )
 
 [connection signal="button_pressed" from="Buttons/Button1" to="." method="_on_Button1_button_pressed"]
 [connection signal="switch_turned_off" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]

@@ -143,7 +143,7 @@ transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.7223
 [node name="Drawer" parent="DrawerPuzzle1" index="0"]
 transform = Transform( -0.124, 0, -1.08404e-08, 0, 0.036, 0, 1.08404e-08, 0, -0.124, 0, 0.0822766, 0 )
 
-[node name="BoardPuzzle1" parent="DrawerPuzzle1/Drawer" index="5"]
+[node name="BoardPuzzle1" parent="DrawerPuzzle1/Drawer" index="6"]
 transform = Transform( 0.524194, 0, 6.77626e-21, 0, 1.80556, 0, -6.77626e-21, 0, 0.524194, -0.338818, 0.386922, -0.156461 )
 
 [node name="DrawerPuzzle2" parent="." instance=ExtResource( 10 )]

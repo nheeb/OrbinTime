@@ -56,6 +56,7 @@ func _ready():
 
 var ending_mode := false
 func ending_initiated():
+	$Music.stop()
 	if Game.puzzle1_beaten or Game.puzzle2_beaten or Game.puzzle3_beaten:
 		view_mode = false
 		move_camera_to_ending_pos()

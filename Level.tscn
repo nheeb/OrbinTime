@@ -79,3 +79,8 @@ transform = Transform( -0.998967, 9.30361e-10, -0.0454326, -0.0439847, 0.250448,
 light_energy = 12.158
 spot_range = 0.275
 spot_angle = 15.39
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 20.6452, 0, 0, 0, 20.6452, 0, 0, 0, 20.6452, 0, -2.57703, 0 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )

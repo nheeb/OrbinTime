@@ -194,16 +194,16 @@ flipped_in_beginning = false
 clickable = true
 
 [node name="Klappe1" parent="." instance=ExtResource( 15 )]
-transform = Transform( 0.482496, 0, 0, 0, 0.482496, 0, 0, 0, 0.482496, -0.391959, -0.18647, 0 )
+transform = Transform( 0.482496, 0, 0, 0, 0.681257, 0, 0, 0, 0.482496, -0.391959, -0.14273, 0 )
 
 [node name="Klappe3" parent="." instance=ExtResource( 15 )]
-transform = Transform( 0.482496, 0, 0, 0, 0.586321, 0, 0, 0, 0.482496, -0.391959, -0.459177, 0 )
+transform = Transform( 0.482496, 0, 0, 0, 0.790889, 0, 0, 0, 0.482496, -0.391959, -0.415154, 0 )
 
 [node name="Klappe4" parent="." instance=ExtResource( 15 )]
-transform = Transform( 1.1561e-08, 0, -0.969485, 0.0467565, 0.583561, 5.57565e-10, 0.480225, -0.0568177, 5.72663e-09, -0.0152556, -0.262913, -0.286831 )
+transform = Transform( 1.1561e-08, 0, -0.969485, 0.0467565, 0.583561, 5.57565e-10, 0.480225, -0.0568177, 5.72663e-09, -0.0152556, -0.249822, -0.286831 )
 
 [node name="Klappe2" parent="." instance=ExtResource( 15 )]
-transform = Transform( -0.482496, 0, -4.21811e-08, 0, 0.586321, 0, 4.21811e-08, 0, -0.482496, 0.387331, -0.344458, 0 )
+transform = Transform( -0.482496, 0, -4.21811e-08, 0, 0.920992, 0, 4.21811e-08, 0, -0.482496, 0.387331, -0.279619, 0 )
 
 [connection signal="button_pressed" from="Buttons/Button1" to="." method="_on_Button1_button_pressed"]
 [connection signal="switch_turned_off" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]

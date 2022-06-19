@@ -17,6 +17,9 @@ var main_weight:Node = null
 const OUTLINE = preload("res://Assets/Materials/OutlineMat.tres")
 
 func toggle_outline(object: Spatial, value: bool, color: Color = Color.ghostwhite, width : float = 0.05) -> void:
+#	if object.name.begins_with("WeightR"):
+#		object.get_node("Outline").visible = value
+#		return
 	if value:
 		object.add_to_group("outlined")
 	else:

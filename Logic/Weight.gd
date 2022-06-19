@@ -33,6 +33,8 @@ func _on_ClickArea_input_event(_camera: Node, event: InputEvent, _position: Vect
 				Game.toggle_outline(self, true)
 				Game.selected_weight = self
 				
+				Game.toggle_outline(Game.level.get_node("Suitcase/WeightRack"),true, Game.WEIGHT_COLOR, 0.08)
+				
 				# outline all tiles in orange or smth
 				for node in get_tree().get_nodes_in_group("tile"):
 					Game.toggle_outline(node, true, Game.WEIGHT_COLOR, 0.08)

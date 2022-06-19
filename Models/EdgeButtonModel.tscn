@@ -65,6 +65,10 @@ transform = Transform( 0.0207958, 0, 0, 0, 0.0207958, 0, 0, 0, 0.0207958, 0, 0.0
 mesh = SubResource( 2 )
 skeleton = NodePath("../..")
 
-[node name="Cover" type="MeshInstance" parent="."]
-transform = Transform( 0.0207958, 0, 0, 0, 0.0207958, 0, 0, 0, 0.0207958, 0, 0.0210787, 0 )
+[node name="Pivot" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.022308, -0.0333258 )
+
+[node name="Cover" type="MeshInstance" parent="Pivot"]
+transform = Transform( 0.0207958, 0, 0, 0, 0.0135128, 0, 0, 0, 0.0207958, 0, -0.00122925, 0.0333258 )
 mesh = SubResource( 4 )
+skeleton = NodePath("../..")

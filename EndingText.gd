@@ -4,12 +4,12 @@ var you_text := "You did it! You've built a planet!"
 var but_text := ""
 
 func set_but_text(mountains, trees, rivers):
-	if !mountains:
-		but_text = "But it could use some mountains..."
-	elif !trees:
+	if !trees:
 		but_text = "But it could use some trees..."
 	elif !rivers:
 		but_text = "But it could use some rivers..."
+	elif !mountains:
+		but_text = "But it could use some mountains..."
 	else:
 		but_text = "It is beautiful!"
 

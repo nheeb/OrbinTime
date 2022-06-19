@@ -139,7 +139,6 @@ transform = Transform( -3.08571e-08, 0, 0.705928, 0.62828, 0.321867, 2.7463e-08,
 
 [node name="Circles" parent="." instance=ExtResource( 12 )]
 transform = Transform( 0.0332468, 0, 0, 0, 0.0396075, 0, 0, 0, 0.0332468, 0, 0, -0.242104 )
-visible = false
 
 [connection signal="switch_turned_off" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]
 [connection signal="switch_turned_on" from="Buttons/Switch1" to="." method="_on_Switch_switch_turned"]

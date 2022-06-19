@@ -730,7 +730,7 @@ mesh = SubResource( 7 )
 skeleton = NodePath("../..")
 
 [node name="gear 3001" type="MeshInstance" parent="."]
-transform = Transform( -0.0738829, -0.00682677, 6.93018e-09, 0, -3.29219e-10, -0.174914, 0.158544, -0.00318135, 3.22953e-09, 0.830587, 0.890425, 0.562906 )
+transform = Transform( -0.0738831, -0.00682677, 6.93018e-09, 0, -3.29219e-10, -0.174914, 0.158544, -0.00318135, 3.22953e-09, 0.830587, 0.890425, 0.562906 )
 mesh = SubResource( 8 )
 skeleton = NodePath("../..")
 

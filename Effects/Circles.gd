@@ -8,7 +8,7 @@ func _ready():
 
 func activate():
 	visible = true
-	$Tween.interpolate_property(self, "color:a", 0.0, 1.0, 2)
+	$Tween.interpolate_property(self, "color:a", 0.0, 1.0, 4)
 	$Tween.start()
 
 func set_color(col: Color):

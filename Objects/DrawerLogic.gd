@@ -34,19 +34,22 @@ func pull_out():
 	$Tween.start()
 	$DrawerOpen.play()
 	pulled_out = true
+	if Game.level.has_node("Suitcase/Klappe" + get_parent().name[-1]):
+		Game.level.get_node("Suitcase/Klappe" + get_parent().name[-1]).open()
 	if has_node("Lamp/Light"):
-		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 0.0, 1.0, .5)
+		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 0.0, 5.0, .5)
 		$LightTween.start()
-		
-	
 
 func pull_out_immediately():
 	var aabb = $DrawerMesh.get_transformed_aabb()
 	var length = aabb.get_longest_axis_size() / self.scale.x
 	self.transform = self.transform.translated(PULL_DIRECTION * length)
 	pulled_out = true
+	var level=get_parent().get_parent().get_parent()
+	if level.has_node("Suitcase/Klappe" + get_parent().name[-1]):
+		level.get_node("Suitcase/Klappe" + get_parent().name[-1]).open()
 	if has_node("Lamp/Light"):
-		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 0.0, 1.0, .5)
+		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 0.0, 5.0, .5)
 		$LightTween.start()
 
 func pull_back():
@@ -73,8 +76,10 @@ func pull_back():
 	$Tween.start()
 	$DrawerClose.play()
 	pulled_out = false
+	if Game.level.has_node("Suitcase/Klappe" + get_parent().name[-1]):
+		Game.level.get_node("Suitcase/Klappe" + get_parent().name[-1]).close()
 	if has_node("Lamp/Light"):
-		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 1.0, 0.0, .5)
+		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 5.0, 0.0, .5)
 		$LightTween.start()
 
 

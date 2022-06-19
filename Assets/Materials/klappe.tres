@@ -1,0 +1,11 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Meshes/Wood512.png" type="Texture" id=1]
+
+[resource]
+resource_name = "Wood"
+vertex_color_use_as_albedo = true
+params_cull_mode = 2
+albedo_texture = ExtResource( 1 )
+roughness = 0.818182
+uv1_scale = Vector3( 0.762, 0.135, 1.069 )

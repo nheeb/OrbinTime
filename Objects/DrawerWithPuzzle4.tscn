@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Objects/Drawer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/DrawerWithPuzzle1.gd" type="Script" id=2]
@@ -6,6 +6,13 @@
 [ext_resource path="res://Assets/Materials/Level4Cable.tres" type="Material" id=4]
 [ext_resource path="res://Assets/Materials/Level2Cable.tres" type="Material" id=5]
 [ext_resource path="res://Logic/BoardPuzzle4.tscn" type="PackedScene" id=6]
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+flags_transparent = true
+albedo_color = Color( 1, 1, 1, 0.341176 )
+roughness = 0.1
 
 [sub_resource type="SphereMesh" id=1]
 
@@ -21,6 +28,12 @@ PULL_DIRECTION = Vector3( 0, 0, 1 )
 
 [node name="Drawer" parent="Drawer" index="4"]
 transform = Transform( 9.41633e-07, 0, -11.6713, 0, 10.508, 0, 3.84725, 0, 1.16208e-06, 0.0744581, -0.0819037, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Drawer"]
+transform = Transform( 1.60131, 0, 0, 0, 0.167596, 0, 0, 0, 0.567354, 0.115283, 0.661375, -0.0759252 )
+mesh = SubResource( 3 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 4 )
 
 [node name="SolutionOrb" type="MeshInstance" parent="Drawer"]
 transform = Transform( -0.190405, 0, -1.66457e-08, 0, 0.655839, 0, 1.66457e-08, 0, -0.190405, -1.64951, 0, -2.8796e-07 )
@@ -41,11 +54,9 @@ clickable = false
 
 [node name="Tile23" parent="Drawer/BoardPuzzle4" index="7"]
 flipped_in_beginning = true
-clickable = false
 
 [node name="Tile33" parent="Drawer/BoardPuzzle4" index="12"]
 flipped_in_beginning = true
-clickable = false
 
 [node name="Tile43" parent="Drawer/BoardPuzzle4" index="17"]
 clickable = false

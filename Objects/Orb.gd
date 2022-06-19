@@ -77,7 +77,5 @@ func _on_Orb_body_entered(body):
 	#print(body.name)
 	if body.name == "Wall":
 		if new > 0.18:
-			var pitch_strength = 0.06
-			AudioServer.get_bus_effect(1, 0).pitch_scale = 1.0 + ((0.5 - randf()) * pitch_strength)
 			$Klack.play()
 			#$Roll.stop()

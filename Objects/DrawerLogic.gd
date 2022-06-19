@@ -35,7 +35,7 @@ func pull_out():
 	$DrawerOpen.play()
 	pulled_out = true
 	if has_node("Lamp/Light"):
-		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 0.0, 1.0, .5)
+		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 0.0, 5.0, .5)
 		$LightTween.start()
 		
 	
@@ -46,7 +46,7 @@ func pull_out_immediately():
 	self.transform = self.transform.translated(PULL_DIRECTION * length)
 	pulled_out = true
 	if has_node("Lamp/Light"):
-		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 0.0, 1.0, .5)
+		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 0.0, 5.0, .5)
 		$LightTween.start()
 
 func pull_back():
@@ -74,7 +74,7 @@ func pull_back():
 	$DrawerClose.play()
 	pulled_out = false
 	if has_node("Lamp/Light"):
-		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 1.0, 0.0, .5)
+		$LightTween.interpolate_property(get_node("Lamp/light"), "light_energy", 5.0, 0.0, .5)
 		$LightTween.start()
 
 

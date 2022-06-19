@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Meshes/Material_007.material" type="Material" id=1]
 [ext_resource path="res://Assets/Meshes/Material_006.material" type="Material" id=2]
 [ext_resource path="res://Assets/Meshes/Belt.material" type="Material" id=3]
+[ext_resource path="res://Objects/Lamp.gd" type="Script" id=4]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Bulb_Sphere002"
@@ -45,15 +46,18 @@ emission_on_uv2 = false
 [sub_resource type="CubeMesh" id=3]
 
 [node name="Lamp" type="MeshInstance"]
-transform = Transform( 0.0172295, 0, 0, 0, 0.0172295, 0, 0, 0, 0.0172295, 0, 0.0339479, 0 )
+transform = Transform( 0.0172295, 0, 0, 0, 0.0133107, 0, 0, 0, 0.0172295, 0, 0.0262517, 0 )
 mesh = SubResource( 1 )
+script = ExtResource( 4 )
 
 [node name="Light" type="OmniLight" parent="."]
 transform = Transform( 58.04, 0, 0, 0, 58.04, 0, 0, 0, 58.04, 0, 0, 0 )
-omni_range = 0.76628
+light_energy = 5.021
+omni_range = 0.731693
+omni_attenuation = 6.27667
 
 [node name="Cable" type="MeshInstance" parent="Light"]
-transform = Transform( 0.00294937, 0, 0, 0, 0.000506381, -0.000446404, 0, 0.000446404, 0.000506381, 0, -0.00567432, 0 )
+transform = Transform( 0.00355232, 0, 0, 0, 0.000609901, -0.000537662, 0, 0.000537662, 0.000609901, 0, -0.0047105, 0 )
 mesh = SubResource( 5 )
 material/0 = SubResource( 6 )
 

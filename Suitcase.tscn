@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Models/SuitcaseModel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Suitcase.gd" type="Script" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Objects/Klappe.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Sprites/reset.png" type="Texture" id=16]
 [ext_resource path="res://Assets/iosevka-extended-regularttt.ttf" type="DynamicFontData" id=17]
+[ext_resource path="res://Assets/Materials/Level4Cable.tres" type="Material" id=18]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -191,6 +192,9 @@ transform = Transform( -3.13437e-09, 0, -0.0598398, 0, 0.210101, 0, 0.0718376, 0
 
 [node name="DrawerPuzzle4" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.323367, -0.481265 )
+
+[node name="Cable" parent="DrawerPuzzle4/Drawer/SolutionOrb" index="0"]
+material/0 = ExtResource( 18 )
 
 [node name="Tile11" parent="DrawerPuzzle4/Drawer/BoardPuzzle4" index="0"]
 flipped_in_beginning = true

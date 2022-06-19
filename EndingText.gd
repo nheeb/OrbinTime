@@ -14,14 +14,14 @@ func set_but_text(mountains, trees, rivers):
 		but_text = "It is beautiful!"
 
 
-var current_label: Label3D
+var current_label: Label
 var current_label_text : String
 var current_label_pct := 0.0 setget set_label_pct
 
 func _ready():
 	visible = false
-	$You.text = ""
-	$But.text = ""
+#	$You.text = ""
+#	$But.text = ""
 
 func set_label_pct(p):
 	current_label_pct = p

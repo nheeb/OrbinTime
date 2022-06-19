@@ -1,7 +1,7 @@
 // NOTE: Shader automatically converted from Godot Engine 3.5.rc2's SpatialMaterial.
 
 shader_type spatial;
-render_mode async_visible,blend_mix,depth_draw_opaque,cull_disabled,diffuse_burley,specular_schlick_ggx;
+render_mode blend_mix,depth_draw_opaque,cull_disabled,diffuse_burley,specular_schlick_ggx;
 uniform vec4 albedo : hint_color;
 uniform vec4 paint_color : hint_color;
 uniform vec4 mountain_color_upper : hint_color;
